@@ -1,0 +1,69 @@
+.dropdown-item {
+    background: greenyellow;
+    width: 200px;
+}
+
+nav {
+    background-image: url("Navbarbg.jpg");
+}
+
+body {
+    background-image: url("Homepgback.jpg");
+}
+
+.container {
+    margin-top: 100px;
+}
+
+#register {
+    color: greenyellow;
+    border: 2px solid #f00;
+    margin-left: 100px;
+    padding-left: 80px;
+    padding-top: 30px;
+    height: 400px;
+    width: 510px;
+}
+
+#register h1 {
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+#Signin {
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+#Signin h3 {
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+#Login {
+    margin-left: 75px;
+}
+
+#Login h3 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+li .btn {
+    background: red;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+ul li div .btn {
+    background: aquamarine;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #00f;
+}
+
+form input {
+    width: 350px;
+}
