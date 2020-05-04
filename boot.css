@@ -1,0 +1,38 @@
+#logo{
+    width: 70px;
+  height:55px;
+  margin-left: 30px;
+  margin-top: 8px;;
+}
+#logo2{
+    width: 100px;
+  height:45px;
+  margin-left: 0px;
+  margin-top: 15px;;
+}
+
+
+header{
+    background-color: rgba(255, 218, 218, 0.787);
+}
+body{
+    
+    
+    background: url("bgimg6.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+      
+}
+.card{
+    margin-left: 40%;
+    margin-top:16%;
+    background-color: rgb(249, 255, 162);
+}
+.card-text{
+    padding-top:12px;
+}
+.btn btn-primary{
+    padding-bottom: 3px;
+}
