@@ -3,8 +3,28 @@
     width: 200px;
 }
 
+.logo {
+    size: 1cm;
+    width: 1px;
+}
+
+h4 {
+    color: gold
+}
+
+h5 {
+    color: gold;
+}
+
+img {
+    width: 100px;
+    height: 70px;
+    border-radius: 6px;
+}
+
 nav {
     background-image: url("Navbarbg.jpg");
+    height: 70px;
 }
 
 body {
@@ -16,9 +36,9 @@ body {
 }
 
 #register {
-    color: greenyellow;
+    color: rgba(102, 47, 255, 0.397);
     border: 2px solid #f00;
-    margin-left: 100px;
+    margin-left: 50px;
     padding-left: 80px;
     padding-top: 30px;
     height: 400px;
@@ -64,6 +84,32 @@ ul li div .btn {
     border: 2px solid #00f;
 }
 
-form input {
-    width: 350px;
+.card {
+    margin-left: 150px;
+    background-color: rgb(250, 4, 4);
+}
+
+.card-text {
+    padding-top: 12px;
+}
+
+#joinus {
+    margin-left: 150px;
+}
+
+#login {
+    margin-left: 155px;
+}
+
+h3 {
+    margin-left: 50px;
+}
+
+.nav-link {
+    color: yellowgreen;
+}
+
+.card-body .btn {
+    padding-left: 20px;
+    padding-right: 20px;
 }
