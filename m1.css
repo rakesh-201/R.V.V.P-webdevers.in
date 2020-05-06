@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+}
+.view-btn{
+    
+ margin-left:30px;
+ padding:4px;
+ text-align: center;
+}
+button{
+    border:4px solid black;
+    padding:5px;
+    width:130px;
+    
+    
+}
+header h1{
+    text-align:center;
+    color: rgb(255, 5, 234)
+}
+header{
+    border-bottom:2px solid black;
+}
+/* .container1,.container2{
+ margin-top: 30px;
+ margin-left: 25px;
+ display:inline-flex;
+ display:flex;
+ width:100%;
+
+}
+.pre-Head1,.preHead2{
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: 400;
+font-style: initial;
+font-size: 30px;
+border-bottom: 2px solid grey;
+padding-bottom: 1px;
+margin-top:40px;
+}
+ #arjit
+{   margin-top:1px;
+    
+    height: 150px;
+    width: 200px;
+
+    padding-right: 2px;
+    cursor: pointer;
+    
+}
+#atif
+{   
+    
+    height: 150px;
+    width: 200px;
+    
+    cursor: pointer;
+}
+.arjit{
+    padding:10px;
+}
+.atif{
+    padding:10px;
+}
+#nehak{
+    width:200px;
+    height:150px;
+}
+.nehak{
+    padding:10px;
+}
+.view-btn a{
+    padding:10px 10px 10px 10px ;
+}
+#icon1,#icon2 li{
+    display:inline-block;
+}
+.view-btn{
+    padding-top: 2px;
+    background-color: #fff !important;
+
+}
+#icon1,#icon2.view-btn{
+    width:100px;
+    height:150px;
+    position:absolute;
+    padding-top:16px;
+    box-sizing: border-box;
+    
+}
+#icon .view-btn a{
+   text-decoration: none;
+   font-size: 19px;
+   
+ 
+}
+ .nehak,.atif,.arjit h3 {
+    
+    text-align: center;
+}
+#icon li a{
+    text-decoration: none;
+}
+.container2{
+    display:flex;
+} */
+.Singers{
+    display:flex;
+    margin-left: 20%;
+}
+#arjit{
+    height: 160px;
+}
+.Singers{
+align-content: center;
+margin-top: 40px;
+
+}
+.card{
+    margin:10px;
+    
+}
+.head1{
+    align-content: center;
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.head1 h3{
+    border:2px solid black;
+    width:19%;
+margin-left: 40%;
+padding: 6px;
+}
+#Khairiyat,#DilHiToHai,#Bekhayali{
+    width: 90px;
+    height: 70px;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+.play{
+    width: 80px;
+    height: 60px;
+    margin-left: 0px;
+}
+.media{
+    margin-top: 100px;
+    margin-right: 250px;
+  
+    align-content: center;
+    margin-left: 150px;
+}
+.jumbotron jumbotron-fluid{
+    background-image: url("arjit.jpg");
+}
+h1{
+    text-align: center;
+    color: rgb(27, 105, 3);
+}
+#ArImg{
+    background-size: cover;
+    width:35%;
+    height:2%;
+    margin-left: 30%;
+    align-content: center;
+}
+div h3{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 10px;border:2px solid grey;
+    background-color: cyan;
+    
+}
+.media border border-primary{
+    padding:5px;
+}
+.Ar{
+    background-color: rgb(253, 255, 151);
+}
+main{
+    background-color: rgb(124, 255, 179);
+    margin-top: 0px;
+}
+html{
+    background-color:rgb(124, 255, 179);
+}
+header{
+    background-color:rgb(124, 255, 179);
+}
+body{
+    background-color:rgb(124, 255, 179);
+}
