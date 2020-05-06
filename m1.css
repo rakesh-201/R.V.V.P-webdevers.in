@@ -105,20 +105,21 @@ margin-top:40px;
 .container2{
     display:flex;
 } */
-.Singers{
+.Singers,.lang{
     display:flex;
+    display: flexbox;
     margin-left: 20%;
 }
 #arjit{
     height: 160px;
 }
-.Singers{
+.Singers,.lang{
 align-content: center;
 margin-top: 40px;
 
 }
 .card{
-    margin:10px;
+    margin:30px;
     
 }
 .head1{
@@ -180,7 +181,9 @@ div h3{
     background-color: rgb(253, 255, 151);
 }
 main{
-    background-color: rgb(124, 255, 179);
+    background-image: url(music\ bgimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 0px;
 }
 html{
