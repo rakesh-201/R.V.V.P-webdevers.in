@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div onmousemove="{{ speak(text) }}">
+    <div class="jumbotron" >
+        <h1>A Site For The People With Golden Dreams!</h1>
+        <p class="lead">
+            <h4>Here You Will Get Awesome Music Experience,Latest News and much more...</h4>
+        </p>
+        <hr class="my-4">
+
+        <a class="btn btn-success btn-lg" href="{{url_for('users.register')}}" role="button">Join Us</a>
+        <p>
+            <h3>Already Joined? Login Here</h3>
+        </p>
+        <a class="btn btn-success btn-lg" href="{{url_for('users.login')}}" role="button">Login</a>
+    </div>
+    <div class="subhd">
+        <h5>-----* OUR KEY FEATURES *-----</h5>
+    </div>
+
+    <div id="cards">
+        <div class="card" style="width: 18rem;">
+            <img src="{{url_for('static', filename='news.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">LATEST NEWS</h5>
+                <p class="card-text">Stay updated with latest & fresh News even in today's busy lifestyle.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{{url_for('static', filename='music.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">MELODIOUS MUSIC</h5>
+                <p class="card-text">Music gives a soul to the universe, wings to the mind, 
+                    flight to the imagination and life to everything.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{{url_for('static', filename='money.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">MONEY SAVER</h5>
+                <p class="card-text">It’s not how much money you make, but how much money you keep,
+                    how hard it works for you! 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+
+{% endblock content %}
