@@ -21,7 +21,7 @@ def register():
         db.session.commit()
         flash(f'Your account has been created! You now may login.', 'success')
         return redirect(url_for('users.login'))
-    return render_template ('register.html', title='Register', form=form ) 
+    return render_template ('register.html', title='Register', form=form, speak=speak) 
 
 
 @users.route('/login', methods=['GET', 'POST'])
@@ -37,4 +37,4 @@ def login():
             return redirect(next_page) if next_page else redirect(url_for('main.home'))
         else:    
             flash('Login Unsuccessful. Please check username or password', 'danger')
-    return render_template ('login.html', title='Login', form=form ) 
+    return render_template ('login.html', title='Login', form=form, speak=speak ) 

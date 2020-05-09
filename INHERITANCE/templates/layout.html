@@ -1,75 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inheritance</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='Hpg.css')}}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Welcome</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <div><img id="logo" src="{{url_for('static', filename='Logo.png')}}" /></div>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body background="{{ url_for('static', filename='img/bkgd.jpg') }}">
+    <nav class="navbar navbar-expand-lg navbar-light" background="{{url_for('static', filename='img/Navbarbg.jpg')}}">
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal"> R.V.V.P@WEBDEVER.in </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link btn btn-warning" href="{{url_for('main.home')}}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-primary text-weight-bold mx-1" href="{{url_for('main.home')}} ">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link btn btn-warning dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item btn" href="#">Reviews of people</a>
-                        <a class="dropdown-item btn" href="#">Rate us</a>
-                        <a class="dropdown-item btn" href="#">Send Feedback</a>
-                        <a class="dropdown-item btn" href="#">Share link</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link text-primary text-weight-bold mx-1" href="{{url_for('main.about')}} ">About us</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle btn btn-warning" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contact Us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item btn btn-outline-success" href="#">Mail Us</a>
-                        <a class="dropdown-item btn btn-outline-success" href="#">Call Us</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link text-primary text-weight-bold mx-1" href="#">Contact us</a>
                 </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-success my-2 my-sm-0 mx-2" data-toggle="modal" data-target="#LoginModal" type="button">Login</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 mx-2" data-toggle="modal" data-target="#SignupModal" type="button">Sign Up</button>
+            </form>
         </div>
     </nav>
-
-    {{speak('Sir, please move your mouse to get options')}}
 
     {% block content %}
     {% endblock content %}
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Our Logo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body">
+                    <img class="centered" src="{{ url_for('static', filename='img/Logo.jpg') }}" width="460" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel"> Log In </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                            <div class="form-group">
+                                {{ form.email.label(class="form-control-label") }} {% if form.email.errors %} {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.email.errors %}
+                                    <span>{{ error }}</span> {% endfor %}
+                                </div>
+                                {% else %} {{ form.email(class="form-control form-control-lg") }} {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.password.label(class="form-control-label") }} {% if form.password.errors %} {{ form.password(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.password.errors %}
+                                    <span>{{ error }}</span> {% endfor %}
+                                </div>
+                                {% else %} {{ form.password(class="form-control form-control-lg") }} {% endif %}
+                            </div>
+                            <div class="form-check">
+                                {{ form.remember(class="form-check-input") }} {{ form.remember.label(class="form-check-label") }}
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-outline-info") }}
+                            <small class="text-muted ml-2">
+                                    <a href="{{url_for('users.register')}}">Forgot Password?</a>
+                                </small>
+                        </div>
+                    </form>
+                    <div class="container  border-top pt-3">
+                        <small class="text-muted">
+                        Need An Account? <a class="ml-2" href="{{ url_for('users.register') }}">Sign Up Now</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="SignupModal" tabindex="-1" role="dialog" aria-labelledby="SignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignupModalLabel">SignUp</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-3 " id="bgd">
+                        <form method="POST" action="">
+                            {{ form1.hidden_tag() }}
+                            <fieldset class="form-group row">
+                                <section id="jointoday">
+                                    <h2>Join Today</h2>
+                                </section>
+                                <section id="reg-form">
+
+                                    <div class="form-group">
+                                        {{ form1.username.label(class="form-control-label") }} 
+                                        {% if form1.username.errors %} 
+                                        {{ form1.username(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form1.username.errors %}
+                                            <span>{{ error }}</span> 
+                                            {% endfor %}
+                                        </div>
+                                        {% else %} 
+                                        {{ form1.username(class="form-control form-control-lg") }} 
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form1.email.label(class="form-control-label") }} 
+                                        {% if form1.email.errors %} 
+                                        {{ form1.email(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form1.email.errors %}
+                                            <span>{{ error }}</span> 
+                                            {% endfor %}
+                                        </div>
+                                        {% else %} 
+                                        {{ form1.email(class="form-control form-control-lg") }} 
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form1.password.label(class="form-control-label") }} 
+                                        {% if form1.password.errors %} 
+                                        {{ form1.password(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form1.password.errors %}
+                                            <span>{{ error }}</span> 
+                                            {% endfor %}
+                                        </div>
+                                        {% else %} 
+                                        {{ form1.password(class="form-control form-control-lg") }} 
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form1.confirm_password.label(class="form-control-label") }} 
+                                        {% if form1.confirm_password.errors %} 
+                                        {{ form1.confirm_password(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form1.confirm_password.errors %}
+                                            <span>{{ error }}</span> 
+                                            {% endfor %}
+                                        </div>
+                                        {% else %} 
+                                        {{ form1.confirm_password(class="form-control form-control-lg") }} 
+                                        {% endif %}
+                                    </div>
+                                </section>
+                            </fieldset>
+                            <div class="form-group" action=''>
+                                {{ form1.submit(class="btn btn-outline-info") }}
+                            </div>
+                        </form>
+                    </div>
+                    <div class="border-top pt-3 container">
+                        <small class="text-muted">
+                                Already Have An Account? <a class="ml-2" href="{{ url_for('users.login') }}">Sign In</a>
+                            </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
 </html>
