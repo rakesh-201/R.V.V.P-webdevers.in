@@ -1,0 +1,63 @@
+body{
+    background-color: #fff000;
+}
+#div1{
+    background-color: #00ff00;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    margin-top: 0; 
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#img1{
+    margin-left: 35%;
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+}
+#back{
+    height: 40px;
+    width: 150px;
+    font-size: 25px;
+    border: 0;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+#s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9, #s10, #s11, #s12, #s13, #s14, #s15, #s16, #s17, #s18, #s19, #s20{
+    height: 170px;
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 80px;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+#ms{
+    background-color: #00ff00;
+    font-size: 30px;
+    border-width: 21px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+a{
+color: white;
+}
+.music{
+    height: 95px;
+    margin-top: 2px;
+    border-radius: 10px;
+}
+.m{
+    margin-bottom: 100px;
+}
+audio{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 45px;    
+}
+.name{
+    margin-left:100px;
+}
