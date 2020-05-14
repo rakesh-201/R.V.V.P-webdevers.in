@@ -20,8 +20,8 @@ button{
     margin-top: 40px!important;
     background: yellowgreen;
 }
-.Md{
-    background-image: url("romantic.jpg");
+.Md,.Kk,.Lm,.Ab{
+    background-image: url("romantic1.jpg");
 }
 audio{
     background:red;
@@ -183,7 +183,7 @@ margin-top: 40px;
 margin-left: 40%;
 padding: 6px;
 }
-#Khairiyat,#DilHiToHai,#Bekhayali{
+#song1,#song2,#song3,#song4,#song5{
     width: 90px;
     height: 70px;
     margin-left: 20px;
@@ -212,7 +212,7 @@ h1{
     text-align: center;
     color: rgb(27, 105, 3);
 }
-#MdRafi{
+#MdRafi,#KishoreK,#LataM{
     background-size: cover;
     width:35%;
     height:2%;
@@ -233,7 +233,7 @@ div h3{
 .media border border-primary{
     padding:5px;
 }
-#Md-description{
+#Md-description,#Kk-description,#Lm-description,#Ab-description{
     background: yellow;
     border: 2px solid #0f0;
 }
