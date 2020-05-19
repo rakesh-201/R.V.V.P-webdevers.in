@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="index.css">
+    <title>Custom Audio Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="glow">
+            <img src="Dil tera.jfif" id="song2" class="mr-3" alt="Img can not display">
+            <div class="text-container">
+                <span class="text">Audio Play</span>
+                <br>
+                <!-- <span class="text">Coding and Stuff</span>  -->
+                <marquee class="text">Dil tera Deewana hai sanam </marquee>
+                <br>
+                <div class="playback_controls">
+                    <button onclick="skip('back')"><i class="fa fa-fast-backward"></i></button>
+                    <button onclick="playpause()"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                    <button onclick="stop()"><i class="fa fa-stop"></i></button>
+                    <button onclick="skip('fwd')"><i class="fa fa-fast-forward"></i></button>
+                </div>
+                <br>
+                <div id="seekbar">
+                    <input type="range" oninput="setPos(this.value)" id="seek" value="0" max="">
+                </div>
+                <br>
+                <div class="volume_controls">
+                    <button id="mute" onclick="mute()"><i class="fa fa-volume-up"></i></button>
+                    <input type="range" id="volume" oninput="setVolume(this.value)" min="0" max="1" step="0.01"
+                        value="1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
