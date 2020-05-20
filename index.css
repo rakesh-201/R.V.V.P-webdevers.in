@@ -38,6 +38,8 @@
     height: 300px; */
     width: 600px;   /*added by me*/
     height: 250px;  /*added by me*/
+    margin-left: 17px;    /*added by me*/
+    margin-right: 152px;  /*added by me*/
     background: -webkit-gradient(
       linear,
       left bottom,
@@ -130,6 +132,8 @@
     animation: animate 20s linear infinite;
     width:600px;     /*added by me*/
     height:250px;    /*added by me */
+    left: 20px;   /*added by me*/
+    right: 200px; /*added by me*/
     /* -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%; */
@@ -204,7 +208,7 @@
     border-radius: 10px;
     background: #ffffff;
   }
-  #seek {
+  .seek {
     display: block;
     width: 230px;
   }
