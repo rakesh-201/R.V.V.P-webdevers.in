@@ -1,197 +1,87 @@
-*{
-    margin:0;
-    padding:0;
-}
-.view-btn{
-    
- margin-left:30px;
- padding:4px;
- text-align: center;
-}
-button{
-    border:4px solid black;
-    padding:5px;
-    width:130px;
-    
-    
-}
-header h1{
-    text-align:center;
-    color: rgb(255, 5, 234)
-}
-header{
-    border-bottom:2px solid black;
-}
-/* .container1,.container2{
- margin-top: 30px;
- margin-left: 25px;
- display:inline-flex;
- display:flex;
- width:100%;
-
-}
-.pre-Head1,.preHead2{
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-weight: 400;
-font-style: initial;
-font-size: 30px;
-border-bottom: 2px solid grey;
-padding-bottom: 1px;
-margin-top:40px;
-}
- #arjit
-{   margin-top:1px;
-    
-    height: 150px;
-    width: 200px;
-
-    padding-right: 2px;
-    cursor: pointer;
-    
-}
-#atif
-{   
-    
-    height: 150px;
-    width: 200px;
-    
-    cursor: pointer;
-}
-.arjit{
-    padding:10px;
-}
-.atif{
-    padding:10px;
-}
-#nehak{
-    width:200px;
-    height:150px;
-}
-.nehak{
-    padding:10px;
-}
-.view-btn a{
-    padding:10px 10px 10px 10px ;
-}
-#icon1,#icon2 li{
-    display:inline-block;
-}
-.view-btn{
-    padding-top: 2px;
-    background-color: #fff !important;
-
-}
-#icon1,#icon2.view-btn{
-    width:100px;
-    height:150px;
-    position:absolute;
-    padding-top:16px;
-    box-sizing: border-box;
-    
-}
-#icon .view-btn a{
-   text-decoration: none;
-   font-size: 19px;
-   
- 
-}
- .nehak,.atif,.arjit h3 {
-    
-    text-align: center;
-}
-#icon li a{
-    text-decoration: none;
-}
-.container2{
-    display:flex;
-} */
-.Singers,.lang{
-    display:flex;
-    display: flexbox;
-    margin-left: 20%;
-}
-#arjit{
-    height: 160px;
-}
-.Singers,.lang{
-align-content: center;
-margin-top: 40px;
-
-}
-.card{
-    margin:30px;
-    
-}
-.head1{
-    align-content: center;
-    text-align: center;
-    margin-top: 40px;
-    
-}
-.head1 h3{
-    border:2px solid black;
-    width:19%;
-margin-left: 40%;
-padding: 6px;
-}
-#Khairiyat,#DilHiToHai,#Bekhayali{
-    width: 90px;
-    height: 70px;
-    margin-left: 20px;
-    margin-top: 16px;
-}
-
-.play{
-    width: 80px;
-    height: 60px;
-    margin-left: 0px;
-}
-.media{
-    margin-top: 100px;
-    margin-right: 250px;
-  
-    align-content: center;
-    margin-left: 150px;
-}
-.jumbotron jumbotron-fluid{
-    background-image: url("arjit.jpg");
-}
-h1{
-    text-align: center;
-    color: rgb(27, 105, 3);
-}
-#ArImg{
-    background-size: cover;
-    width:35%;
-    height:2%;
-    margin-left: 30%;
-    align-content: center;
-}
-div h3{
-    text-align: center;
-    margin-top: 90px;
-    margin-bottom: 10px;border:2px solid grey;
-    background-color: cyan;
-    
-}
-.media border border-primary{
-    padding:5px;
-}
-.Ar{
-    background-color: rgb(253, 255, 151);
-}
-main{
-    background-image: url(music\ bgimg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 0px;
+body{
+  background-color:#000;
+  font-family: Open sans;
 }
 html{
-    background-color:rgb(124, 255, 179);
+  background-color: black !important;
 }
-header{
-    background-color:rgb(124, 255, 179);
+img{
+  width:100%;
+min-height:250px ;
 }
-body{
-    background-color:rgb(124, 255, 179);
+.main{
+  padding:40px 0;
+}
+.col-md-3{
+margin-bottom: 40px;
+}
+.album-poster{
+  position: relative;
+  display: block ;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow:0px 15px 35px #3d2173a1;
+  transition: all ease 0.4s;
+}
+.album-poster:hover{
+  box-shadow: none;
+  transform :scale(0.98) translateY(5px);
+}
+h3{
+  font-size: 34px;
+  margin-bottom: 34px;
+  padding-bottom: 15px;
+}
+p{
+  font-size: 15px;
+}
+h4{
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  font-weight: 700;
+}
+span{
+  color:#000 !important;
+  font-size: 16px;
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+ background:#e0e0e0;
+ height:4px;
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+  background:#2196f3 !important;
+  height:4px;
+ }
+ .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+ background-color: #2196f3 !important;
+}
+.aplayer .aplayer-icon path{
+  width:20px;
+  height: 20px;
+}
+.aplayer .aplayer-info .apalyer-music{
+  margin-bottom:5px;
+}
+#aplayer{
+position: fixed;
+bottom:-100%;
+left:0;
+width:100%;
+margin :0;
+box-shadow :0 -2px 2px #dadada;
+border:3px solid rgb(95, 164, 255);
+background-color: #fff;
+transition:all ease 0.5s ;
+}
+#aplayer.showPlayer{
+  bottom: 0;
+}
+.col-md-12 h4{
+  font-weight: 800;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(17, 73, 255);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0px -3px 20px rgb(255, 251, 6);
 }
