@@ -1,264 +1,91 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+ body{
+    background-color:#000;
+    font-family: Open sans;
   }
-  /* html{ 
-    background: #000;
-  } */
-  
-  html,
-  body,
-  .container {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  html{
+    background-color: black !important;
   }
-  .container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    /* justify-content: center; */
-    justify-content: left;
+  img{
+    width: 100%;
+    min-height:250px ;
   }
-  .glow {
+  .main{
+    padding:40px 0;
+    background: linear-gradient(red,pink,yellow,cyan);
+  }
+  .col-md-3{
+  margin-bottom: 40px;
+  }
+  .album-poster{
     position: relative;
-    /* width: 300px;
-    height: 300px; */
-    width: 600px;   /*added by me*/
-    height: 250px;  /*added by me*/
-    margin-left: 17px;    /*added by me*/
-    margin-right: 152px;  /*added by me*/
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(#000000),
-      to(#262626)
-    );
-    background: -webkit-linear-gradient(bottom, #fff000 /*added by me*/, #262626);
-    background: -moz-linear-gradient(bottom, #fff000, #262626);
-    background: -o-linear-gradient(bottom, #fff000, #262626);
-    background: linear-gradient(0deg, #fff000, #262626);
-    /* -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    border-radius:50%; */
+    display: block ;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow:0px 15px 35px #3d2173a1;
+    transition: all ease 0.4s;
   }
-  .glow::before,
-  .glow::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background: -webkit-linear-gradient(
-      45deg,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ff0000,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ffff00,
-      #ff0000
-    );
-    background: -moz-linear-gradient(
-      45deg,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ff0000,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ffff00,
-      #ff0000
-    );
-    background: -o-linear-gradient(
-      45deg,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ff0000,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ffff00,
-      #ff0000
-    );
-    background: linear-gradient(
-      45deg,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ff0000,
-      #ff00ee,
-      #0000ff,
-      #00ff00,
-      #ffff00,
-      #ff0000
-    );
-    /* -webkit-background-size: 400% 400%;
-    -moz-background-size: 400%;
-    -o-background-size: 400%;
-    background-size: 400%; */
-    max-width: -webkit-calc(600px + 4px);
-    max-width: -moz-calc(600px + 4px);
-    max-width: calc(600px + 4px);
-    max-height: -webkit-calc(300px + 4px);
-    max-height: -moz-calc(300px + 4px);
-    max-height: calc(300px + 4px);
-    width: -webkit-calc(600px + 4px);
-    width: -moz-calc(600px + 4px);
-    width: calc(600px + 4px);
-    height: -webkit-calc(300px + 4px);
-    height: -moz-calc(300px + 4px);
-    height: calc(300px + 4px);
-    z-index: -1;
-    -webkit-animation: animate 20s linear infinite;
-    -moz-animation: animate 20s linear infinite;
-    -o-animation: animate 20s linear infinite;
-    animation: animate 20s linear infinite;
-    width:600px;     /*added by me*/
-    height:250px;    /*added by me */
-    left: 20px;   /*added by me*/
-    right: 200px; /*added by me*/
-    /* -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%; */
+  .album-poster:hover{
+    box-shadow: none;
+    transform :scale(0.98) translateY(5px);
   }
-  .glow::after {
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
+  h3{
+    font-size: 34px;
+    margin-bottom: 34px;
+    padding-bottom: 15px;
   }
-  .text-container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    text-align: center;
-    position: absolute;
-    width: 50%;   /*added by me*/
-    top: 50%;
-    /* left: 50%; */
-    left:70%;   /*added by me*/  
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  p{
+    font-size: 15px;
   }
-  .text {
-    color: #ffffff;
-    display: block;
+  h4{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    font-weight: 700;
   }
-  button {
-    /* background: #000000; */
-    background: #ffffff;
-    color: #ffffff;
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(#000000),
-      to(#262626)
-    );
-    background: -webkit-linear-gradient(bottom, #000000, #262626);
-    background: -moz-linear-gradient(bottom, #000000, #262626);
-    background: -o-linear-gradient(bottom, #000000, #262626);
-    background: linear-gradient(0deg, #000000, #262626);
-    font-size: 14px;
-    border: none;
-    outline: none;
-    padding: 0px 15px;
-    width: 55px;
-    height: 30px;
-    line-height: 30px;
-    -webkit-border-radius: 32px;
-    -moz-border-radius: 32px;
-    border-radius: 32px;
+  span{
+    color:#000 !important;
+    font-size: 16px;
   }
-  input[type="range"] {
-    -webkit-appearance: none;
-    border: 1px solid #000000;
-    height: 5px;
-    vertical-align: middle;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    background-color: #232323;
-    outline: none;
+  .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+   background:linear-gradient(blue,lightblue);
+   height:4px;
   }
-  input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
+  .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+    background:#2196f3 !important;
+    height:4px;
+   }
+   .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+   background-color: #2196f3 !important;
+  }
+  .aplayer .aplayer-icon path{
+    width:20px;
     height: 20px;
-    border: 1px solid #000000;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: #ffffff;
   }
-  .seek {
-    display: block;
-    width: 230px;
+  .aplayer .aplayer-info .apalyer-music{
+    margin-bottom:5px;
   }
-  img{                    /*added by me*/
-    width: 30%;
-    height: 80%;
-    margin-top: 24px;
-    margin-left: 20px;
+  #aplayer{
+  position: fixed;
+  bottom:-100%;
+  left:0;
+  width:100%;
+  margin :0;
+  box-shadow :0 -2px 2px #dadada;
+  border:3px solid rgb(95, 164, 255);
+  background: linear-gradient(#ffaaff,lightblue);
+  transition:all ease 0.5s ;
   }
-  @-webkit-keyframes animate {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
+  #aplayer.showPlayer{
+    bottom: 0;
   }
-  @-moz-keyframes animate {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
+  .col-md-12{
+    background: linear-gradient(green,lightgreen);
   }
-  @-o-keyframes animate {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-  @keyframes animate {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
+  .col-md-12 h4{
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(17, 73, 255);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px -3px 20px rgb(255, 251, 6);
   }
