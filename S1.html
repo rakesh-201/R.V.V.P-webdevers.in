@@ -17,18 +17,20 @@
      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
      <script src="https://unpkg.com/swiper/js/swiper.js"></script>
      <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="S1.js"></script>
+  <link rel="stylesheet" href="S1.css"> 
 <style>
 
   body {
     
-    background: rgb(3, 3, 3);
+    background-image:linear-gradient(rgb(64, 143, 0),rgb(0, 195, 255));
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color:#000;
     margin: 0;
     padding: 0;
-    text-shadow:0px 2px 25px rgb(250, 0, 125);
+    text-shadow:0px 2px 45px rgb(255, 0, 136);
   }
   .swiper-container {
     width: 100%;
@@ -65,7 +67,7 @@
     padding-top:10px;
     margin-top: 100%;
     padding-bottom: 100px;
-    margin-bottom: 11px;
+    margin-bottom: 11p;
   align-content: center;
   color: aliceblue;
   padding-left:69px;
@@ -88,8 +90,11 @@
   text-align: center;
   padding-top:30px;
   padding-bottom: 40px;
-  text-shadow:0px 10px 10px 22px rgb(50, 66, 205) !important;
+  text-shadow:0px 10px 10px 22px rgb(255, 32, 2)!important;
 }
+
+
+
 </style>
   
 
@@ -97,7 +102,7 @@
 <body>
 
 
-     <!-- Swiper --><main>
+     <!-- Swiper --><main id="musicHome">
      
          
       <div class="swiper-container">
@@ -105,8 +110,8 @@
         <div class="head"><h2>Top Charts</h2></div>
        
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(arjit.jpg)"><h3>Arjit Singh<br><button type="button" class="btn btn-primary">Play Songs   <i class="fa fa-play  padding-top:1px;"></i></button></h3></div>
-          <div class="swiper-slide" style="background-image:url(atif.jpg)"><h3>Atif Aslam<br><button type="button" class="btn btn-primary">Play Songs   <i class="fa fa-play  padding-top:1px;"></i></button></h3></div>
+          <div class="swiper-slide"  style="background-image:url(arjit.jpg)"><h3>Arjit Singh<br><a id="arjit" href="arjit.html"><button type="button" class="btn btn-primary" >Play Songs   <i class="fa fa-play  padding-top:1px;"></i></button></a></h3></div>
+          <div class="swiper-slide" style="background-image:url(atif.jpg)"><h3>Atif Aslam<br><a id="atif" href="Atif.html" ><button type="button" class="btn btn-primary">Play Songs   <i class="fa fa-play  padding-top:1px;"></i></button></a></h3></div>
           <div class="swiper-slide" style="background-image:url(nehak.jpg)"><h3>Neha kakkar<br><button type="button" class="btn btn-primary">Play Songs   <i class="fa fa-play  padding-top:1px;"></i></button></h3></div>
           <div class="swiper-slide" style="background-image:url(lata.jpg)"><h3>Lata Mangeshkar<br><button type="button" class="btn btn-primary">Play Songs   <i class="fa fa-play  padding-top:1px;"></i></button></h3></div>
           <div class="swiper-slide" style="background-image:url(kishore.jpg)"><h3>Kishore Kumar<br><button type="button" class="btn btn-primary">Play Songs   <i class="fa fa-play  padding-top:1px;"></i></button></h3></div>
@@ -117,7 +122,17 @@
           <div class="swiper-slide" style="background-image:url(0.jpg)"></div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination"><div class="loader">
+          <div class="spinner-grow text-success" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        </div></div>
       </div>
 
       <div class="swiper-container 2">
@@ -137,27 +152,39 @@
         <div class="swiper-pagination"></div>
       </div>
      </main>
-     <main>
-  
-     </main>
 
-  <script >
-    var swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows : true,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  });
-  </script>
+<div id="arjitpg">
+
+</div>
+
+
+<div id="atifpg">
+
+</div>
+
+
+    
+
+
+
+
+<script>var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows : true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});</script>
+
+
 </body>
 </html>
