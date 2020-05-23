@@ -1,0 +1,33 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container my-4">
+    <ul id="msg">
+        {% if messages %} {% for msg in messages %}
+        <code id="msg"> {{msg}} </code> {% endfor %} {% endif %}
+    </ul>
+    <form method="POST" action="/contact"> {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputPassword4" class="text-danger">Name</label>
+                <input type="text" name="name" class="form-control" id="inputPassword4">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4" class="text-danger">Email</label>
+                <input type="email" name="email" class="form-control" id="inputEmail4">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2" class="text-danger">Enter Your Message Here</label>
+            <input type="text" name="text" class="form-control" id="inputAddress2">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock content %} {% block js %}
+<script>
+    setTimeout(function() {
+        if ($('#msg').length > 0) {
+            $('#msg').remove();
+        }
+    }, 4000)
+</script>
+{% endblock js %}

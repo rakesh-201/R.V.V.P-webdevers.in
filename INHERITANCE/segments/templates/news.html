@@ -1,0 +1,43 @@
+{% extends 'layout1.html' %} {% block title %}Latest News {% endblock title %} {% block content %}
+<div class="container">
+    <div id="50" class="container text-danger ">
+    </div>
+</div>
+{% endblock content %} {% block js %}
+<script>
+    str = `<h1 class="text-danger align-text-centre">Today's News...</h1>`
+    $('#50').append(str)
+    $(document).ready(function() {
+        $.ajax({
+            type: 'POST',
+            URL: '/news',
+            data: {
+                'csrfmiddlewaretoken': '{{ csrf_token }}',
+            },
+            encode: true,
+        }).done(function(text) {
+            console.log(text);
+            txt = JSON.parse(text)
+            for (i in txt) {
+                var a = ""
+                a = `<li class="  align-items-center text-danger" id="${i}" > ${ txt[i] } </li>`
+                $('#50').append(a)
+            }
+
+        });
+        $.ajax({
+            type: 'POST',
+            URL: '/news/speak',
+            data: {
+                'csrfmiddlewaretoken': '{{ csrf_token }}',
+            },
+            encode: true,
+        }).done(function(a) {
+            console.log("done");
+            console.log(a);
+        })
+
+    })
+</script>
+
+{% endblock js %}

@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+    <div class="container mt-3">
+        <div class="media">
+            <img src="{% static '/image/img1.jpg' %}" width="200" height="150" class="mr-3 mb-3" alt="INHERITANCE">
+            <div class="media-body">
+                <h5 class="mt-0 text-danger">INHERITANCE</h5>
+                <p class="text-danger mb-3">It all started with INHERITANCE. A program that is conducted in VJTI, wherein the SY's assign some project to the FY's so that they get an idea of how projects are made, what is team work, how to manage time and more than anything else how to utilize
+                summer vacation. This site was made by Four students of VJTI.</p>
+
+                <div class="media mt-3">
+                    <a class="mr-3" href="#">
+                        <img src="{% static '/image/rakesh.jpg'%}" width="200" height="150" class="mr-3" alt="Rakesh's Pic">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="mt-0 text-success">RAKESH RAJPUROHIT</h5>
+                        <p class="text-success">A student of VJTI. Branch IT.</p>
+                    </div>
+                </div>
+
+                <div class="media mt-3">
+                    <div class="media-body">
+                        <h5 class="mt-0 text-right text-success">VISHAL DANGE</h5>
+                        <p class="text-right text-success">A student of VJTI. Branch IT.</p>
+                    </div>
+                    <a class="mr-3" href="#">
+                        <img src="{% static '/image/1.jpeg'%}" class="ml-3" width="200" height="150" alt="pic">
+                    </a>
+                </div>
+
+                <div class="media mt-3 ">
+                    <a class="mr-3" href="#">
+                        <img src="{% static '/image/2.jpeg'%}" class="mr-3" width="200" height="150" alt="pic">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="mt-0 text-success">VEDANT MONDKAR</h5>
+                        <p class="text-success">A student of VJTI. Branch IT</p>
+                    </div>
+                </div>
+
+                <div class="media mt-3">
+                    <div class="media-body">
+                        <h5 class="mt-0 text-right text-success">PRASHANT BHALA</h5>
+                        <p class="text-right text-success">A student of VJTI. Branch IT</p>
+                    </div>
+                    <a class="mr-3" href="#">
+                        <img src="{% static '/image/3.jpeg'%}" class="mr-3" width="200" height="150" alt="...">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

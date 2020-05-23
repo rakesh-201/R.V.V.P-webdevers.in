@@ -1,0 +1,50 @@
+{% extends 'layout1.html' %} {% block title %} Dairy {% endblock title %} {% block content %}
+<style>
+    .border-warning {
+        border-radius: 100px;
+    }
+    
+    input {
+        overflow: auto;
+        width: -webkit-fill-available;
+    }
+</style>
+<div class="container">
+    <div class="jumbotron mt-5 border border-warning ">
+        <div class="container">
+            <h1 class="display-4 font-weight-bolder text-warning ">Dairy</h1>
+            <p class="lead text-warning ">Hello!, Please speak what you wanna save.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron mt-5 border border-warning ">
+        <div class="container">
+            <h4 class=" font-weight-bolder text-warning ">You May Also Write Here...</h4>
+            <form action="/notebook" method="POST">
+                <input type="text" name="text">
+                <button class="btn btn-outline-warning"> Save </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %} {% block js %}
+<script>
+    $(document).ready(function() {
+        console.log("starting");
+        $.ajax({
+            type: 'POST',
+            URL: '/news',
+            data: {
+                'csrfmiddlewaretoken': '{{ csrf_token }}',
+            },
+            encode: true,
+        }).done(function(text) {
+            console.log(text);
+            if (text == -1) {
+                location.reload()
+            }
+        })
+    })
+</script>
+{% endblock js %}
