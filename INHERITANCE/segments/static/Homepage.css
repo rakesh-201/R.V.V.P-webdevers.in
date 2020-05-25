@@ -1,0 +1,26 @@
+.jumbotron{
+    background-image: url("bgimg14.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:rgb(219, 250, 133)
+}
+.subhd h5{
+    align-content: center;
+margin-left: 40%;
+}
+#cards {
+    display: flex;
+    margin-left: 100px;
+}
+.card{
+    margin :30px;
+}
+ul {
+    margin-left: 70%;
+}
+ul li{
+    padding:10px;
+}
+.jumbotron{
+    text-align: center;
+}

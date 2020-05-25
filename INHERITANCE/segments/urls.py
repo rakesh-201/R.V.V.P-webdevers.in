@@ -11,4 +11,6 @@ urlpatterns=[
     path("songs", views.songs, name="songs"),
     path("news", views.news, name="news"),
     path("notebook", views.notebook, name="notebook"),
+    path("songs/arijit", views.arijit, name="notebook"),
+    path("songs/atif", views.atif, name="notebook"),
 ]

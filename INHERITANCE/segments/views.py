@@ -107,7 +107,7 @@ def news(request):
 
 
 def songs(request):
-    pass;
+    return render(request, "s1.html")
 
 
 def speak(text):
@@ -160,3 +160,10 @@ def notebook(request):
                 return HttpResponse(query)
         return render(request, "notebook.html")
     return redirect("home")
+
+
+def arijit(request):
+    return render(request, "song_arijit.html")
+
+def atif(request):
+    return render(request, "song_atif.html")
