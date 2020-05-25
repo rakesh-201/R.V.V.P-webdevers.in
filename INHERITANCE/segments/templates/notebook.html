@@ -21,9 +21,9 @@
     <div class="jumbotron mt-5 border border-warning ">
         <div class="container">
             <h4 class=" font-weight-bolder text-warning ">You May Also Write Here...</h4>
-            <form action="/notebook" method="POST">
+            <form action="/notebook" method="POST"> {% csrf_token %}
                 <input type="text" name="text">
-                <button class="btn btn-outline-warning"> Save </button>
+                <button type="submit"ass="btn btn-outline-warning"> Save </button>
             </form>
         </div>
     </div>
