@@ -1,241 +1,232 @@
-<!doctype html>
+{% extends 'layout_song.html' %}
+<!-- <!doctype html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+  <!-- Required meta tags 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="Arjit.css">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-  <title>Arijit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+<!-- Bootstrap CSS -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"> -->
+<link rel="stylesheet" href="Arjit.css">
+<title>{% block title %} Arijit Singh {% endblock title %}</title>
 </head>
 
 <body>
-{% load static %}
-  <div class="main">
+  {% block content %}
+    {% load static %}
+    <div class="main">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <form class="form-inline  my-2 my-lg-0">
-        <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h4 style="text-align: center;">Best Of Arijit Singh</h4><img src="{% static '/image/arjit.jpg' %}">
-        </div>
-        <hr>
-        <hr>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+            <form class="form-inline  my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 style="text-align: center;">Best Of Arijit Singh</h4><img src="{% static '/image/arjit.jpg' %}">
+                </div>
+                <hr>
+                <hr>
 
-        <div class=" songCard  col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="0">
-            <img src="{% static '/image/Bekhayali.jpg' %}">
-          </a>
-          <h4>Bekhayali</h4>
-          <p>Kabir Singh</p>
-        </div>
+                <div class=" songCard  col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="0">
+                        <img src="{% static '/image/Bekhayali.jpg' %}">
+                    </a>
+                    <h4>Bekhayali</h4>
+                    <p>Kabir Singh</p>
+                </div>
 
-        <div class=" songCard  col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="1">
-            <img src="{% static '/image/Dil Hi Toh Hai.jpg' %}">
-          </a>
-          <h4>Dil Hi Toh Hai</h4>
-          <p>The Sky Is Pink</p>
-        </div>
+                <div class=" songCard  col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="1">
+                        <img src="{% static '/image/Dil Hi Toh Hai.jpg' %}">
+                    </a>
+                    <h4>Dil Hi Toh Hai</h4>
+                    <p>The Sky Is Pink</p>
+                </div>
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="2">
-            <img src="{% static '/image/Sanam Re.jpg' %}">
-          </a>
-          <h4>Sanam Re</h4>
-          <p>hh</p>
-        </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="2">
+                        <img src="{% static '/image/Sanam Re.jpg' %}">
+                    </a>
+                    <h4>Sanam Re</h4>
+                    <p>hh</p>
+                </div>
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="3">
-            <img src="{% static '/image/Khairiyat.jpg' %}">
-          </a>
-          <h4>"Khairiyat</h4>
-          <p>chichhore</p>
-        </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="3">
+                        <img src="{% static '/image/Khairiyat.jpg' %}">
+                    </a>
+                    <h4>"Khairiyat</h4>
+                    <p>chichhore</p>
+                </div>
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="4">
-            <img src="{% static '/image/Phir Le Aya Dil.jpg' %}">
-          </a>
-          <h4>Phir Le Aaya Dil</h4>
-          <p>Song Info</p>
-        </div>
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="5">
-            <img src="{% static '/image/Pal.jpg' %}">
-          </a>
-          <h4>Pal</h4>
-          <p>Song Info</p>
-        </div>
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="6">
-            <img src="{% static '/image/Sooraj Dooba Hai Aaj.jpg' %}">
-          </a>
-          <h4>Sooraj Dooba Hai Aaj</h4>
-          <p>Song Info</p>
-        </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="4">
+                        <img src="{% static '/image/Phir Le Aya Dil.jpg' %}">
+                    </a>
+                    <h4>Phir Le Aaya Dil</h4>
+                    <p>Song Info</p>
+                </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="5">
+                        <img src="{% static '/image/Pal.jpg' %}">
+                    </a>
+                    <h4>Pal</h4>
+                    <p>Song Info</p>
+                </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="6">
+                        <img src="{% static '/image/Sooraj Dooba Hai Aaj.jpg' %}">
+                    </a>
+                    <h4>Sooraj Dooba Hai Aaj</h4>
+                    <p>Song Info</p>
+                </div>
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="7">
-            <img src="{% static '/image/Sukoon Mila.jpg' %}">
-          </a>
-          <h4>Sukoon Mila</h4>
-          <p>Song Info</p>
-        </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="7">
+                        <img src="{% static '/image/Sukoon Mila.jpg' %}">
+                    </a>
+                    <h4>Sukoon Mila</h4>
+                    <p>Song Info</p>
+                </div>
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="8">
-            <img src="{% static '/image/Tera Hoke Rahoon.jpg' %}">
-          </a>
-          <h4>Tera Hoke Rahoon</h4>
-          <p>Song Info</p>
-        </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="8">
+                        <img src="{% static '/image/Tera Hoke Rahoon.jpg' %}">
+                    </a>
+                    <h4>Tera Hoke Rahoon</h4>
+                    <p>Song Info</p>
+                </div>
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="9">
-            <img src="{% static '/image/Tu Hi Hai Aashiqui.jpg' %}">
-          </a>
-          <h4>Tu Hi Hai Aashiqui</h4>
-          <p>Song Info</p>
-        </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="9">
+                        <img src="{% static '/image/Tu Hi Hai Aashiqui.jpg' %}">
+                    </a>
+                    <h4>Tu Hi Hai Aashiqui</h4>
+                    <p>Song Info</p>
+                </div>
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="10">
-            <img src="{% static '/image/Tum Hi Ho.jpg' %}">
-          </a>
-          <h4>Tum Hi Ho</h4>
-          <p>Song Info</p>
-        </div>
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="11">
-            <img src="{% static '/image/Tum Saath Ho.jpg' %}">
-          </a>
-          <h4>Tum Saath Ho</h4>
-          <p>Song Info</p>
-        </div>
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="12">
-            <img src="{% static '/image/Darkhaast.jpg' %}">
-          </a>
-          <h4>Darkhaast</h4>
-          <p>Song Info</p>
-        </div>
-
-
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="13">
-            <img src="{% static '/image/Laal Ishq.jpg' %}">
-          </a>
-          <h4>Laal Ishq</h4>
-          <p>Song Info</p>
-        </div>
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="14">
-            <img src="{% static '/image/Ilahi.jpg' %}">
-          </a>
-          <h4>Illahi</h4>
-          <p>Song Info</p>
-        </div>
-
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="15">
-            <img src="{% static '/image/Ik Vaari ya.jpg' %}">
-          </a>
-          <h4>Ik Vaari ya</h4>
-          <p>Ik Vaari ya</p>
-        </div>
-
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="16">
-            <img src="{% static '/image/Hawayein.jpg' %}">
-          </a>
-          <h4>Hawayein</h4>
-          <p>Song Info</p>
-        </div>
-
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="{% static '/image/Dhokha Dhadi.jpg' %}">
-          </a>
-          <h4>Dhokha Dhadi</h4>
-          <p>Song Info</p>
-        </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="10">
+                        <img src="{% static '/image/Tum Hi Ho.jpg' %}">
+                    </a>
+                    <h4>Tum Hi Ho</h4>
+                    <p>Song Info</p>
+                </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="11">
+                        <img src="{% static '/image/Tum Saath Ho.jpg' %}">
+                    </a>
+                    <h4>Tum Saath Ho</h4>
+                    <p>Song Info</p>
+                </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="12">
+                        <img src="{% static '/image/Darkhaast.jpg' %}">
+                    </a>
+                    <h4>Darkhaast</h4>
+                    <p>Song Info</p>
+                </div>
 
 
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="{% static '/image/Mast Magan.jpg' %}">
-          </a>
-          <h4>Mast Magan</h4>
-          <p>Song Info</p>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="13">
+                        <img src="{% static '/image/Laal Ishq.jpg' %}">
+                    </a>
+                    <h4>Laal Ishq</h4>
+                    <p>Song Info</p>
+                </div>
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="14">
+                        <img src="{% static '/image/Ilahi.jpg' %}">
+                    </a>
+                    <h4>Illahi</h4>
+                    <p>Song Info</p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="15">
+                        <img src="{% static '/image/Ik Vaari ya.jpg' %}">
+                    </a>
+                    <h4>Ik Vaari ya</h4>
+                    <p>Ik Vaari ya</p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="16">
+                        <img src="{% static '/image/Hawayein.jpg' %}">
+                    </a>
+                    <h4>Hawayein</h4>
+                    <p>Song Info</p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="17">
+                        <img src="{% static '/image/Dhokha Dhadi.jpg' %}">
+                    </a>
+                    <h4>Dhokha Dhadi</h4>
+                    <p>Song Info</p>
+                </div>
+
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="17">
+                        <img src="{% static '/image/Mast Magan.jpg' %}">
+                    </a>
+                    <h4>Mast Magan</h4>
+                    <p>Song Info</p>
+                </div>
+
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="17">
+                        <img src="{% static '/image/Meet.jpg' %}">
+                    </a>
+                    <h4>Meet</h4>
+                    <p>Song Info</p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="17">
+                        <img src="{% static '/image/Tu Mila Toh Haina.jpg' %}">
+                    </a>
+                    <h4>Tu Mila Toh Haina</h4>
+                    <p>Song Info</p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="17">
+                        <img src="{% static '/image/Tujhe Kitna Chahne Lage.jpg' %}">
+                    </a>
+                    <h4>Tujhe Kitna Chahne Lage</h4>
+                    <p>Song Info</p>
+                </div>
+
+
+            </div>
+
         </div>
+    </div>
+    </div>
 
-
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="{% static '/image/Meet.jpg' %}">
-          </a>
-          <h4>Meet</h4>
-          <p>Song Info</p>
-        </div>
-
-         <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="{% static '/image/Tu Mila Toh Haina.jpg' %}">
-          </a>
-          <h4>Tu Mila Toh Haina</h4>
-          <p>Song Info</p>
-        </div>
-
-        <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="{% static '/image/Tujhe Kitna Chahne Lage.jpg' %}">
-          </a>
-          <h4>Tujhe Kitna Chahne Lage</h4>
-          <p>Song Info</p>
-        </div>
-     
-
-      </div>
+    <div id="aplayer">
 
     </div>
-  </div>
-  </div>
-
-  <div id="aplayer">
-
-  </div>
-
-
-
-
-
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-  <script src="Arjit.js"> </script>
-
+{% block js %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+    <script src="{% static '/Arjit.js'%}"></script>
+{% endblock js %}
+  {% endblock content %}
 </body>
 
 </html>
