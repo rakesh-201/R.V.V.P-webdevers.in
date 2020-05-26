@@ -13,4 +13,9 @@ urlpatterns=[
     path("notebook", views.notebook, name="notebook"),
     path("songs/arijit", views.arijit, name="notebook"),
     path("songs/atif", views.atif, name="notebook"),
+    path("songs/english", views.english, name="english"),
+    path("songs/asha", views.asha, name="asha"),
+    path("songs/marathi", views.marathi, name="marathi "),
+    path("songs/mdRafi", views.mdRafi, name="mdRafi"),
+    path("songs/lata", views.lata, name="lata"),
 ]

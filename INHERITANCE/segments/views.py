@@ -165,5 +165,26 @@ def notebook(request):
 def arijit(request):
     return render(request, "song_arijit.html")
 
+
 def atif(request):
     return render(request, "song_atif.html")
+
+
+def english(request):
+    return render(request, "english.html")
+
+
+def asha(request):
+    return render(request, "asha.html")
+
+
+def marathi(request):
+    return render(request, "marathi.html")
+
+
+def mdRafi(request):
+    return render(request, "mdrafi.html")
+
+
+def lata(request):
+    return render(request, "lata.html")

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{%static '/singerPage.css'%}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+    <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Asha songs</title>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button id="gobackBtn" class="btn btn-outline-success my-2 my-sm-0"><a href="music hpg.html">Go
+            Back</a></button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search for songs"
+                    aria-label="Search">
+                <button onclick="this.preventDefault()" id="searchBtn"
+                    class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </form>
+        </div>   
+    </nav>
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="general">
+                    <h4 style="text-align: center;">Enjoy The Songs</h4>
+                </div>
+                <br>
+                <br>
+                <div class="col-md-12" id="singerName">
+                    <h4 style="text-align: center;">Best Of Asha</h4>
+                </div>
+                <div class="col-md-12 singerImage">
+                    <a href="javascript:void();" class="album-poster">
+                        <img src="{% static '/image/Asha.jpg' %}" id="singerImg" alt="Rafi Image">
+                    </a>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="0">
+                        <img src="{% static '/image/Asha_songs/Deewana_hua.jpg' %}">
+                    </a>
+                    <h4>Deewana hua badal</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="1">
+                        <img src="{% static '/image/Asha_songs/Dhal_gaya.jpg' %}">
+                    </a>
+                    <h4>Dhal gaya din</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="2">
+                        <img src="{% static '/image/Asha_songs/Jaiye aap.jpg' %}">
+                    </a>
+                    <h4>Jaiye aap kaha jayenge</h4>
+                    <p><b>Asha Bhosle</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="3">
+                        <img src="{% static '/image/Asha_songs/O saathi.jpg' %}">
+                    </a>
+                    <h4>O saathi chal</h4>
+                    <p><b>Asha Bhosle, Kishore Kumar</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="4">
+                        <img src="{% static '/image/Asha_songs/Piya tu.jpg' %}">
+                    </a>
+                    <h4>Piya tu ab to aaja</h4>
+                    <p><b>Asha Bhosle</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="5">
+                        <img src="{% static '/image/Asha_songs/Uden jab.png' %}">
+                    </a>
+                    <h4>Uden jab jab zulfen teri</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="6">
+                        <img src="{% static '/image/Asha_songs/Aaiye meharbaan.jpg' %}">
+                    </a>
+                    <h4>Aaiye meharbaan</h4>
+                    <p><b>Asha Bhosle</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="7">
+                        <img src="{% static '/image/Asha_songs/Do lafzon.jpg' %}">
+                    </a>
+                    <h4>Do lafzon ki hai</h4>
+                    <p><b>Asha Bhosle</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="8">
+                        <img src="{% static '/image/Asha_songs/Ek mai.jpg' %}">
+                    </a>
+                    <h4>Ek mai aur ek tu</h4>
+                    <p><b>Asha Bhosle, Kishore Kumar</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="9">
+                        <img src="{% static '/image/Asha_songs/Gun guna.jpg' %}">
+                    </a>
+                    <h4>Gun guna rahe hai bhanware</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="10">
+                        <img src="{% static '/image/Asha_songs/Jab chali.jpg' %}">
+                    </a>
+                    <h4>Jab chali thandi hawa</h4>
+                    <p><b>Asha Bhosle</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="11">
+                        <img src="{% static '/image/Asha_songs/Saara pyar.jfif' %}">
+                    </a>
+                    <h4>Saara pyar tumhara</h4>
+                    <p><b>Asha Bhosle, Kishore Kumar</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="12">
+                        <img src="{% static '/image/Asha_songs/Roka kai.jpg' %}">
+                    </a>
+                    <h4>Roka kai baar maine</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="13">
+                        <img src="{% static '/image/Asha_songs/Sar par.jpg' %}">
+                    </a>
+                    <h4>Sar par topi laal</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="14">
+                        <img src="{% static '/image/Asha_songs/Raat ke.jpg' %}">
+                    </a>
+                    <h4>Raat ke hamsafar</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="15">
+                        <img src="{% static '/image/Asha_songs/Chhod do.jpg' %}">
+                    </a>
+                    <h4>Chhod do aanchal</h4>
+                    <p><b>Asha Bhosle, Kishore Kumar</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="16">
+                        <img src="{% static '/image/Asha_songs/Deewana mastana.jpg' %}">
+                    </a>
+                    <h4>Deewana mastana hua dil</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="17">
+                        <img src="{% static '/image/Asha_songs/Ek pardesi.jpg' %}">
+                    </a>
+                    <h4>Ek pardesi mera dil le gaya</h4>
+                    <p><b>Asha Bhosle, Mohammad Rafi</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster"  data-switch="18">
+                        <img src="{% static '/image/Asha_songs/Ye mera.jpg' %}">
+                    </a>
+                    <h4>Yeh Mera dil</h4>
+                    <p><b>Asha Bhosle</b></p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="aplayer">
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+    <script src="{% static '/Asha.js' %}"> </script>
+
+</body>
+
+</html>
