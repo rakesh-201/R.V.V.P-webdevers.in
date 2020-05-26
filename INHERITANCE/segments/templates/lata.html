@@ -1,38 +1,16 @@
-<!doctype html>
-<html lang="en">
-
-<head>
+{% extends 'layout_song.html' %}
+{% block content %}
 {% load static %}
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static '/singerPage.css'%}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-    <title>Lata songs</title>
-
-
-</head>
+    <title>{% block title %}Lata songs
+    {% endblock title %}</title>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button id="gobackBtn" class="btn btn-outline-success my-2 my-sm-0"><a href="music hpg.html">Go
-            Back</a></button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search for songs"
-                    aria-label="Search">
-                <button onclick="this.preventDefault()" id="searchBtn"
-                    class="btn btn-outline-success my-2 my-sm-0">Search</button>
-            </form>
-        </div>   
-    </nav>
-
+    
     <div class="main">
         <div class="container">
             <div class="row">
@@ -52,7 +30,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="0">
-                        <img src="{% static '/image/Lata songs/Main tere.jfif' %}">
+                        <img src="{% static '/Lata_songs/Main_tere.jfif' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Main tere ishq me</h4>
@@ -62,7 +40,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="1">
-                        <img src="{% static '/image/Lata songs/yeh galiyaan.jfif' %}">
+                        <img src="{% static '/Lata_songs/yeh_galiyaan.jfif' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Yeh galiyan ye chaubara</h4>
@@ -72,7 +50,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="2">
-                        <img src="{% static '/image/Lata songs/Pyar kiya.jfif' %}">
+                        <img src="{% static '/Lata_songs/Pyar_kiya.jfif' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Pyar kiya to darna kya</h4>
@@ -82,7 +60,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="3">
-                        <img src="{% static '/image/Lata songs/Aaj phir.jpg' %}">
+                        <img src="{% static '/Lata_songs/Aaj_phir.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Aaj phir jeene ki</h4>
@@ -92,7 +70,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster"  data-switch="4">
-                        <img src="{% static '/image/MdRafi Songs/Kitna pyara.jpg' %}">
+                        <img src="{% static '/MdRafi_Songs/Kitna_pyara.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Kitna pyara wada</h4>
@@ -103,7 +81,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="5">
-                        <img src="{% static '/image/Lata songs/Rangeela re.jpg' %}">
+                        <img src="{% static '/Lata_songs/Rangeela_re.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Rangeela re</h4>
@@ -113,7 +91,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="6">
-                        <img src="{% static '/image/Lata songs/Chhoti si.jfif' %}">
+                        <img src="{% static '/Lata_songs/Chhoti_si.jfif' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Chhoti si umar me</h4>
@@ -124,7 +102,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="7">
-                        <img src="{% static '/image/Lata songs/Milo na.jfif' %}">
+                        <img src="{% static '/Lata_songs/Milo_na.jfif' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Milo na tum to </h4>
@@ -135,7 +113,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster"  data-switch="8">
-                        <img src="{% static '/image/MdRafi Songs/Itna to.jpg' %}">
+                        <img src="{% static '/MdRafi_Songs/Itna_to.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Itna toh yaad hai mujhe</h4>
@@ -145,7 +123,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster"  data-switch="9">
-                        <img src="{% static '/image/Lata songs/Bekhudi mein.jpg' %}">
+                        <img src="{% static '/Lata_songs/Bekhudi_mein.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Bekhudi mein sanam</h4>
@@ -155,7 +133,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="10">
-                        <img src="{% static '/image/Kishore songs/Tere bina.jpg' %}">
+                        <img src="{% static '/Kishore_songs/Tere_bina.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Tere bina Zindagi se koi</h4>
@@ -165,7 +143,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster"  data-switch="11">
-                        <img src="{% static '/image/MdRafi Songs/Patta patta.jpg' %}">
+                        <img src="{% static '/MdRafi_Songs/Patta_patta.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Patta patta boota boota</h4>
@@ -175,7 +153,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster"  data-switch="12">
-                        <img src="{% static '/image/Lata songs/Yuhi tum.jfif' %}">
+                        <img src="{% static '/Lata_songs/Yuhi_tum.jfif' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Yuhi tum mujhse baat</h4>
@@ -185,7 +163,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="13">
-                        <img src="{% static '/image/MdRafi Songs/Dil tera.jpg' %}">
+                        <img src="{% static '/MdRafi_Songs/Dil_tera.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Dil tera deewana hai sanam</h4>
@@ -195,7 +173,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="14">
-                        <img src="{% static '/image/Kishore songs/Kora kagaz.jpg' %}">
+                        <img src="{% static '/Kishore_songs/Kora_kagaz.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Kora kagaz tha ye man mera</h4>
@@ -205,7 +183,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="15">
-                        <img src="{% static '/image/Kishore songs/Gaata rahe.jpg' %}">
+                        <img src="{% static '/Kishore_songs/Gaata_rahe.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Gaata rahe mera dil</h4>
@@ -215,7 +193,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="16">
-                        <img src="{% static '/image/Kishore songs/Gum hai.jpg' %}">
+                        <img src="{% static '/Kishore_songs/Gum_hai.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Gum hai kisi ke</h4>
@@ -225,7 +203,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="17">
-                        <img src="{% static '/image/Kishore songs/Jai jai.jpg' %}">
+                        <img src="{% static '/Kishore_songs/Jai_jai.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Jai jai shiv shankar</h4>
@@ -235,7 +213,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="18">
-                        <img src="{% static '/image/Kishore songs/Rimjhim gire.jpg' %}">
+                        <img src="{% static '/Kishore_songs/Rimjhim_gire.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Rimjhim gire saavan</h4>
@@ -245,7 +223,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="19">
-                        <img src="{% static '/image/Kishore songs/Tum aa.jpg' %}">
+                        <img src="{% static '/Kishore_songs/Tum_aa.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Tum aa gaye ho</h4>
@@ -267,8 +245,7 @@
 
 
 
-
-
+{% block js %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -284,6 +261,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
     <script src="{% static '/Lata.js'%}"> </script>
 
-</body>
+{% endblock js %}
 
-</html>
+</body>
+{% endblock content %}

@@ -1,37 +1,18 @@
-<!doctype html>
-<html lang="en">
-
-<head>
+{% extends 'layout_song.html' %}
+{% block content %}
 {% load static %}
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static '/singerPage.css'%}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-    <title>International songs</title>
-
-
-</head>
+    <title>{% block title %}International songs
+    {% endblock title %}</title>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button id="gobackBtn" class="btn btn-outline-success my-2 my-sm-0"><a href="music hpg.html">Go
-            Back</a></button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search for songs"
-                    aria-label="Search">
-                <button onclick="this.preventDefault()" id="searchBtn"
-                    class="btn btn-outline-success my-2 my-sm-0">Search</button>
-            </form>
-        </div>   
-    </nav>
+    
+<body>
+    
 
     <div class="main">
         <div class="container">
@@ -49,7 +30,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="0">
-                        <img src="{% static '/image/English songs/Stuck with u.jpeg' %}">
+                        <img src="{% static '/English_songs/Stuck_with_u.jpeg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Stuck with u</h4>
@@ -59,7 +40,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="1">
-                        <img src="{% static '/image/English songs/Intentions.jpeg' %}">
+                        <img src="{% static '/English_songs/Intentions.jpeg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Intentions</h4>
@@ -69,7 +50,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="2">
-                        <img src="{% static '/image/English songs/Lil Mosey.jfif' %}">
+                        <img src="{% static '/English_songs/Lil_Mosey.jfif' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Blueberry Faygo</h4>
@@ -79,7 +60,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="3">
-                        <img src="{% static '/image/English songs/LM3ALLEM-arabic.jpg' %}">
+                        <img src="{% static '/English_songs/LM3ALLEM-arabic.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>LM3ALLEM-arabic</h4>
@@ -89,7 +70,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="4">
-                        <img src="{% static '/image/English songs/Doja cat.jpg' %}">
+                        <img src="{% static '/English_songs/Doja_cat.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Say So</h4>
@@ -99,7 +80,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="5">
-                        <img src="{% static '/image/English songs/NAV - No Debate feat.jpg' %}">
+                        <img src="{% static '/English_songs/NAV_-_No_Debate_feat.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Travis Scott - Turks</h4>
@@ -109,7 +90,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="6">
-                        <img src="{% static '/image/English songs/The box.jpg' %}">
+                        <img src="{% static '/English_songs/The_box.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>The box</h4>
@@ -120,7 +101,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="7">
-                        <img src="{% static '/image/English songs/Stupid love.png' %}">
+                        <img src="{% static '/English_songs/Stupid_love.png' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Stupid love</h4>
@@ -130,7 +111,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="8">
-                        <img src="{% static '/image/English songs/Whats poppin.jpg' %}">
+                        <img src="{% static '/English_songs/Whats_poppin.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Whats poppin</h4>
@@ -140,7 +121,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="9">
-                        <img src="{% static '/image/English songs/The Weeknd - Blinding Lights.jpg' %}">
+                        <img src="{% static '/English_songs/The_Weeknd_-_Blinding_Lights.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>The Weekend - Blinding Lights</h4>
@@ -151,7 +132,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="10">
-                        <img src="{% static '/image/English songs/Be Kind.jpg' %}">
+                        <img src="{% static '/English_songs/Be_Kind.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Be Kind</h4>
@@ -161,7 +142,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="11">
-                        <img src="{% static '/image/English songs/Baby.jpg' %}">
+                        <img src="{% static '/English_songs/Baby.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Baby</h4>
@@ -171,7 +152,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="12">
-                        <img src="{% static '/image/English songs/Roses.jpg' %}">
+                        <img src="{% static '/English_songs/Roses.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Roses Imanbek Remix</h4>
@@ -181,7 +162,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="13">
-                        <img src="{% static '/image/English songs/Despacito.jpg' %}">
+                        <img src="{% static '/English_songs/Despacito.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Despacito</h4>
@@ -191,7 +172,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="14">
-                        <img src="{% static '/image/English songs/Dont Start Now.jpg' %}">
+                        <img src="{% static '/English_songs/Dont_Start_Now.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Don't Start Now</h4>
@@ -201,7 +182,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="15">
-                        <img src="{% static '/image/English songs/Joker BGM song.jpg' %}">
+                        <img src="{% static '/English_songs/Joker_BGM_song.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Joker BGM song</h4>
@@ -213,7 +194,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="16">
-                        <img src="{% static '/image/English songs/Shape Of You.jpg' %}">
+                        <img src="{% static '/English_songs/Shape_Of_You.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Shape Of You</h4>
@@ -223,7 +204,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="17">
-                        <img src="{% static '/image/English songs/Sick and Tired.jpg' %}">
+                        <img src="{% static '/English_songs/Sick_and_Tired.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Sick and Tired</h4>
@@ -233,7 +214,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="18">
-                        <img src="{% static '/image/English songs/Yummy.jpg' %}">
+                        <img src="{% static '/English_songs/Yummy.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Yummy</h4>
@@ -243,7 +224,7 @@
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="19">
-                        <img src="{% static '/image/English songs/Animal Trance.jpg' %}">
+                        <img src="{% static '/English_songs/Animal_Trance.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Animal trance</h4>
@@ -260,29 +241,21 @@
                 </div>
                 <div class="col-md-2">
                     <a href="#" class="album-poster">
-                        <img src="{% static '/image/Et20.jpg' %}">
+                        <img src="{% static '/Et20.jpg' %}">
                     </a>
                     <h4>Song Info</h4>
                 </div>
 
                 <div class="col-md-2">
                     <a href="#" class="album-poster">
-                        <img src="{% static '/image/Et20.jpg' %}">
+                        <img src="{% static '/Et20.jpg' %}">
                     </a>
                     <h4>Song Info</h4>
                 </div>
 
                 <div class="col-md-2">
                     <a href="#" class="album-poster">
-                        <img src="{% static '/image/Et20.jpg' %}">
-                    </a>
-                    <h4>Song Info</h4>
-                </div>
-
-
-                <div class="col-md-2">
-                    <a href="#" class="album-poster">
-                        <img src="{% static '/image/Et20.jpg' %}">
+                        <img src="{% static '/Et20.jpg' %}">
                     </a>
                     <h4>Song Info</h4>
                 </div>
@@ -290,7 +263,15 @@
 
                 <div class="col-md-2">
                     <a href="#" class="album-poster">
-                        <img src="{% static '/image/Et20.jpg' %}">
+                        <img src="{% static '/Et20.jpg' %}">
+                    </a>
+                    <h4>Song Info</h4>
+                </div>
+
+
+                <div class="col-md-2">
+                    <a href="#" class="album-poster">
+                        <img src="{% static '/Et20.jpg' %}">
                     </a>
                     <h4>Song Info</h4>
                 </div>
@@ -299,7 +280,7 @@
 
                 <div class="col-md-2">
                     English songs/ <a href="#" class="album-poster">
-                        <img src="{% static '/image/Et20.jpg' %}">
+                        <img src="{% static '/Et20.jpg' %}">
                     </a>
                     <h4>Song Info</h4>
                 </div>
@@ -312,7 +293,7 @@
     <div id="aplayer">
 
     </div>
-
+{% block js %}
 
 
 
@@ -333,6 +314,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
     <script src="{% static '/English.js'%}"> </script>
 
+{% endblock js %}
 </body>
 
-</html>
+{% endblock content %}
