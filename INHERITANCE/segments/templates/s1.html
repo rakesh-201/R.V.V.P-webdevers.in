@@ -1,23 +1,17 @@
 {% extends 'layout_song.html' %} {% block content %}
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> -->
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> {% load static %}
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <!-- Link Swiper's CSS -->
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css " rel="stylesheet " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN " crossorigin="anonymous ">
-<script src="https://unpkg.com/swiper/js/swiper.js "></script>
-<script src="https://unpkg.com/swiper/js/swiper.min.js "></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js "></script>
-{% load static %}
-<link rel="stylesheet " href="{% static '/S1.css'%} ">
+<link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="{% static 'music_hpg.js'%}"></script>
+<link rel="stylesheet" href="{% static 'music hpg.css'%}">
 <style>
     body {
         background-image: linear-gradient(rgb(64, 143, 0), rgb(0, 195, 255));
@@ -94,146 +88,199 @@
         text-align: center;
         padding-top: 30px;
         padding-bottom: 40px;
-        text-shadow: 0px 10px 10px 22px rgb(255, 32, 2)!important;
+        text-shadow: 0px 10px 10px 22px rgb(255, 32, 2) !important;
     }
 </style>
-
-
-</head>
 
 <body>
 
 
     <!-- Swiper -->
-    <main id="musicHome ">
+    <main id="musicHome">
 
 
-        <div class="swiper-container ">
-            <div class="heading ">
-                <h1> <i class="fa fa-music fa-md "><i class="fa fa-music fa-md " ></i></i> Your Personalized <br> Music App <i class="fa fa-music fa-md "><i class="fa fa-music fa-md " ></i></i>
+        <div class="swiper-container">
+            <div class="heading">
+                <h1> <i class="fa fa-music fa-md"><i class="fa fa-music fa-md"></i></i> Your Personalized <br> Music App
+                    <i class="fa fa-music fa-md"><i class="fa fa-music fa-md"></i></i>
                 </h1>
             </div>
-            <div class="head ">
+            <div class="head">
                 <h2>Top Charts</h2>
             </div>
 
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide " background={% static '/image/arjit.jpg' %}> <img src="{% static '/image/arjit.jpg' %} " width="290" height="290" alt="...">
-                    <h3>Arjit Singh<br><a id="arjit " href="/songs/arijit "><button type="button " class="btn btn-primary" >Play Songs<i class="fa fa-play padding-top:1px; "></i></button></a></h3>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(static/image/arjit.jpg)">
+                    <h3>Arjit Singh<br><a id="arjit" href="/songs/arijit"><button type="button"
+                                class="btn btn-primary">Play Songs <i
+                                    class="fa fa-play  padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/atif.jpg' %}> <img src="{% static '/image/atif.jpg' %} " width="290" height="290" alt="...">
-                    <h3>Atif Aslam<br><a id="atif " href="/songs/a`tif.html "><button type="button " class="btn btn-primary ">Play Songs<i class="fa fa-play padding-top:1px; "></i></button></a></h3>
+                <div class="swiper-slide" style="background-image:url(static/image/atif.jpg)">
+                    <h3>Atif Aslam<br><a id="atif" href="/songs/atif"><button type="button" class="btn btn-primary">Play
+                                Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/nehak.jpg' %}> <img src="{% static '/image/nehak.jpg' %} " width="290" height="290" alt="...">
-                    <h3>Neha kakkar<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide" style="background-image:url(static/image/nehak.jpg)">
+                    <h3>Neha kakkar<br><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/lata.jpg' %}> <img src="{% static '/image/lata.jpg' %} " width="290" height="290" alt="...">
-                    <h3>Lata Mangeshkar<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide" style="background-image:url(static/image/lata.jpg)">
+                    <h3>Lata Mangeshkar<br><a id="lata" href="/songs/lata"><button type="button"
+                                class="btn btn-primary">Play Songs <i
+                                    class="fa fa-play  padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/kishore.jpg' %}> <img src="{% static '/image/kishore.jpg' %} " width="290" height="290" alt="...">
-                    <h3>Kishore Kumar<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide" style="background-image:url(static/image/kishore.jpeg)">
+                    <h3>Kishore Kumar<br><a id="kishore" href="/songs/kishore"><button type="button"
+                                class="btn btn-primary">Play Songs <i
+                                    class="fa fa-play  padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/Mt20.jpg' %}> <img src="{% static '/image/Mt20.jpg' %} " width="290" height="290" alt="...">
-                    <h3>Marathi T20<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide" style="background-image:url(static/image/MdRafi.jpg)">
+                    <h3>Mohammad Rafi<br><a id="MdRafi" href="/songs/mdRafi"><button type="button"
+                                class="btn btn-primary">Play Songs<i
+                                    class="fa fa-play padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/Ht20.jpg' %}> <img src="{% static '/image/Ht20.jpg' %} " width="290" height="290" alt="...">
-                    <h3>Bollywood T20<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide" style="background-image:url(static/image/Asha.jpg)">
+                    <h3>Asha Bhosle<br><a id="Asha" href="/songs/asha"><button type="button" class="btn btn-primary">Play
+                                songs<i class="fa fa-play padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/Et20.jpg' %}> <img src="{% static '/image/Et20.jpg' %} " width="290" height="290" alt="...">
-                    <h3>English T20<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide" style="background-image:url(static/image/Mt20.jpeg)">
+                    <h3>Marathi T20<br><a id="Marathi" href="/songs/marathi"><button type="button"
+                            class="btn btn-primary">Play Songs <i class="fa fa-play padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide " background={% static '/image/.jpg' %}></div>
-                <div class="swiper-slide " background={% static '/image/0.jpg' %}></div>
+                <div class="swiper-slide" style="background-image:url(static/image/Ht20.jpg)">
+                    <h3>Bollywood T20<br><a id="Hindi" href="/songs/hindi"><button type="button" class="btn btn-primary">
+                      Play Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
+                </div>
+                <div class="swiper-slide" style="background-image:url(static/image/Et20.jpg)">
+                    <h3>English T20<br><a id="English" href="/songs/english"><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play  padding-top:1px;"></i></button></a></h3>
+                </div>
             </div>
             <!-- Add Pagination -->
-            <div class="swiper-pagination ">
-                <div class="loader ">
-                    <div class="spinner-grow text-success " role="status ">
-                        <span class="sr-only ">Loading...</span>
+            <div class="swiper-pagination">
+                <!-- <div class="loader">
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="sr-only">Loading...</span>
                     </div>
-                    <div class="spinner-grow text-danger " role="status ">
-                        <span class="sr-only ">Loading...</span>
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="sr-only">Loading...</span>
                     </div>
-                    <div class="spinner-grow text-warning " role="status ">
-                        <span class="sr-only ">Loading...</span>
+                    <div class="spinner-grow text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
                     </div>
-                </div>
+                </div>  -->
             </div>
         </div>
 
-        <div class="swiper-container 2 ">
-            <div class="head ">
+        <div class="swiper-container 2">
+            <div class="head">
                 <h2>Select Year</h2>
             </div>
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide ">2020
-                    <h3>2020<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">2020
+                    <h3>2020<br><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide ">2019
-                    <h3>2k19<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide">2019
+                    <h3>2k19<br><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide ">2018
-                    <h3>2k18<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide">2018
+                    <h3>2k18<br><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide ">2017
-                    <h3>2k17<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide">2017
+                    <h3>2k17<br><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide ">2016
-                    <h3>2k16<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide">2016
+                    <h3>2k16<br><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide ">2015>
-                    <h3>2k15<br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide">2015>
+                    <h3>2k15<br><button type="button" class="btn btn-primary">Play Songs <i
+                                class="fa fa-play padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide ">Coming Soon!!
-                    <h3><br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide">Coming Soon!!
+                    <h3><br><button type="button" class="btn btn-primary">Play Songs
+                            <i class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
-                <div class="swiper-slide ">Coming Soon!!
-                    <h3><br><button type="button " class="btn btn-primary ">Play Songs   <i class="fa fa-play padding-top:1px; "></i></button></h3>
+                <div class="swiper-slide">Coming Soon!!
+                    <h3><br><button type="button" class="btn btn-primary">Play Songs
+                            <i class="fa fa-play  padding-top:1px;"></i></button></h3>
                 </div>
 
             </div>
             <!-- Add Pagination -->
-            <div class="swiper-pagination "></div>
+            <div class="swiper-pagination"></div>
         </div>
     </main>
 
-    <div id="arjitpg ">
+    <div id="arjitpg">
 
     </div>
 
 
-    <div id="atifpg ">
+    <div id="atifpg">
+
+    </div>
+
+    <div id="latapg">
+
+    </div>
+
+    <div id="kishorepg">
+
+    </div>
+
+    <div id="MdRafipg">
+
+    </div>
+
+
+
+    <div id="Ashapg">
+
+    </div>
+
+    <div id="Marathipg">
+
+    </div>
+
+    <div id="Hindipg">
+
+    </div>
+
+    <div id="Englishpg">
 
     </div>
 
 
 
 
+    {% block js %}
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+
+
+    {% endblock js %}
 
 </body>
-{% endblock content %} {% block js %}
 
-<script src="{% static '/S1.js'%} "></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    });
-</script>
-
-{% endblock js %}
-
-
-</html>
+{% endblock content %}
