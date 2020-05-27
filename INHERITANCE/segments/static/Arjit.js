@@ -99,7 +99,7 @@ const ap = new APlayer({
             name: 'Ilahi',
             artist: 'Arjit Simgh',
             url: 'Ilahi.mp3',
-            cover: 'Ilahi'.jpg '
+            cover: 'Ilahi.jpg'
         },
         {
             name: 'Ik Vaari ya',
