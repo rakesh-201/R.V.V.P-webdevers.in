@@ -8,11 +8,12 @@
     str = `<h1 class="text-danger align-text-centre">Today's News...</h1>`
     $('#50').append(str)
     $(document).ready(function() {
-        $.ajax({
+        /* $.ajax({
             type: 'POST',
             URL: '/news',
             data: {
                 'csrfmiddlewaretoken': '{{ csrf_token }}',
+                'type': true,
             },
             encode: true,
         }).done(function(text) {
@@ -20,23 +21,65 @@
             txt = JSON.parse(text)
             for (i in txt) {
                 var a = ""
-                a = `<li class="  align-items-center text-danger" id="${i}" > ${ txt[i] } </li>`
+                a = `<li class="align-items-center text-danger" id="${i}" > ${ txt[i] } </li>`
                 $('#50').append(a)
             }
-
-        });
+            $.ajax({
+                type: 'POST',
+                URL: '/news',
+                data: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    'type': false,
+                },
+                encode: true,
+            }).done(function(txt) {
+                txt = JSON.parse(txt)
+                a = ` <h1 class="text-danger align-text-centre">Sorted News...</h1> `
+                $('#50').append(a)
+                for (i in txt) {
+                    var a = ""
+                    a = `<li class="align-items-center text-danger" id="${i}" > ${ txt[i] } </li>`
+                    $('#50').append(a)
+                }
+            })
+        }); */
         $.ajax({
             type: 'POST',
-            URL: '/news/speak',
+            URL: '/news',
             data: {
                 'csrfmiddlewaretoken': '{{ csrf_token }}',
+                'type': true,
             },
             encode: true,
-        }).done(function(a) {
-            console.log("done");
-            console.log(a);
+            success: function(text) {
+                console.log(text);
+                txt = JSON.parse(text)
+                for (i in txt) {
+                    var a = ""
+                    a = `<li class="align-items-center text-danger" id="${i}" > ${ txt[i] } </li>`
+                    $('#50').append(a)
+                }
+                $.ajax({
+                    type: 'POST',
+                    URL: '/news',
+                    data: {
+                        'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        'type': false,
+                    },
+                    encode: true,
+                    success: function(txt) {
+                        txt = JSON.parse(txt)
+                        a = ` <h1 class="text-danger align-text-centre">Sorted News...</h1> `
+                        $('#50').append(a)
+                        for (i in txt) {
+                            var a = ""
+                            a = `<li class="align-items-center text-danger" id="10${i}" > ${ txt[i] } </li>`
+                            $('#50').append(a)
+                        }
+                    }
+                })
+            }
         })
-
     })
 </script>
 

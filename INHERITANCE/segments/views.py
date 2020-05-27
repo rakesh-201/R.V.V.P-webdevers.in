@@ -10,20 +10,25 @@ import playsound
 import os
 import speech_recognition as sr;
 
-x=False
+x = False
+rr = 1
+z = 1
 def set(a):
     global x;
     x = a
+    global rr
+    rr=0
+    global z
+    z=1
+    
 def get():
     global x;
     return x
   
+  
+  
 
 # Create your views here.
-def text(request):
-    return HttpResponse(request.POST['text'])
-
-
 def home(request):
     if request.method == 'POST':
         username = request.POST.get('username', '')
@@ -84,25 +89,163 @@ def logout(request):
     return redirect("home")
 
 
+def News(request):
+    r = sr.Recognizer()
+    with  sr.Microphone() as source:
+        tts = gTTS("Listening......")
+        filename = "voice.mp3"
+        tts.save(filename)
+        playsound.playsound(filename)
+        os.remove(filename)
+        print("Listening......")
+        r.pause_threshold = 1
+        sr.Recognizer().energy_threshold = 1500
+        r.energy_threshold = 1500
+        audio = r.listen(source)
+        print('done')
+        tts = gTTS("Done")
+        filename = "voice.mp3"
+        tts.save(filename)
+        playsound.playsound(filename)
+        os.remove(filename)
+    try:
+        query = r.recognize_google(audio, language = 'en-in')
+        if "business" in query:
+            url_ = "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=619d592e3df744d7afc8d8492e0de271"
+        elif 'entertainment' in query:
+            url_ = "http://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=619d592e3df744d7afc8d8492e0de271"
+        elif ('sport' in query.lower()) or ('sports' in query.lower()):
+            url_ = "http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=619d592e3df744d7afc8d8492e0de271"
+        else:
+            print(query)
+            return HttpResponse(json.dumps(["Thank You..."])) 
+    except Exception as e:
+        global rr
+        rr += 1
+        tts = gTTS("Please say that again")
+        filename = "voice.mp3"
+        tts.save(filename)
+        playsound.playsound(filename)
+        os.remove(filename)
+        if rr<3:
+            return redirect("News")
+        else:
+            rr=0
+            tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
+            filename = "voice.mp3"
+            tts.save(filename)
+            playsound.playsound(filename)
+            os.remove(filename)
+            return HttpResponse(json.dumps(["Thank You..."]))
+    rr=0
+    news = requests.get(url_).text
+    news = json.loads(news)
+    articles = news['articles']
+    arts = []
+    for article in articles:
+        arts.append(article['title'])
+        tts=gTTS(text=article['title'], lang='en')
+        filename='voice.mp3'
+        tts.save(filename)
+        playsound.playsound(filename)
+        os.remove(filename)
+        print(article['title'])
+    art = json.dumps(arts)
+    return HttpResponse(art)
+
+
 def news(request):
     if get():
         if request.method == 'POST':
-            url = "http://newsapi.org/v2/top-headlines?country=in&apiKey=619d592e3df744d7afc8d8492e0de271"
-            news = requests.get(url).text
-            news = json.loads(news)
-            articles = news['articles']
-            arts = []
-            for article in articles:
-                arts.append(article['title'])
-                tts=gTTS(text=article['title'], lang='en')
+            global z
+            if z:
+                z=0
+                url = "http://newsapi.org/v2/top-headlines?country=in&apiKey=619d592e3df744d7afc8d8492e0de271"
+                news = requests.get(url).text
+                news = json.loads(news)
+                articles = news['articles']
+                arts = []
+                for article in articles:
+                    arts.append(article['title'])
+                    tts=gTTS(text=article['title'], lang='en')
+                    filename='voice.mp3'
+                    tts.save(filename)
+                    playsound.playsound(filename)
+                    os.remove(filename)
+                    print(article['title'])
+                art = json.dumps(arts)
+                return HttpResponse(art)
+            else:
+                z=1
+                tts=gTTS(text="The news is further sorted into three categories as follows: First, Business ; Second, Entertainment ; Third , Sports", lang='en')
                 filename='voice.mp3'
                 tts.save(filename)
                 playsound.playsound(filename)
                 os.remove(filename)
-                print(article['title'])
-            art = json.dumps(arts)
-            return HttpResponse(art)
-        return render(request, "news.html", {'text': text})
+                r = sr.Recognizer()
+                with  sr.Microphone() as source:
+                    tts = gTTS("Listening......")
+                    filename = "voice.mp3"
+                    tts.save(filename)
+                    playsound.playsound(filename)
+                    os.remove(filename)
+                    print("Listening......")
+                    r.pause_threshold = 1
+                    sr.Recognizer().energy_threshold = 1500
+                    r.energy_threshold = 1500
+                    audio = r.listen(source)
+                    print('done')
+                    tts = gTTS("Done")
+                    filename = "voice.mp3"
+                    tts.save(filename)
+                    playsound.playsound(filename)
+                    os.remove(filename)
+
+                try:
+                    query = r.recognize_google(audio, language = 'en-in')
+                    if "business" in query.lower():
+                        url_ = "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=619d592e3df744d7afc8d8492e0de271"
+                    elif 'entertainment' in query.lower():
+                        url_ = "http://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=619d592e3df744d7afc8d8492e0de271"
+                    elif ('sport' in query.lower()) or ('sports' in query.lower()) :
+                        url_ = "http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=619d592e3df744d7afc8d8492e0de271"
+                    else:
+                        print(query)
+                        return HttpResponse(json.dumps(["Thank You..."])) 
+                except Exception as e:
+                    global rr
+                    rr += 1
+                    tts = gTTS("Please say that again")
+                    filename = "voice.mp3"
+                    tts.save(filename)
+                    playsound.playsound(filename)
+                    os.remove(filename)
+                    if rr<3:
+                        return redirect("News")
+                    else:
+                        tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
+                        filename = "voice.mp3"
+                        tts.save(filename)
+                        playsound.playsound(filename)
+                        os.remove(filename)
+                        return HttpResponse(json.dumps(["Thank You..."]))
+
+                rr=0
+                news = requests.get(url_).text
+                news = json.loads(news)
+                articles = news['articles']
+                arts = []
+                for article in articles:
+                    arts.append(article['title'])
+                    tts=gTTS(text=article['title'], lang='en')
+                    filename='voice.mp3'
+                    tts.save(filename)
+                    playsound.playsound(filename)
+                    os.remove(filename)
+                    print(article['title'])
+                art = json.dumps(arts)
+                return HttpResponse(art)
+        return render(request, "news.html")
     return redirect("home")
 
 
@@ -163,28 +306,47 @@ def notebook(request):
 
 
 def arijit(request):
-    return render(request, "song_arijit.html")
-
+    if get():
+        return render(request, "song_arijit.html")
+    return redirect("home")
 
 def atif(request):
-    return render(request, "song_atif.html")
-
+    if get():
+        return render(request, "song_atif.html")
+    return redirect("home")
+        
 
 def english(request):
-    return render(request, "english.html")
+    if get():
+        return render(request, "english.html")
+    return redirect("home")
 
 
 def asha(request):
-    return render(request, "asha.html")
+    if get():
+        return render(request, "asha.html")
+    return redirect("home")
 
 
 def marathi(request):
-    return render(request, "marathi.html")
+    if get():
+        return render(request, "marathi.html")
+    return redirect("home")
 
 
 def mdRafi(request):
-    return render(request, "mdrafi.html")
+    if get():
+        return render(request, "mdrafi.html")
+    return redirect("home")
 
 
 def lata(request):
-    return render(request, "lata.html")
+    if get():
+        return render(request, "lata.html")
+    return redirect("home")
+
+
+def hindi(request):
+    if get():
+        return render(request, "hindi.html")
+    return redirect("home")
