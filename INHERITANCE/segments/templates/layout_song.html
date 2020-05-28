@@ -31,14 +31,11 @@
                     <a class="nav-link text-primary" href="/contact">Contact us</a>
                 </li>
             </ul>
-            <form class="form-inline  my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+            <form class="form-inline my-lg-0">
+                <input class="form-control mr-sm-1" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-sm-0 " type="submit">Search</button>
             </form>
-            <a href="/logout"><button class="btn btn-outline-success my-lg-0 my-2 mx-2 my-sm-0" data-toggle="modal" data-target="#LoginModal" type="submit">Logout</button></a>
-            <a href="/news"><button class="btn btn-outline-success my-lg-0 my-2 mx-2 my-sm-0" data-toggle="modal" data-target="#LoginModal" type="submit">Latest News</button></a>
-            <a href="/songs"><button class="btn btn-outline-success my-lg-0 my-2 mx-2 my-sm-0" data-toggle="modal" data-target="#SignupModal" type="submit">Songs</button></a>
-            <a href="/notebook"><button class="btn btn-outline-success my-lg-0 my-2 mx-2 my-sm-0" data-toggle="modal" data-target="#SignupModal" type="submit">Note Book</button></a>
+            <a href="/songs"><button class="btn btn-outline-success my-lg-0 mx-2 my-sm-0" data-toggle="modal" data-target="#SignupModal" type="submit">Songs</button></a>
         </div>
     </nav>
     {% block content %} {% endblock content %}
