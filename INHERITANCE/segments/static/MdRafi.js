@@ -198,14 +198,14 @@ const ap = new APlayer({
         {
             name: 'Bekhudi mein sanam',
             artist: 'Lata Mangeshkar, Mohammad Rafi ',
-            url: 'Lata Songs/Bekhudi_mein.mp3',
-            cover: 'Lata Songs/Bekhudi_mein.jpg'
+            url: 'Lata_Songs/Bekhudi_mein.mp3',
+            cover: 'Lata_Songs/Bekhudi_mein.jpg'
         },
         {
             name: 'Yuhi tum mujhse baat',
             artist: 'Mohammad Rafi, Lata Mangeshkar',
-            url: 'Lata songs/Yuhi_tum.mp3',
-            cover: 'Lata songs/Yuhi_tum.jfif'
+            url: 'Lata_Songs/Yuhi_tum.mp3',
+            cover: 'Lata_Songs/Yuhi_tum.jfif'
         }
     ]
 });
