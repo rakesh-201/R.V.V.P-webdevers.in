@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	
+    <link rel="stylesheet" type="text/css" href="loginForm.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+
+<div class="container">
+	<div class="header">
+        <h2>Login Here</h2>
+       <a href="#" id="forgetPassword">Forget passsword ?</a>
+	</div>
+	<form id="form" class="form">
+		<div class="form-control">
+			<label for="username">Username</label>
+			<input type="text" placeholder="florinpop17" id="username" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+	
+		<div class="form-control">
+			<label for="username">Password</label>
+			<input type="password" placeholder="Password" id="password"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+	
+		<button type="submit">Submit</button>
+	</form>
+</div>
+
+
+
+<form id="getUName" class="form">
+    <div class="form-control">
+        <label for="username" ><h2 id="usernameText">Enter Username</h2></label>
+        <input type="text" placeholder="florinpop17" id="enterUsername" />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+    </div>
+
+
+    <button type="submit" id="getPassword">Get Password</button>
+</form>
+
+
+
+
+
+
+
+
+<script  src="loginForm.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
