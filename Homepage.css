@@ -1,7 +1,9 @@
 .jumbotron{
-    background-image: url("bgimg14.jpg");
+    background-image: url("bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: cross-fade(100);
+    
     color:rgb(219, 250, 133)
 }
 .subhd h5{
@@ -23,4 +25,33 @@ ul li{
 }
 .jumbotron{
     text-align: center;
+}
+
+.slideshow{
+    width: 65%;
+    height: 500px;
+    margin: auto;
+}
+#slideimage{
+    width:100%;
+    height:350px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+body{
+    background-color: #ff00fc !important;
+    text-decoration: solid;
+}
+#slideText{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgba(255, 254, 167, 0.904)(0, 255, 34, 0.575)a(0, 255, 34, 0.575)a(0, 255, 34, 0.575)a(0, 255, 34, 0.575)a(0, 255, 34, 0.575)a(0, 255, 34, 0.575)a(0, 255, 34, 0.575)a(0, 255, 34, 0.575)a(0, 255, 115, 0.575)a(0, 255, 115, 0.575)a(0, 255, 115, 0.575) !important;
+    text-align: center;
+    margin:5px;
+    padding:5px;
+    cursor: pointer;
+   text-shadow: 0px 1px 3px 2px grey;
+}
+a{
+    text-decoration:none;
+    color:black;
 }
