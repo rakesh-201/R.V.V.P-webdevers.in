@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The News</title>
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <h1>News Day-Night</h1>
+        <hr>
+
+      <button class="btn btn-outline-success my-2 my-sm-0"  id="themeChange1" onclick="changeTheme1()">Light </button>
+      <button class="btn btn-outline-success my-2 my-sm-0"  id="themeChange2" onclick="changeTheme2()">Dark </button>
+       
+    </nav>
+    <main>
+        <div class="cont">
+            <h2 style="color: coral;"  class="category">Top Stories for you</h2>
+            <hr>
+            <div class="newsBox">
+               
+                <img src="news1.jpg">
+                <h2>Headlines,Lorem ipsum dolor sit amet consectetur ad</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news2.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news3.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news4.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div> <div class="newsBox">
+                <img src="news5.jpg">
+                                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news6.jpg">
+               <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news1.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div>
+        </div>
+
+
+
+        <div class="cont">
+            <h2 style="color: coral;"  class="category">Corona Breaking</h2>
+            <hr>
+            <div class="newsBox">
+               
+                <img src="news1.jpg">
+            <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news2.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news3.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news4.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div> 
+            </div>
+        </div>
+
+        <div class="cont">
+            <h2 style="color: coral;" class="category"> Sports </h2>
+            <hr>
+            <div class="newsBox">
+               
+                <img src="news1.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news2.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news3.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+               
+                <img src="news1.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news4.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div> 
+            </div>
+        </div>
+    </main>
+
+    <script>
+   document.getElementById("themeChange2").hide();
+        function changeTheme1(){
+            console.log("Theme Changing");
+            
+            document.body.style.backgroundColor = "rgb(68, 214, 232)";
+            
+            document.getElementById("themeChange2").show();
+            document.getElementById("themeChange1").hide();
+        };
+        
+
+        function changeTheme2(){
+            console.log("Theme Changing");
+            
+            document.body.style.backgroundColor = "#000";
+            
+            document.getElementById("themeChange2").hide();
+            document.getElementById("themeChange1").show();
+        };
+            </script>
+
+</body>
+</html>
