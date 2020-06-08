@@ -1,36 +1,46 @@
 {% extends 'layout.html' %} {% block content %} {% load static %}
+<style>
+    .carou {
+        border: 4px solid red;
+    }
+</style>
 <ul id="msg">
     {% if messages %} {% for msg in messages %}
     <code class="text-center">
         {{ msg }}
     </code> {% endfor %} {% endif %}
 </ul>
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide carou" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
     </ol>
+    <!--
+        {%static 'image/img11.jpg'%}
+        {%static 'image/img12.jpg'%}
+        {%static 'image/img13.jpg'%}
+    -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{%static 'image/img11.jpg'%}" class="d-block w-100" width="100" height="360" alt="...">
+            <img src="{% static '/diary.jpg'%}" class="d-block w-100" width="100" height="360" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h2 class="text-primary font-weight-bolder"> B_Site </h2>
-                <p class="text-primary  font-weight-bolder"> A Site for the people with Golden Dreams </p>
+                <h5 class="text-primary font-weight-bolder typed"></h5>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{%static 'image/img12.jpg'%}" class="d-block w-100" width="100" height="360" alt="...">
+            <img src="{% static '/music.jpeg'%}" class="d-block w-100" width="100" height="360" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5 class="text-primary  font-weight-bolder"> B_Site </h5>
-                <p class="text-primary  font-weight-bolder"> A Site for the people with Golden Dreams </p>
+                <h2 class="text-primary  font-weight-bolder"> B_Site </h2>
+                <h5 class="text-primary  font-weight-bolder typed-1"></h5>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{%static 'image/img13.jpg'%}" class="d-block w-100" width="100" height="360" alt="...">
+            <img src="{% static '/news.jpeg'%}" class="d-block w-100" width="100" height="360" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5 class="text-primary  font-weight-bolder"> B_Site </h5>
-                <p class="text-primary  font-weight-bolder"> A Site for the people with Golden Dreams </p>
+                <h2 class="text-primary  font-weight-bolder"> B_Site </h2>
+                <h5 class="text-primary  font-weight-bolder typed-2"></h5>
             </div>
         </div>
     </div>
@@ -45,36 +55,105 @@
 </div>
 <div class="container">
     <div class="card-group">
-        <div class="card mx-1 my-2">
+        <div class="card mx-1 my-2 carou">
             <img src="{%static 'image/news.jpg'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-primary font-weight-bolder">LATEST NEWS</h5>
                 <p class="card-text text-primary ">Stay updated with latest & fresh News even in today's busy lifestyle.</p>
             </div>
         </div>
-        <div class="card mx-1 my-2">
+        <div class="card mx-1 my-2 carou">
             <img src="{%static 'image/music.jpg'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-primary font-weight-bolder">MELODIOUS MUSIC</h5>
                 <p class="card-text text-primary">Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.</p>
             </div>
         </div>
-        <div class="card mx-1 my-2">
+        <div class="card mx-1 my-2 carou">
             <img src="{%static 'image/notebook.jpg'%}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-primary font-weight-bolder">MONEY SAVER</h5>
+                <h5 class="card-title text-primary font-weight-bolder">MY DAIRY</h5>
                 <p class="card-text text-primary">It’s not how much money you make, but how much money you keep, how hard it works for you!
             </div>
         </div>
     </div>
 </div>
 
+<!-- <video poster="movie.jpg" controls="controls">
+  <source src="403.mp4" type="video/mp4; codecs="avc1.4D401E, mp4a.40.2""/>
+<object data="demo.swf" height="250" width="250">
+<embed src="demo.swf" height="250" width="250">
+    Text content in the event that no video can be played.
+</embed>
+</object>
+</video> -->
 {% endblock content %} {% block js %}
+<style>
+    .typed {
+        display: inline
+    }
+    
+    .typed-1 {
+        display: inline
+    }
+    
+    .typed-2 {
+        display: inline
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
 <script>
     setTimeout(function() {
         if ($('#msg').length > 0) {
             $('#msg').remove();
         }
     }, 4000)
+
+    $(document).ready(function() {
+        var typed = new Typed('.typed', {
+            strings: ["A Site for the people with Golden Dreams", "A Site for the people with Golden Dreams", "Access to Web is for everyone regardless of the disability", "Web for Everyone is our Moto :)"],
+            backSpeed: 15,
+            smartBackspace: true,
+            backDelay: 1200,
+            startDelay: 1000,
+            typeSpeed: 25,
+            loop: true,
+        });
+        var typed = new Typed('.typed-1', {
+            strings: ["A Site for the people with Golden Dreams", "A Site for the people with Golden Dreams", "Access to Web is for everyone regardless of the disability", "Web for Everyone is our Moto :)"],
+            backSpeed: 15,
+            smartBackspace: true,
+            backDelay: 1200,
+            startDelay: 1000,
+            typeSpeed: 25,
+            loop: true,
+        });
+        var typed = new Typed('.typed-2', {
+            strings: ["A Site for the people with Golden Dreams", "A Site for the people with Golden Dreams", "Access to Web is for everyone regardless of the disability", "Web for Everyone is our Moto :)"],
+            backSpeed: 15,
+            smartBackspace: true,
+            backDelay: 1200,
+            startDelay: 1000,
+            typeSpeed: 25,
+            loop: true,
+        });
+        $.ajax({
+            type: 'GET',
+            URL: '/',
+            data: {
+                'res': 1
+            },
+            encode: true,
+            success: function(text) {
+                console.log('Done');
+                console.log(text);
+                if (text == 'register') {
+                    window.location.href = '/register'
+                } else if (text == 'login') {
+                    window.location.href = '/login_page'
+                }
+            }
+        })
+    })
 </script>
 {% endblock js %}

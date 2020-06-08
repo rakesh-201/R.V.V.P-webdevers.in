@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The News</title>
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: box 0;
+        }
+        
+        body {
+            /* background-image: url("newsbg.jpg"); */
+            background-size: cover;
+            color: rgb(245, 94, 94);
+            background-color: black;
+        }
+        
+        h1 {
+            text-align: center;
+            font: larger;
+            font-weight: bolder;
+            font-size: 2.0rem;
+        }
+        
+        h2 {
+            font: larger;
+            max-width: 88%;
+            text-align: center;
+            font-size: 1.0rem;
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .category {
+            font: larger;
+            max-width: 88%;
+            text-align: center;
+            font-size: 1.6rem;
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .cont {
+            display: flex;
+            margin: 20px;
+            border-radius: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .newsBox {
+            padding: 10px;
+            margin: 20px;
+            border: 3px solid rgb(188, 255, 132);
+            min-width: 25%;
+        }
+        
+        img {
+            background-size: cover;
+            width: 100%;
+            height: 70px;
+            border-radius: 10px;
+            align-content: center;
+        }
+        
+        h4 {
+            color: rgb(255, 0, 200);
+            box-shadow: 0px 2px 2px 3px rgb(0, 68, 255);
+            padding: 4px;
+        }
+        
+        h4:hover {
+            box-shadow: none;
+            border: 1px solid rgb(10, 26, 255);
+            background-color: rgb(212, 255, 58);
+        }
+        
+        .cont h2 {
+            margin: 4px;
+            text-align: center;
+        }
+        
+        button {
+            float: right;
+            width: 80px;
+            height: 40px;
+            background-color: rgb(255, 252, 86);
+            padding: 5px;
+            margin: 10px;
+            font-style: initial;
+            font-size: 1.2rem;
+            color: rgb(0, 47, 255);
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>News Day-Night</h1>
+        <hr>
+
+        <button class="btn btn-outline-success my-2 my-sm-0" id="themeChange1" onclick="changeTheme1()">Light </button>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="themeChange2" onclick="changeTheme2()">Dark </button>
+
+    </nav>
+    <main>
+        <div class="cont">
+            <h2 style="color: coral;" class="category">Top Stories for you</h2>
+            <hr>
+            <div class="newsBox">
+
+                <img src="news1.jpg">
+                <h2>Headlines,Lorem ipsum dolor sit amet consectetur ad</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news2.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news3.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news4.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news5.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news6.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news1.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div>
+        </div>
+
+
+
+        <div class="cont">
+            <h2 style="color: coral;" class="category">Corona Breaking</h2>
+            <hr>
+            <div class="newsBox">
+
+                <img src="news1.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news2.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news3.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news4.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div>
+        </div>
+        </div>
+
+        <div class="cont">
+            <h2 style="color: coral;" class="category"> Sports </h2>
+            <hr>
+            <div class="newsBox">
+
+                <img src="news1.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news2.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, impedit.</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news3.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur.</h4>
+            </div>
+            <div class="newsBox">
+
+                <img src="news1.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nemo!</h4>
+            </div>
+            <div class="newsBox">
+                <img src="news4.jpg">
+                <h2>Headlines</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorum</h4>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("themeChange2").hide();
+
+        function changeTheme1() {
+            console.log("Theme Changing");
+
+            document.body.style.backgroundColor = "rgb(68, 214, 232)";
+
+            document.getElementById("themeChange2").show();
+            document.getElementById("themeChange1").hide();
+        };
+
+
+        function changeTheme2() {
+            console.log("Theme Changing");
+
+            document.body.style.backgroundColor = "#000";
+
+            document.getElementById("themeChange2").hide();
+            document.getElementById("themeChange1").show();
+        };
+    </script>
+
+</body>
+
+</html>

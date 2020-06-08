@@ -39,11 +39,37 @@
 
 
 {% endblock content %} {% block js %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script>
     setTimeout(function() {
         if ($('#msg').length > 0) {
             $('#msg').remove();
         }
     }, 4000)
+    $("#forgetPassword").click(function() {
+        $(".container").hide();
+        $("#getUName").show();
+    });
+    $(document).ready(() => {
+        $.ajax({
+            type: 'GET',
+            URL: '/login',
+            data: {
+                respon: 1,
+            },
+            encode: true,
+            success: (text) => {
+                if (text == 'news') {
+                    window.location.href = '/news'
+                }
+                if (text == 'music') {
+                    window.location.href = '/songs'
+                }
+                if (text == 'diary')
+                    window.location.href = '/notebook'
+            }
+        })
+    })
 </script>
 {% endblock js %}

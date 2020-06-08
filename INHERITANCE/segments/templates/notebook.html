@@ -1,4 +1,4 @@
-{% extends 'layout1.html' %} {% block title %} Dairy {% endblock title %} {% block content %}
+{% extends 'layout1.html' %} {% block title %} Diary {% endblock title %} {% block content %}
 <style>
     .border-warning {
         border-radius: 100px;
@@ -12,7 +12,7 @@
 <div class="container">
     <div class="jumbotron mt-5 border border-warning ">
         <div class="container">
-            <h1 class="display-4 font-weight-bolder text-warning ">Dairy</h1>
+            <h1 class="display-4 font-weight-bolder text-warning ">My Diary</h1>
             <p class="lead text-warning ">Hello!, Please speak what you wanna save.</p>
         </div>
     </div>
@@ -21,10 +21,20 @@
     <div class="jumbotron mt-5 border border-warning ">
         <div class="container">
             <h4 class=" font-weight-bolder text-warning ">You May Also Write Here...</h4>
-            <form action="/notebook" method="POST"> {% csrf_token %}
+            <form action="/diary" method="POST"> {% csrf_token %}
                 <input type="text" name="text">
-                <button type="submit"ass="btn btn-outline-warning"> Save </button>
+                <button type="submit" class="mt-2 btn btn-outline-warning"> Save </button>
             </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron mt-5 border border-warning ">
+        <div class="container">
+            <h4 class=" font-weight-bolder text-warning ">Your Previously saved stories...</h4>
+            <ul id="50">
+
+            </ul>
         </div>
     </div>
 </div>
@@ -34,16 +44,58 @@
         console.log("starting");
         $.ajax({
             type: 'POST',
-            URL: '/news',
+            URL: '/notebook',
             data: {
                 'csrfmiddlewaretoken': '{{ csrf_token }}',
+                respons: 0,
             },
             encode: true,
         }).done(function(text) {
-            console.log(text);
-            if (text == -1) {
-                location.reload()
+            text = JSON.parse(text)
+            for (i in text['txt']) {
+                txt = text['txt'][i][0]
+                date = text['txt'][i][1]
+                var a = ""
+                a = `<li class="list-group-item d-flex justify-content-between align-items-center">
+                    ${txt}
+                    <span class="badge badge-primary badge-pill">${date}</span>
+                </li>`
+                $('#50').append(a)
             }
+            $.ajax({
+                type: 'POST',
+                URL: '/notebook',
+                data: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    respons: 1,
+                },
+                encode: true,
+                success: function(text) {
+                    $.ajax({
+                        type: 'POST',
+                        URL: '/notebook',
+                        data: {
+                            'csrfmiddlewaretoken': '{{ csrf_token }}',
+                            respons: 0,
+                        },
+                        encode: true,
+                    }).done(function(text) {
+                        console.log(text)
+                        text = JSON.parse(text)
+                        $('#50').empty()
+                        for (i in text['txt']) {
+                            txt = text['txt'][i][0]
+                            date = text['txt'][i][1]
+                            var a = ""
+                            a = `<li class="list-group-item d-flex justify-content-between align-items-center">
+                                ${txt}
+                                <span class="badge badge-primary badge-pill">${date}</span>
+                            </li>`
+                            $('#50').append(a)
+                        }
+                    })
+                }
+            })
         })
     })
 </script>

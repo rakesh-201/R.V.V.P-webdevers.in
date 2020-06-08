@@ -1,4 +1,4 @@
-$(".album-poster").on("click", function () {
+$(".album-poster").on("click", function() {
     var dataSwitchId = $(this).attr("data-switch");
     //console.log(dataSwitchId);
 
@@ -15,143 +15,141 @@ $(".album-poster").on("click", function () {
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     listFolded: true,
-    audio: [
-        {
+    audio: [{
             name: 'Stuck with u',
             artist: 'Ariana Grande & Justin Bieber',
-            url: 'English songs/Stuck with u.mp3',
-            cover: 'English songs/Stuck with u.jpeg'
+            url: 'static/English_songs/Stuck_with_u.mp3',
+            cover: 'static/English_songs/Stuck_with_u.jpeg'
         },
         {
             name: 'Intentions',
             artist: 'Justin Bieber',
-            url: 'English songs/Intentions.mp3',
-            cover: 'English songs/Intentions.jpeg'
+            url: 'static/English_songs/Intentions.mp3',
+            cover: 'static/English_songs/Intentions.jpeg'
         },
         {
             name: 'Blueberry Faygo ',
             artist: 'Lil Mosey',
-            url: 'English songs/Lil Mosey.mp3',
-            cover: 'English songs/Lil Mosey.jfif'
+            url: 'static/English_songs/Lil_Mosey.mp3',
+            cover: 'static/English_songs/Lil_Mosey.jfif'
         },
         {
             name: 'LM3ALLEM-arabic',
             artist: 'Saad Lamjarred',
-            url: 'English songs/LM3ALLEM-arabic.mp3',
-            cover: 'English songs/LM3ALLEM-arabic.jpg'
+            url: 'static/English_songs/LM3ALLEM-arabic.mp3',
+            cover: 'static/English_songs/LM3ALLEM-arabic.jpg'
         },
         {
             name: 'Say So ',
             artist: 'Doja Cat',
-            url: 'English songs/Doja cat.mp3',
-            cover: 'English songs/Doja cat.jpg'
+            url: 'static/English_songs/Doja_cat.mp3',
+            cover: 'static/English_songs/Doja_cat.jpg'
         },
         {
             name: 'Travis Scott - Turks',
             artist: 'NAV & Gunna',
-            url: 'English songs/NAV - No Debate feat.mp3',
-            cover: 'English songs/NAV - No Debate feat.jpg'
+            url: 'static/English_songs/NAV-No_Debate_feat.mp3',
+            cover: 'static/English_songs/NAV-No_Debate_feat.jpg'
         },
         {
             name: 'The Box',
             artist: 'Roddy Ricch',
-            url: 'English songs/The box.mp3',
-            cover: 'English songs/The box.jpg'
+            url: 'static/English_songs/The_box.mp3',
+            cover: 'static/English_songs/The_box.jpg'
         },
         {
             name: 'Stupid Love',
             artist: 'Lady Gaga ',
-            url: 'English songs/Stupid love.mp3',
-            cover: 'English songs/Stupid love.png'
+            url: 'static/English_songs/Stupid_love.mp3',
+            cover: 'static/English_songs/Stupid_love.png'
         },
         {
             name: 'Whats Poppin',
             artist: 'Jack Harlow',
-            url: 'English songs/Whats poppin.mp3',
-            cover: 'English songs/Whats poppin.jpg'
+            url: 'static/English_songs/Whats_poppin.mp3',
+            cover: 'static/English_songs/Whats_poppin.jpg'
         },
         {
             name: 'The Weeknd - Blinding Lights',
             artist: 'Weeknd',
-            url: 'English songs/The Weeknd - Blinding Lights.mp3',
-            cover: 'English songs/The Weeknd - Blinding Lights.jpg'
+            url: 'static/English_songs/The_Weeknd-Blinding_Lights.mp3',
+            cover: 'static/English_songs/The_Weeknd-Blinding_Lights.jpg'
         },
         {
             name: 'Be Kind',
             artist: 'Marshallow and Halsey',
-            url: 'English songs/Be Kind.mp3',
-            cover: 'English songs/Be Kind.jpg'
+            url: 'static/English_songs/Be_Kind.mp3',
+            cover: 'static/English_songs/Be_Kind.jpg'
         },
         {
             name: 'Baby',
             artist: 'Justin Bieber',
-            url: 'English songs/Baby.mp3',
-            cover: 'English songs/Baby.jpg'
+            url: 'static/English_songs/Baby.mp3',
+            cover: 'static/English_songs/Baby.jpg'
         },
         {
             name: 'Roses Imanbek Remix ',
             artist: 'SAINt JHN ',
-            url: 'English songs/Roses.mp3',
-            cover: 'English songs/Roses.jpg'
+            url: 'static/English_songs/Roses.mp3',
+            cover: 'static/English_songs/Roses.jpg'
         },
         {
             name: 'Despacito',
             artist: 'Louis Founsi',
-            url: 'English songs/Despacito.mp3',
-            cover: 'English songs/Despacito.jpg'
+            url: 'static/English_songs/Despacito.mp3',
+            cover: 'static/English_songs/Despacito.jpg'
         },
         {
             name: 'Dont Start Now',
             artist: 'Dua Lipa',
-            url: 'English songs/Dont Start Now.mp3',
-            cover: 'English songs/Dont Start Now.jpg'
+            url: 'static/English_songs/Dont_Start_Now.mp3',
+            cover: 'static/English_songs/Dont_Start_Now.jpg'
         },
         {
             name: 'Joker BGM song',
             artist: 'Indila',
-            url: 'English songs/Joker BGM song.mp3',
-            cover: 'English songs/Joker BGM song.jpg'
+            url: 'static/English_songs/Joker_BGM_song.mp3',
+            cover: 'static/English_songs/Joker_BGM_song.jpg'
         },
         {
             name: 'Shape Of You',
             artist: 'Ed Sherran',
-            url: 'English songs/Shape Of You.mp3',
-            cover: 'English songs/Shape Of You.jpg'
+            url: 'static/English_songs/Shape_Of_You.mp3',
+            cover: 'static/English_songs/Shape_Of_You.jpg'
         },
         {
             name: 'Sick and Tired',
             artist: 'Anastacia',
-            url: 'English songs/Sick and Tired.mp3',
-            cover: 'English songs/Sick and Tired.jpg'
+            url: 'static/English_songs/Sick_and_Tired.mp3',
+            cover: 'static/English_songs/Sick_and_Tired.jpg'
         },
         {
             name: 'Yummy',
             artist: 'Justin Bieber',
-            url: 'English songs/Yummy.mp3',
-            cover: 'English songs/Yummy.jpg'
+            url: 'static/English_songs/Yummy.mp3',
+            cover: 'static/English_songs/Yummy.jpg'
         },
         {
             name: 'Animal Trance',
             artist: 'Jules Craig',
-            url: 'English songs/Animal Trance.mp3',
-            cover: 'English songs/Animal Trance.jpg'
+            url: 'static/English_songs/Animal_Trance.mp3',
+            cover: 'static/English_songs/Animal_Trance.jpg'
         }
     ]
 });
 
 let search = document.getElementById("searchTxt");
-search.addEventListener("input", function () {
+search.addEventListener("input", function() {
     let inputVal = search.value;
     inputVal = inputVal.toLocaleLowerCase();
     console.log("input event fired!", inputVal);
     let songCards = document.getElementsByClassName("songCard");
-    Array.from(songCards).forEach(function (element) {
+    Array.from(songCards).forEach(function(element) {
         let songTxt = element.getElementsByTagName("h4")[0].innerText;
         songTxt = songTxt.toLocaleLowerCase();
         if (songTxt.includes(inputVal)) {
             element.style.display = "block";
-        }
-        else {
+        } else {
             element.style.display = "none";
         }
     })

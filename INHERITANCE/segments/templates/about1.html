@@ -1,0 +1,179 @@
+{% extends 'layout.html' %} {% block title %} About Us {% endblock title %} {% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-family: consolas;
+        background-color: rgb(80, 49, 255) !important;
+    }
+    
+    .cont {
+        position: relative;
+        width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: space-around;
+    }
+    
+    .cont .box {
+        position: relative;
+        width: 280px;
+        height: 400px;
+        margin: 20px 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 3px 20px 1px rgb(19, 37, 65);
+    }
+    
+    .content .box:hover .box {
+        box-shadow: none;
+    }
+    
+    .Header {
+        border-radius: 2px;
+        background-color: rgb(196, 231, 161);
+    }
+    
+    .cont .box .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        clip-path: circle(400px at center 100px);
+        transition: 0.5s;
+        transition-delay: 0.5s;
+    }
+    
+    .cont .box:hover .imgBx {
+        clip-path: circle(80px at center 100px);
+        transition-delay: 0s;
+        box-shadow: none;
+    }
+    
+    .box {
+        border: 4px solid yellow;
+    }
+    
+    .cont .box .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .cont .box .content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 55%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    .cont .box .content h2 {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .cont .box .content a {
+        text-decoration: none;
+        background: rgb(255, 601, 191);
+        color: #fff;
+        padding: 5px;
+        display: inline-block;
+    }
+    
+    .cont .box .content h2,
+    .cont .box .content p,
+    .cont .box .content a {
+        opacity: 0;
+        transition: 0.5s;
+        transform: translateY(20px);
+    }
+    
+    .cont .box:hover .content h2 {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.5s
+    }
+    
+    .cont .box:hover .content p {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.7s
+    }
+    
+    .cont .box:hover .content a {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.9s
+    }
+</style>
+
+<body>
+    {% load static %}
+    <div class="cont mt-2 text-warning">
+        <div>
+            <p class="text-warning mb-3">It all started with INHERITANCE. A program that is conducted in VJTI, wherein the SYs assign some project to the FYs so that they get an idea of how projects are made, what is team work, how to manage time and more than anything else how to
+                utilize summer vacation. This site is made by Four students of VJTI.</p>
+        </div>
+        <div class="box mx-2">
+            <div class="imgBx">
+                <img src="{% static '/image/rakesh.jpg'%}">
+            </div>
+            <div class="content">
+                <h2>Rakesh Rajpurohit</h2>
+                <p>A student of VJTI. Branch IT.</p>
+
+            </div>
+        </div>
+
+        <div class="box mx-2">
+            <div class="imgBx">
+                <img src="{% static '/image/1.jpeg' %}">
+            </div>
+            <div class="content">
+                <h2>Vishal Dange</h2>
+                <p>A student of VJTI. Branch IT.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="box mx-2">
+            <div class="imgBx">
+                <img src="{% static '/image/2.jpeg' %}">
+            </div>
+            <div class="content">
+                <h2>Vedant Mondkar</h2>
+                <p>A student of VJTI. Branch IT.</p>
+
+            </div>
+        </div>
+        <div class="box mx-2">
+            <div class="imgBx">
+                <img src="{% static '/image/3.jpeg' %}">
+            </div>
+            <div class="content">
+                <h2>Prashant Bhala</h2>
+                <p>A student of VJTI. Branch IT.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock content %}

@@ -1,23 +1,164 @@
 {% extends 'layout_song.html' %}
-<!-- <!doctype html>
-<html lang="en">
-
-<head>
-  <!-- Required meta tags 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-  Bootstrap CSS -->
-  {% load static %}
-<link rel="stylesheet" href="{% static '/Atif.css'%}">
-<title>{% block title %}Atif Aslam
-{% endblock title %} </title>
-</head>
-
-<body>
+{% block title %}Atif Songs
+{% endblock title %}
 {% block content %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+    <style>
+        body {
+            background-color: #000;
+            font-family: Open sans;
+        }
+        
+        html {
+            background-color: black !important;
+        }
+        
+        img {
+            width: 100%;
+            min-height: 250px;
+            padding: 5px;
+            background-color: rgba(155, 199, 255, 0.938);
+            cursor: pointer;
+        }
+        
+        .main {
+            padding: 40px 0;
+            background-image: linear-gradient(rgb(119, 205, 255), blue);
+        }
+        
+        .col-md-2 {
+            margin: 30px 20px 0px 5px;
+            padding-bottom: 10px;
+        }
+        
+        .album-poster {
+            position: relative;
+            display: block;
+            border-radius: 7px;
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            box-shadow: 0px -5px 20px #8aff3ca1;
+            transition: all ease 0.4s;
+            border: 4px solid rgb(251, 104, 104);
+        }
+        
+        .album-poster:hover {
+            box-shadow: none;
+            transform: scale(0.98) translateY(5px);
+        }
+        
+        h3 {
+            font-size: 34px;
+            margin-bottom: 34px;
+            padding-bottom: 15px;
+            cursor: pointer;
+        }
+        
+        p {
+            font-size: 15px;
+        }
+        
+        h4 {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        
+        span {
+            color: rgb(5, 12, 114) !important;
+            font-size: 25px;
+        }
+        
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+            background: #feffbf;
+            height: 4px;
+        }
+        
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+            background: #0079db !important;
+            height: 14px;
+        }
+        
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+            background-color: #0071ce !important;
+        }
+        
+        .aplayer .aplayer-icon {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+            fill: #000;
+        }
+        
+        .aplayer .aplayer-info .aplayer-music {
+            margin-bottom: 5px;
+        }
+        
+        .aplayer .aplayer-body .aplayer-info .aplayer-controller .aplayer-time button {
+            border: 5px solid rgb(111, 59, 255);
+            padding: 5px 5px 10px 5px;
+            margin-bottom: 10px;
+            background-color: rgb(253, 230, 255);
+        }
+        
+        .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-time-inner {
+            margin-top: 5px;
+        }
+        
+        #aplayer {
+            box-shadow: 3px -4px 22px rgb(255, 0, 0);
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding-bottom: 10px;
+            padding: 5px;
+            margin: 0;
+            box-shadow: 0 -2px 2px #dadada;
+            border: 5px solid rgb(95, 164, 255);
+            background-color: rgb(176, 255, 255);
+            transition: all ease 0.5s;
+        }
+        
+        #aplayer.showPlayer {
+            bottom: 0;
+        }
+        
+        .col-md-12 h4 {
+            font-weight: 800;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(17, 73, 255);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0px -3px 20px rgb(255, 251, 6);
+            margin-top: ;
+        }
+        
+        .col-md-12 img {
+            margin-bottom: 40px;
+            border-radius: 50%;
+            box-shadow: 0px -2px 20px rgb(0, 255, 21);
+        }
+        
+        h4 {
+            padding-top: 10px;
+            color: rgb(208, 255, 187);
+        }
+        
+        .col-md-3 p {
+            color: rgb(255, 78, 78);
+            font-weight: 500;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+
     <div class="main">
         {% load static %}
         <div class="container">
@@ -134,12 +275,6 @@
                     <h4>Main Rang Sharbaton Ka</h4>
                     <p>Song Info</p>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
     </div>
@@ -147,12 +282,6 @@
     <div id="aplayer">
 
     </div>
-
-
-
-
-
-
 {% block js %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -160,11 +289,116 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-    <script src="{% static '/Atif.js' %}">
-    </script>
+    <script>
+        $(".album-poster").on("click", function() {
+            var dataSwitchId = $(this).attr("data-switch");
+            //console.log(dataSwitchId);
 
+            ap.list.switch(dataSwitchId);
+
+            ap.play();
+            $("#aplayer").addClass("showPlayer");
+        });
+
+
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            audio: [{
+                    name: 'Jeene Laga Hoon',
+                    artist: 'Arjit Singh',
+                    url: 'static/songs/Jeene_Laga_Hoon.mp3',
+                    cover: 'static/image/Jeene_Laga_Hoon.jpg'
+                }, {
+                    name: 'Maula',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Maula.mp3',
+                    cover: 'static/image/Maula.jpg'
+                }, {
+                    name: 'Pehli Nazar Mein',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Pehli_Nazar_Mein.mp3',
+                    cover: 'static/image/Pehli_Nazar_Mein.jpg'
+                }, {
+                    name: 'Piya O Re Piya',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Piya_O_Re_Piya.mp3',
+                    cover: 'static/image/Piya_O_Re_Piya.jpg'
+                }, {
+                    name: 'Pehli Dafa',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Pehli_Dafa.mp3',
+                    cover: 'static/image/Pehli_Dafa.jpg'
+                }, {
+                    name: 'Tere Bin',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Tere_Bin.mp3',
+                    cover: 'static/image/Tere_Bin.jpg'
+                }, {
+                    name: 'Tere Sang Yaara',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Tere_Sang_Yaara.mp3',
+                    cover: 'static/image/Tere_Sang_Yaara.jpg'
+                }, {
+                    name: 'Woh Lamhe Woh Baatein',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Woh_Lamhe_Woh_Baatein.mp3',
+                    cover: 'static/image/Woh_Lamhe_Woh_Baatein.jpg'
+                }, {
+                    name: 'Baarish',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Baarish.mp3',
+                    cover: 'static/image/Baarish.jpg'
+                }, {
+                    name: 'Gulabi Aankhein',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Gulabi_Aankhein.mp3',
+                    cover: 'static/image/Gulabi_Aankhein.jpg'
+                },
+
+                {
+                    name: 'Sukoon Mila',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Sukoon_Mila.mp3',
+                    cover: 'static/image/Sukoon_Mila.jpg'
+                },
+
+                {
+                    name: 'Tera Hone Laga Hoon',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Tera_Hone_Laga_Hoon.mp3',
+                    cover: 'static/image/Tera_Hone_Laga_Hoon.jpg'
+                }, {
+                    name: 'Tu Mohabbat Hai',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Tu_Mohabbat_Hai.mp3',
+                    cover: 'static/image/Tu_Mohabbat_Hai.jpg'
+                }, {
+                    name: 'Main Rang Sharbaton Ka.',
+                    artist: 'Atif Aslam',
+                    url: 'static/songs/Main_Rang_Sharbaton_Ka..mp3',
+                    cover: 'static/image/Main_Rang_Sharbaton_Ka..jpg'
+                },
+
+
+            ]
+        });
+        let search = document.getElementById("searchTxt");
+        search.addEventListener("input", function() {
+            let inputVal = search.value;
+            console.log("input event fired!", inputVal);
+            let songCards = document.getElementsByClassName("songCard");
+            Array.from(songCards).forEach(function(element) {
+                let songTxt = element.getElementsByTagName("h4")[0].innerText;
+
+                if (songTxt.includes(inputVal)) {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            })
+
+        })
+    </script>
 {% endblock js %}
 {% endblock content %}
-</body>
-
-</html>
