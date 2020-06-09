@@ -9,6 +9,7 @@ from gtts import gTTS
 import playsound
 import os
 import speech_recognition as sr;
+import multiprocessing
 
 x = False
 rr = 0
@@ -39,35 +40,19 @@ def home(request):
     if request.method == 'GET':
         res = request.GET.get('res')
         if res:
-            tts = gTTS("Welcome to the B Site sir. A site for the people with golden dreams.")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
-            tts = gTTS("To enjoy your services you need to have a account. Would you like to create one or want to login.")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("home1.mp3")
+            playsound.playsound("home2.mp3")
             r = sr.Recognizer()
             global nn
             nn = 0
             with  sr.Microphone() as source:
-                tts = gTTS("You may answer as create or login. Listening...")
-                filename = "voice.mp3"
-                tts.save(filename)
-                playsound.playsound(filename)
-                os.remove(filename)
+                playsound.playsound("home3.mp3")
                 print("Listening......")
                 r.energy_threshold = 1500
                 r.pause_threshold = 1
                 audio = r.listen(source)
                 print('done')
-                tts = gTTS("done")
-                filename = "voice.mp3"
-                tts.save(filename)
-                playsound.playsound(filename)
-                os.remove(filename)
+                playsound.playsound("done.mp3")
             try:
                 print("Recognizing......")
                 query = r.recognize_google(audio, language = 'en-in')
@@ -82,32 +67,20 @@ def home(request):
                     return HttpResponse("register")
                 elif 'login' in query.lower():
                     nn = 0
-                    return HttpResponse("login")
+                    return HttpResponse("login_page")
                 else:
                     print(query)
-                    tts = gTTS("Sorry, that didn't match our constraints, please try again!")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("constraints.mp3")
                     return redirect("auxiliary_home")
             except Exception as e:
                 print(e)
                 if nn < 3:
                     nn += 3
                     print("Say that again please......")
-                    tts = gTTS("Say that again please......")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("sayagain.mp3")
                     return redirect("auxiliary_home")
                 else:
-                    tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("conprob.mp3")
                     return HttpResponse("Thank You...")
     if request.method == 'POST':
         username = request.POST.get('username', '')
@@ -134,21 +107,13 @@ def home(request):
 def auxiliary_home(request):
     r = sr.Recognizer()
     with  sr.Microphone() as source:
-        tts = gTTS("You may answer as create or login. Listening...")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("home3.mp3")
         print("Listening......")
         r.energy_threshold = 1500
         r.pause_threshold = 1
         audio = r.listen(source)
         print('done')
-        tts = gTTS("done")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("done.mp3")
     global nn
     try:
         print("Recognizing......")
@@ -165,25 +130,17 @@ def auxiliary_home(request):
             return HttpResponse("login_page")
         else:
             print(query)
-            tts = gTTS("Sorry, that didn't match our constraints, please try again!")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("constraints.mp3")
             return redirect("auxiliary_home")
     except Exception as e:
         print(e)
         if nn < 3:
             nn += 3
             print("Say that again please......")
-            speak("Say that again please......")
+            playsound.playsound("sayagain.mp3")
             return redirect("auxiliary_home")
         else:
-            tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("conprob.mp3")
             return HttpResponse("Thank You...")
     nn = 0
     return redirect("home")
@@ -195,16 +152,8 @@ def login_(request):
     if request.method == 'GET':
         respon = request.GET.get('respon')
         if respon:
-            tts = gTTS("Welcome Sir. You may now enjoy our services. Our services include Latest News, Mellodious Music and a Diary for our own stories.")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
-            tts = gTTS("What will you like to start with?. Listening......")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("home11.mp3")
+            playsound.playsound("home12.mp3")
             r = sr.Recognizer()
             with  sr.Microphone() as source:
                 print("Listening......")
@@ -212,11 +161,7 @@ def login_(request):
                 r.pause_threshold = 1
                 audio = r.listen(source)
                 print('done')
-                tts = gTTS("done")
-                filename = "voice.mp3"
-                tts.save(filename)
-                playsound.playsound(filename)
-                os.remove(filename)
+                playsound.playsound("done.mp3")
             global nn
             try:
                 print("Recognizing......")
@@ -238,25 +183,17 @@ def login_(request):
                     return HttpResponse("diary")
                 else:
                     print(query)
-                    tts = gTTS("Sorry, that didn't match our constraints, please try again!")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("constraints.mp3")
                     return redirect("auxiliary_login_")
             except Exception as e:
                 print(e)
                 if nn < 3:
                     nn += 3
                     print("Say that again please......")
-                    speak("Say that again please......")
+                    playsound.playsound("sayagain.mp3")
                     return redirect("auxiliary_login_")
                 else:
-                    tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("conprob.mp3")
                     return HttpResponse("Thank You...")
 
     if request.method == 'POST':
@@ -278,21 +215,13 @@ def login_(request):
 def auxiliary_login_(request):
     r = sr.Recognizer()
     with  sr.Microphone() as source:
-        tts = gTTS("What will you like to start with? Listening......")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("login13.mp3")
         print("Listening......")
         r.energy_threshold = 1500
         r.pause_threshold = 1
         audio = r.listen(source)
         print('done')
-        tts = gTTS("done")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("done.mp3")
     global nn
     try:
         print("Recognizing......")
@@ -314,25 +243,17 @@ def auxiliary_login_(request):
             return HttpResponse("diary")
         else:
             print(query)
-            tts = gTTS("Sorry, that didn't match our constraints, please try again!")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("constraints.mp3")
             return redirect("auxiliary_login_")
     except Exception as e:
         print(e)
         if nn < 3:
             nn += 3
             print("Say that again please......")
-            speak("Say that again please......")
+            playsound.playsound("sayagain.mp3")
             return redirect("auxiliary_login_")
         else:
-            tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("conprob.mp3")
             return HttpResponse("Thank You...")
 
 
@@ -361,11 +282,7 @@ def login_page(request):
     if request.method == 'GET':
         respo = request.GET.get('respo')
         if respo:
-            tts = gTTS("To login you need to add your email ID and your password. You can use Tab key and fill in these details in the order mentioned.")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("login1.mp3")
     if request.method == 'POST':
         email =  request.POST.get('email', '')
         password =  request.POST.get('password', '')
@@ -374,11 +291,7 @@ def login_page(request):
             set(1)
             return redirect("login_")
         else:
-            tts = gTTS("They don't exist any such user. Please enter correct email ID and password.")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("login2.mp3")
             return redirect("home")
     return render(request, "login.html")
 
@@ -389,11 +302,7 @@ def register(request):
     if request.method == 'GET':
         resp = request.GET.get("resp")
         if resp:
-            tts = gTTS("To register you need to add a username, an email id, a password and need to confirm that password. You can use Tab key and fill in these fields in the order mentioned.")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("register1.mp3")
             return HttpResponse("Done")
     if request.method == 'POST':
         username = request.POST.get('username', '')
@@ -431,22 +340,14 @@ def logout(request):
 def News(request):
     r = sr.Recognizer()
     with  sr.Microphone() as source:
-        tts = gTTS("Listening......")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("listening.mp3")
         print("Listening......")
         r.pause_threshold = 1
         sr.Recognizer().energy_threshold = 1500
         r.energy_threshold = 1500
         audio = r.listen(source)
         print('done')
-        tts = gTTS("Done")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("done.mp3")
     try:
         query = r.recognize_google(audio, language = 'en-in')
         if "business" in query:
@@ -461,20 +362,12 @@ def News(request):
     except Exception as e:
         global rr
         rr += 1
-        tts = gTTS("Please say that again")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("sayagain.mp3")
         if rr<3:
             return redirect("News")
         else:
             rr=0
-            tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("conprob.mp3")
             return HttpResponse(json.dumps(["Thank You..."]))
     rr=0
     news = requests.get(url_).text
@@ -516,30 +409,18 @@ def news(request):
                 art = json.dumps(arts)
                 return HttpResponse(art)
             elif response == '0':
-                tts=gTTS(text="The news is further sorted into three categories as follows: First, Business ; Second, Entertainment ; Third , Sports", lang='en')
-                filename='voice.mp3'
-                tts.save(filename)
-                playsound.playsound(filename)
-                os.remove(filename)
+                playsound.playsound("newscat.mp3")
                 r = sr.Recognizer()
                 with  sr.Microphone() as source:
-                    tts = gTTS("Listening......")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("listening.mp3")
                     print("Listening......")
                     r.pause_threshold = 1
                     sr.Recognizer().energy_threshold = 1500
                     r.energy_threshold = 1500
                     audio = r.listen(source)
                     print('done')
-                    tts = gTTS("Done")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
-
+                    playsound.playsound("done.mp3")
+                    
                 try:
                     query = r.recognize_google(audio, language = 'en-in')
                     if "business" in query.lower():
@@ -554,19 +435,11 @@ def news(request):
                 except Exception as e:
                     global rr
                     rr += 1
-                    tts = gTTS("Please say that again")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("sayagain.mp3")
                     if rr<3:
                         return redirect("News")
                     else:
-                        tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-                        filename = "voice.mp3"
-                        tts.save(filename)
-                        playsound.playsound(filename)
-                        os.remove(filename)
+                        playsound.playsound("conprob.mp3")
                         return HttpResponse(json.dumps(["Thank You..."]))
 
                 rr=0
@@ -594,32 +467,16 @@ def songs(request):
     return render(request, "s1.html")
 
 
-def speak(text):
-    tts = gTTS(text)
-    filename = "voice.mp3"
-    tts.save(filename)
-    playsound.playsound(filename)
-    os.remove(filename)
-
-
 def auxiliary_notebook(request):
     r = sr.Recognizer()
     with  sr.Microphone() as source:
-        tts = gTTS(" You now may speak, Listening...")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("listening1.mp3")
         print("Listening......")
         r.energy_threshold = 1500
         r.pause_threshold = 1
         audio = r.listen(source)
         print('done')
-        tts = gTTS("done")
-        filename = "voice.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
+        playsound.playsound("done.mp3")
     global nn
     try:
         print("Recognizing......")
@@ -637,14 +494,10 @@ def auxiliary_notebook(request):
         if nn < 3:
             nn += 3
             print("Say that again please......")
-            speak("Say that again please......")
+            playsound.playsound("sayagain.mp3")
             return redirect("auxiliary_notebook")
         else:
-            tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-            filename = "voice.mp3"
-            tts.save(filename)
-            playsound.playsound(filename)
-            os.remove(filename)
+            playsound.playsound("conprob.mp3")
             return HttpResponse("Thank You...")
     nn = 0
     return HttpResponse(json.dumps(query))
@@ -664,28 +517,16 @@ def notebook(request):
                     diary.save()
                     return redirect("notebook")
                 if 1:
-                    tts = gTTS("Welcome to our diary section. You may save any of your stories here... ")
-                    filename = "voice.mp3"
-                    tts.save(filename)
-                    playsound.playsound(filename)
-                    os.remove(filename)
+                    playsound.playsound("notebook1.mp3")
                     r = sr.Recognizer()
                     with  sr.Microphone() as source:
-                        tts = gTTS(" You now may speak, Listening...")
-                        filename = "voice.mp3"
-                        tts.save(filename)
-                        playsound.playsound(filename)
-                        os.remove(filename)
+                        playsound.playsound("listening1.mp3")
                         print("Listening......")
                         r.energy_threshold = 1500
                         r.pause_threshold = 1
                         audio = r.listen(source)
                         print('done')
-                        tts = gTTS("done")
-                        filename = "voice.mp3"
-                        tts.save(filename)
-                        playsound.playsound(filename)
-                        os.remove(filename)
+                        playsound.playsound("done.mp3")
                         global nn
                         nn = 0
                     try:
@@ -697,21 +538,17 @@ def notebook(request):
                         tts.save(filename)
                         playsound.playsound(filename)
                         os.remove(filename)
-                        diary = Diary(id=id, D_desc=query)
+                        diary = Diary(id=request.user.id, D_desc=query)
                         diary.save()
                     except Exception as e:
                         print(e)
                         if nn < 3:
                             nn+=1
                             print("Say that again please......")
-                            speak("Say that again please......")
+                            playsound.playsound("sayagain.mp3")
                             return redirect("auxiliary_notebook")
                         else:
-                            tts = gTTS("There is some problem with the voice connection. Please reload the page and try again...")
-                            filename = "voice.mp3"
-                            tts.save(filename)
-                            playsound.playsound(filename)
-                            os.remove(filename)
+                            playsound.playsound("conprob.mp3")
                             return HttpResponse("Thank You...")
                     nn = 0
                     return HttpResponse(json.dumps(query))

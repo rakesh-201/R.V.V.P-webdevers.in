@@ -1,11 +1,16 @@
 {% extends 'layout.html' %} {% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <div class="container my-4">
+    {% load static %}
     <ul id="msg">
         {% if messages %} {% for msg in messages %}
         <code id="msg"> {{msg}} </code> {% endfor %} {% endif %}
     </ul>
+    <div class="container-fluid">
+        <img src="{% static '/contact.jpg' %}" width="800px" style=" margin: 150px ;border: 4px solid red " class="my-3" alt="..."> {% endblock content %} {% block js %}
+    </div>
     <form method="POST" action="/contact"> {% csrf_token %}
-        <div class="form-row">
+        <div class="form-row mt-3">
             <div class="form-group col-md-6">
                 <label for="inputPassword4" class="text-danger">Name</label>
                 <input type="text" name="name" class="form-control" id="inputPassword4">
@@ -19,10 +24,10 @@
             <label for="inputAddress2" class="text-danger">Enter Your Message Here</label>
             <textarea type="text" name="text" class="form-control" id="inputAddress2"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
     </form>
+
 </div>
-{% endblock content %} {% block js %}
 <script>
     setTimeout(function() {
         if ($('#msg').length > 0) {
