@@ -7,89 +7,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="Arjit.css">
   <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
   <title>Hello, world!</title>
 
-
+  <script src="jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
 
   <div class="main">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <form class="form-inline  my-2 my-lg-0">
-        <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg bg-primary">
+      <form class="form-inline  my-2 my-lg-0"> -->
+        <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="search" placeholder="Search Song names"
+          aria-label="Search">
+        <button class="btn btn-outline-success my-2 mx-5 my-sm-0" type="button">Search</button>
+      
     </nav>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h4 style="text-align: center;">Best Of Arjit Singh</h4><img src="arjit.jpg">
+          <h4 style="text-align: center; margin-top: 15px;">Best Of Arjit Singh</h4><img id="arjitImg" src="vishal/arjit.jpg">
         </div>
-        <hr>
+
         <hr>
 
-        <div class=" songCard  col-md-3">
+        <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="0">
-            <img src="Bekhayali.jpg">
+            <img src="vishal/Bekhayali.jpg">
           </a>
           <h4>Bekhayali</h4>
-          <p>Kabir Singh</p>
+          <p>Kabir Singh <a data-placement="right" data-toggle="tooltip" id="favIcon" title="Add to favourites"><i
+                class="fa fa-star ">heart</i> </a></p>
+
         </div>
 
-        <div class=" songCard  col-md-3">
+        <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="1">
-            <img src="Dil Hi Toh Hai.jpg">
-          </a>
+
+            <img src="vishal/Dil_Hi_Toh_Hai.jpg"></a>
           <h4>Dil Hi Toh Hai</h4>
           <p>The Sky Is Pink</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="2">
-            <img src="Sanam Re.jpg">
-          </a>
+            <img src="vishal/Sanam_Re.jpg"></a>
+
           <h4>Sanam Re</h4>
           <p>hh</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="3">
-            <img src="Khairiyat.jpg">
-          </a>
-          <h4>"Khairiyat</h4>
-          <p>chichhore</p>
+
+            <img src="vishal/Khairiyat.jpg"> </a>
+          <h4>Khairiyat</h4>
+          <p>Chhichhore</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="4">
-            <img src="Phir Le Aya Dil.jpg">
-          </a>
+
+            <img src="vishal/Phir_Le_Aya_Dil.jpg"> </a>
           <h4>Phir Le Aaya Dil</h4>
-          <p>Song Info</p>
+          <p>Barfi</p>
         </div>
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="5">
-            <img src="Pal.jpg">
+            <img src="vishal/Pal.jpg">
           </a>
           <h4>Pal</h4>
-          <p>Song Info</p>
+          <p>Jalebi</p>
         </div>
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="6">
-            <img src="Sooraj Dooba Hai Aaj.jpg">
+            <img src="vishal/Sooraj_Dooba_Hai_Aaj.jpg">
           </a>
           <h4>Sooraj Dooba Hai Aaj</h4>
-          <p>Song Info</p>
+          <p>Roy</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="7">
-            <img src="Sukoon Mila.jpg">
+            <img src="vishal/Sukoon_Mila.jpg">
           </a>
           <h4>Sukoon Mila</h4>
           <p>Song Info</p>
@@ -97,7 +102,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="8">
-            <img src="Tera Hoke Rahoon.jpg">
+            <img src="vishal/Tera_Hoke_Rahoon.jpg">
           </a>
           <h4>Tera Hoke Rahoon</h4>
           <p>Song Info</p>
@@ -105,138 +110,253 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="9">
-            <img src="Tu Hi Hai Aashiqui.jpg">
+            <img src="vishal/Tu_Hi_Hai_Aashiqui.jpg">
           </a>
           <h4>Tu Hi Hai Aashiqui</h4>
-          <p>Song Info</p>
+          <p>Aashiqui 2</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="10">
-            <img src="Tum Hi Ho.jpg">
+            <img src="vishal/Tum_Hi_Ho.jpg">
           </a>
           <h4>Tum Hi Ho</h4>
-          <p>Song Info</p>
+          <p>Aashiqui 2</p>
         </div>
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="11">
-            <img src="Tum Saath Ho.jpg">
+            <img src="vishal/Tum_Saath_Ho.jpg">
           </a>
-          <h4>Tum Saath Ho</h4>
-          <p>Song Info</p>
+          <h4> Agar Tum Saath Ho</h4>
+          <p>Tamasha</p>
         </div>
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="12">
-            <img src="Darkhaast.jpg">
+            <img src="vishal/Darkhaast.jpg">
           </a>
           <h4>Darkhaast</h4>
-          <p>Song Info</p>
+          <p>Shivaay</p>
         </div>
 
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="13">
-            <img src="Laal Ishq.jpg">
+            <img src="vishal/Laal_Ishq.jpg">
           </a>
           <h4>Laal Ishq</h4>
-          <p>Song Info</p>
+          <p>Goliyon Ki Rasleela Ram-Leela </p>
         </div>
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="14">
-            <img src="Ilahi.jpg">
+            <img src="vishal/Illahi.jpg">
           </a>
           <h4>Illahi</h4>
-          <p>Song Info</p>
+          <p>Yeh Jawaani Hai Deewani</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="15">
-            <img src="Ik Vaari ya.jpg">
+            <img src="vishal/Ik_Vaari_ya.jpg">
           </a>
           <h4>Ik Vaari ya</h4>
-          <p>Ik Vaari ya</p>
+          <p>Raabata</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="16">
-            <img src="Hawayein.jpg">
+            <img src="vishal/Hawayein.jpg">
           </a>
           <h4>Hawayein</h4>
-          <p>Song Info</p>
+          <p>Jab Harry Met Sejal</p>
         </div>
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="Dhokha Dhadi.jpg">
+            <img src="vishal/Dhokha_Dhadi.jpg">
           </a>
           <h4>Dhokha Dhadi</h4>
-          <p>Song Info</p>
+          <p>R... Rajkumar</p>
         </div>
 
 
         <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="Mast Magan.jpg">
+          <a href="javascript:void();" class="album-poster" data-switch="18">
+            <img src="vishal/Mast Magan.jpg">
           </a>
           <h4>Mast Magan</h4>
-          <p>Song Info</p>
+          <p>2 states</p>
         </div>
 
 
         <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="Meet.jpg">
+          <a href="javascript:void();" class="album-poster" data-switch="19">
+            <img src="vishal/Meet.jpg">
           </a>
           <h4>Meet</h4>
           <p>Song Info</p>
         </div>
 
-         <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="Tu Mila Toh Haina.jpg">
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="20">
+            <img src="vishal/Tu_Mila_Toh_Haina.jpg">
           </a>
           <h4>Tu Mila Toh Haina</h4>
           <p>Song Info</p>
         </div>
 
         <div class="songCard col-md-3">
-          <a href="javascript:void();" class="album-poster" data-switch="17">
-            <img src="Tujhe Kitna Chahne Lage.jpg">
+          <a href="javascript:void();" class="album-poster" data-switch="21">
+            <img src="vishal/Tujhe_Kitna_Chahne_Lage.jpg">
           </a>
           <h4>Tujhe Kitna Chahne Lage</h4>
           <p>Song Info</p>
         </div>
-     
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="22">
+            <img src="vishal/chahun_Main_Ya_Na.jpg">
+          </a>
+          <h4>Chahun Main Ya Na</h4>
+          <p>Song Info</p>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="23">
+            <img src="vishal/Bolna.jpg">
+          </a>
+          <h4>Mahi Bolna</h4>
+          <p>Song Info</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="24">
+            <img src="vishal/Janam_Janam.jpg">
+          </a>
+          <h4>Janam Janam</h4>
+          <p>Dilwale</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="25">
+            <img src="vishal/Kabhi_Jo_Baadal_Barse.jpg">
+          </a>
+          <h4>Kabhi Jo Baadal Barse</h4>
+          <p>Song Info</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="26">
+            <img src="vishal/Main_Phir_Bhi_Tumko_Chahunga.jpg">
+          </a>
+          <h4>Main Phir Bhi Tumko Chahunga</h4>
+          <p>Half Girlfriend</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="27">
+            <img src="vishal/Main_Rang_Sharbaton_Ka.jpg">
+          </a>
+          <h4>Main Rang Sharbto..</h4>
+          <p>Phata Poster Nikala Hero</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="28">
+            <img src="vishal/Nashe_Si_Chadh_Gayi.jpg">
+          </a>
+          <h4>Nashe Si Chadh Gayi</h4>
+          <p>Song Info</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="29">
+            <img src="vishal/Milne_Hai_Mujhse _Aayi.jpg">
+          </a>
+          <h4>Milne_Hai_Mujhse _Aayi</h4>
+          <p>Aashiqui 2</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="30">
+            <img src="vishal/Pachtaoge.jpg">
+          </a>
+          <h4>Pachtaoge</h4>
+          <p>Jaani ve</p>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="31">
+            <img src="vishal/Roke_Na_Ruke_Naina.jpg">
+          </a>
+          <h4>Roke Na Ruke Naina</h4>
+          <p>Badrinath Ki Dulhania</p>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="32">
+            <img src="vishal/Shayad.jpg">
+          </a>
+          <h4>Shayad</h4>
+          <p>Love Aaj Kal</p>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="33">
+            <img src="vishal/Tose_Naina.jpg">
+          </a>
+          <h4>Tose Naina</h4>
+          <p>Mickey Virus</p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="34">
+            <img src="vishal/GIMA_Awards.jpg">
+          </a>
+          <h4>Arjit Singh at GIMA_Awards</h4>
+          <p>Mashup</p>
+        </div>
+
+
 
       </div>
-
     </div>
-  </div>
-  </div>
-
-  <div id="aplayer">
-
-  </div>
 
 
-
+    <div id="aplayer">
+     
+      <a data-placement="right" data-toggle="tooltip"  title="Shuffle"> <button type="button" class="aplayer-icon aplayer-icon-order"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M22.667 4l7 6-7 6 7 6-7 6v-4h-3.653l-3.76-3.76 2.827-2.827 2.587 2.587h2v-8h-2l-12 12h-6v-4h4.347l12-12h3.653v-4zM2.667 8h6l3.76 3.76-2.827 2.827-2.587-2.587h-4.347v-4z"></path></svg></button> </a>
+    </div>
+   
 
 
 
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-  <script src="Arjit.js"> </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="Arjit.js"> </script>
+
+    <script>
+      $(function () { $("[data-toggle = 'tooltip']").tooltip(); });
+    </script>
 
 </body>
 
