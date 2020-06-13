@@ -1,230 +1,295 @@
-
 $(".album-poster").on("click",function(){
-  var dataSwitchId=$(this).attr("data-switch");
-  //console.log(dataSwitchId);
-   
-  ap.list.switch(dataSwitchId);
-
-  ap.play();
-  $("#aplayer").addClass("showPlayer");
-});
-
-
-
-
-
-const ap = new APlayer({
-  container: document.getElementById('aplayer'),
- listFolded:true,
-  audio: [{ 
-    name: 'A Savita Aga Savita',
+    var dataSwitchId=$(this).attr("data-switch");
+    //console.log(dataSwitchId);
+     
+    ap.list.switch(dataSwitchId);
+  
+    ap.play();
+    $("#aplayer").addClass("showPlayer");
+  });
+  
+  
+  
+  
+  
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+   listFolded:true,
+    audio: [{ 
+      name: 'A Savita Aga Savita',
+      artist: '',
+      url: 'Marathi songs/A Savita Aga Savita.mp3',
+      cover: 'Marathi songs/A Savita Aga Savita.jpg'
+  },
+  { 
+      name: 'Aai Tujha deul.jpg',
+      artist: '',
+      url: 'Marathi songs/Aai Tujha deul.mp3',
+      cover: 'Marathi songs/Aai Tujha deul.jpg'
+  },
+  { 
+      name: 'Aamdar Zalya Sarkha Vatatay',
+      artist: '',
+      url: 'Marathi songs/Aamdar Zalya Sarkha Vatatay.mp3',
+      cover: 'Marathi songs/Aamdar Zalya Sarkha Vatatay.jpg'
+  },
+  { 
+      name: 'Aaple Saheb Thackrey',
+      artist:'',
+      url: 'Marathi songs/Aaple Saheb Thackrey.mp3',
+      cover: 'Marathi songs/Aaple Saheb Thackrey.jpg'
+  },
+  { 
+    name: 'Aatach Baya Ka Baavarla',
+    artist:'',
+    url: 'Marathi songs/Aatach Baya Ka Baavarla.mp3',
+    cover: 'Marathi songs/Aatach Baya Ka Baavarla.jpg'
+  },
+  { 
+    name: 'Aho Mami Tumchi Mulagi Lay Sundar',
+    artist:'',
+    url: 'Marathi songs/Aho Mami Tumchi Mulagi Lay Sundar.mp3',
+    cover: 'Marathi songs/Aho Mami Tumchi Mulagi Lay Sundar.jpg'
+  },
+  { 
+    name: 'Apsara Aali',
+    artist:'Sonalee Kulkarni and Ajay-Atul',
+    url: 'Marathi songs/Apsara Aali.mp3',
+    cover: 'Marathi songs/Apsara Aali.jpg'
+  },
+  { 
+    name: 'Bablya Ekas Kesavar Fuge',
     artist: '',
-    url: 'A Savita Aga Savita.mp3',
-    cover: 'A Savita Aga Savita.jpg'
-},
-{ 
-    name: 'Aai Tujha deul.jpg',
+    url: 'Marathi songs/Bablya Ekas Kesavar Fuge.mp3',
+    cover: 'Marathi songs/Bablya Ekas Kesavar Fuge.jpg'
+  },
+  { 
+    name: 'Bhau - Shambu',
+    artist: 'Shambu',
+    url: 'Marathi songs/Bhau - Shambu.mp3',
+    cover: 'Marathi songs/Bhau - Shambu.jpg'
+  },
+  { 
+    name: 'Fandry Song',
+    artist: 'Ajay-Atul',
+    url: 'Marathi songs/Fandry Song.mp3',
+    cover: 'Marathi songs/Fandry Song.jpg'
+  },
+  { 
+    name: 'Gondhal',
+    artist: 'Ajay-Atul',
+    url: 'Marathi songs/Gondhal.mp3',
+    cover: 'Marathi songs/Gondhal.jpg'
+  },
+  { 
+    name: 'Govyachya Kinaryav',
     artist: '',
-    url: 'Aai Tujha deul.mp3',
-    cover: 'Aai Tujha deul.jpg'
-},
-{ 
-    name: 'Aamdar Zalya Sarkha Vatatay',
+    url: 'Marathi songs/Govyachya Kinaryav.mp3',
+    cover: 'Marathi songs/Govyachya Kinaryav.jpg'
+  },
+  { 
+    name: 'Gulabachi Kali',
     artist: '',
-    url: 'Aamdar Zalya Sarkha Vatatay.mp3',
-    cover: 'Aamdar Zalya Sarkha Vatatay.jpg'
-},
-{ 
-    name: 'Aaple Saheb Thackrey',
+    url: 'Marathi songs/Gulabachi Kali.mp3',
+    cover: 'Marathi songs/Gulabachi Kali.jpg'
+  },
+  { 
+    name: 'Hi Poli Saajuk',
+    artist: 'Reshma Sonawane',
+    url: 'Marathi songs/Hi Poli Saajuk.mp3',
+    cover: 'Marathi songs/Hi Poli Saajuk.jpg'
+  },
+  { 
+    name: 'Halad Lagali',
     artist: '',
-    url: 'Aaple Saheb Thackrey.mp3',
-    cover: 'Aaple Saheb Thackrey.jpg'
-},
-{ 
-  name: 'Aatach Baya Ka Baavarla',
-  artist:'',
-  url: 'Aatach Baya Ka Baavarla.mp3',
-  cover: 'Aatach Baya Ka Baavarla.jpg'
-},
-{ 
-  name: 'Aho Mami Tumchi Mulagi Lay Sundar',
-  artist:'',
-  url: 'Aho Mami Tumchi Mulagi Lay Sundar.mp3',
-  cover: 'Aho Mami Tumchi Mulagi Lay Sundar.jpg'
-},
-{ 
-  name: 'Apsara Aali',
-  artist:'Sonalee Kulkarni and Ajay-Atul',
-  url: 'Apsara Aali.mp3',
-  cover: 'Apsara Aali.jpg'
-},
-{ 
-  name: 'Bablya Ekas Kesavar Fuge',
-  artist: '',
-  url: 'Bablya Ekas Kesavar Fuge.mp3',
-  cover: 'Bablya Ekas Kesavar Fuge.jpg'
-},
-{ 
-  name: 'Bhau - Shambu',
-  artist: 'Shambu',
-  url: 'Bhau - Shambu.mp3',
-  cover: 'Bhau - Shambu.jpg'
-},
-{ 
-  name: 'Fandry Song',
-  artist: 'Ajay-Atul',
-  url: 'Fandry Song.mp3',
-  cover: 'Fandry Song.jpg'
-},
-{ 
-  name: 'Gondhal',
-  artist: 'Ajay-Atul',
-  url: 'Gondhal.mp3',
-  cover: 'Gondhal.jpg'
-},
-{ 
-  name: 'Govyachya Kinaryav',
-  artist: '',
-  url: 'Govyachya Kinaryav.mp3',
-  cover: 'Govyachya Kinaryav.jpg'
-},
-{ 
-  name: 'Gulabachi Kali',
-  artist: '',
-  url: 'Gulabachi Kali.mp3',
-  cover: 'Gulabachi Kali.jpg'
-},
-{ 
-  name: 'Halad Lagali',
-  artist: '',
-  url: 'Halad Lagali.mp3',
-  cover: 'Halad Lagali.jpg'
-},
-{ 
-  name: 'Hi Poli Saajuk',
-  artist: 'Reshma Sonawane',
-  url: 'Hi Poli Saajuk.mp3',
-  cover: 'Hi Poli Saajuk.jpg'
-},
-{ 
-  name: 'Ishkkachi Nauka',
-  artist: '',
-  url: 'Ishkkachi Nauka.mp3',
-  cover: 'Ishkkachi Nauka.jpg'
-},
-{ 
-  name: 'Ka Kalena',
-  artist: '',
-  url: 'Ka Kalena.mp3',
-  cover: 'Ka Kalena.jpg'
-},
-{ 
-  name: 'Khel Mandala',
-  artist: '',
-  url: 'Khel Mandala.mp3',
-  cover: 'Khel Mandala.jpg'
-},
-{ 
-  name: 'Koliwada Jhingla',
-  artist: '',
-  url: 'Koliwada Jhingla.mp3',
-  cover: 'Koliwada Jhingla.jpg'
-},
-{ 
-  name: 'Kombadi Palali',
-  artist: '',
-  url: 'Kombadi Palali.mp3',
-  cover: 'Kombadi Palali.jpg'
-},
-{ 
-  name: 'Mala Ved Lagale',
-  artist: '',
-  url: 'Mala Ved Lagale.mp3',
-  cover: 'Mala Ved Lagale.jpg'
-},
-{ 
-  name: 'Mendi Chya panavar',
-  artist: '',
-  url: 'Mendi Chya panavar.mp3',
-  cover: 'Mendi Chya panavar.jpg'
-},
-{ 
-  name: 'O kaka',
-  artist: '',
-  url: 'O kaka.mp3',
-  cover: 'O kaka.jpg'
-},
-{ 
-  name: 'O Raje',
-  artist: '',
-  url: 'O Raje.mp3',
-  cover: 'O Raje.jpg'
-},
-{ 
-  name: 'Pune RAP',
-  artist: '',
-  url: 'Pune RAP.mp3',
-  cover: 'Pune RAP.jpg'
-},
-{ 
-  name: 'Saavar Re Mana',
-  artist: '',
-  url: 'Saavar Re Mana.mp3',
-  cover: 'Saavar Re Mana.jpg'
-},
-{ 
-  name: 'Sairat Zala Ji',
-  artist: 'Ajay-Atul',
-  url: 'Sairat Zala Ji.mp3',
-  cover: 'Sairat Zala Ji.jpg'
-},
-{ 
-  name: 'Shantabia',
-  artist: '',
-  url: 'Shantabia.mp3',
-  cover: 'Shantabia.jpg'
-},
-{ 
-  name: 'Shitti Vajali',
-  artist: '',
-  url: 'Shitti Vajali.mp3',
-  cover: 'Shitti Vajali.jpg'
-},
-{ 
-  name: 'TAN TAN BHAN BHAN',
-  artist: 'Shambu',
-  url: 'TAN TAN BHAN BHAN.mp3',
-  cover: 'TAN TAN BHAN BHAN.jpg'
-},
-{ 
-  name: 'Tola Tola',
-  artist: 'Bela Shende and Amitraj',
-  url: 'Tola Tola.mp3',
-  cover: 'Tola Tola.jpg'
-},
-{ 
-  name: 'Tu Chal Re Mana',
-  artist: 'Virat M and Mahesh M',
-  url: 'Tu Chal Re Mana.mp3',
-  cover: 'Tu Chal Re Mana.jpg'
-},
-{ 
-  name: 'Wajle Ki Bara',
-  artist: 'Amrita Khanvelkar and Ajay-Atul',
-  url: 'Wajle Ki Bara.mp3',
-  cover: 'Wajle Ki Bara.jpg'
-},
-{ 
-  name: 'Yad Lagla',
-  artist: 'Ajay-Atul',
-  url: 'Yad Lagla.mp3',
-  cover: 'Yad Lagla.jpg'
-},
-{ 
-  name: 'Zingat',
-  artist: 'Ajay-Atul',
-  url: 'Zingat.mp3',
-  cover: 'Zingat.jpg'
-}
-]
-});
+    url: 'Marathi songs/Halad Lagali.mp3',
+    cover: 'Marathi songs/Halad Lagali.jpg'
+  },
+  { 
+    name: 'Ishkkachi Nauka',
+    artist: '',
+    url: 'Marathi songs/Ishkkachi Nauka.mp3',
+    cover: 'Marathi songs/Ishkkachi Nauka.jpg'
+  },
+  { 
+    name: 'Ka Kalena',
+    artist: '',
+    url: 'Marathi songs/Ka Kalena.mp3',
+    cover: 'Marathi songs/Ka Kalena.jpg'
+  },
+  { 
+    name: 'Khel Mandala',
+    artist: '',
+    url: 'Marathi songs/Khel Mandala.mp3',
+    cover: 'Marathi songs/Khel Mandala.jpg'
+  },
+  { 
+    name: 'Koliwada Jhingla',
+    artist: '',
+    url: 'Marathi songs/Koliwada Jhingla.mp3',
+    cover: 'Marathi songs/Koliwada Jhingla.jpg'
+  },
+  { 
+    name: 'Kombadi Palali',
+    artist: '',
+    url: 'Marathi songs/Kombadi Palali.mp3',
+    cover: 'Marathi songs/Kombadi Palali.jpg'
+  },
+  { 
+    name: 'Mala Ved Lagale',
+    artist: '',
+    url: 'Marathi songs/Mala Ved Lagale.mp3',
+    cover: 'Marathi songs/Mala Ved Lagale.jpg'
+  },
+  { 
+    name: 'O kaka',
+    artist: '',
+    url: 'Marathi songs/O kaka.mp3',
+    cover: 'Marathi songs/O kaka.jpg'
+  },
+  { 
+    name: 'O Raje',
+    artist: '',
+    url: 'Marathi songs/O Raje.mp3',
+    cover: 'Marathi songs/O Raje.jpg'
+  },
+  { 
+    name: 'Pune RAP',
+    artist: '',
+    url: 'Marathi songs/Pune RAP.mp3',
+    cover: 'Marathi songs/Pune RAP.jpg'
+  },
+  { 
+    name: 'Saavar Re Mana',
+    artist: '',
+    url: 'Marathi songs/Saavar Re Mana.mp3',
+    cover: 'Marathi songs/Saavar Re Mana.jpg'
+  },
+  { 
+    name: 'Sairat Zala Ji',
+    artist: 'Ajay-Atul',
+    url: 'Marathi songs/Sairat Zala Ji.mp3',
+    cover: 'Marathi songs/Sairat Zala Ji.jpg'
+  },
+  { 
+    name: 'Shantabai',
+    artist: '',
+    url: 'Marathi songs/Shantabia.mp3',
+    cover: 'Marathi songs/Shantabia.jpg'
+  },
+  { 
+    name: 'Shitti Vajali',
+    artist: '',
+    url: 'Marathi songs/Shitti Vajali.mp3',
+    cover: 'Marathi songs/Shitti Vajali.jpg'
+  },
+  { 
+    name: 'TAN TAN BHAN BHAN',
+    artist: 'Shambu',
+    url: 'Marathi songs/TAN TAN BHAN BHAN.mp3',
+    cover: 'Marathi songs/TAN TAN BHAN BHAN.jpg'
+  },
+  { 
+    name: 'Tola Tola',
+    artist: 'Bela Shende and Amitraj',
+    url: 'Marathi songs/Tola Tola.mp3',
+    cover: 'Marathi songs/Tola Tola.jpg'
+  },
+  { 
+    name: 'Tu Chal Re Mana',
+    artist: 'Virat M and Mahesh M',
+    url: 'Marathi songs/Tu Chal Re Mana.mp3',
+    cover: 'Marathi songs/Tu Chal Re Mana.jpg'
+  },
+  { 
+    name: 'Wajle Ki Bara',
+    artist: 'Amrita Khanvelkar and Ajay-Atul',
+    url: 'Marathi songs/Wajle Ki Bara.mp3',
+    cover: 'Marathi songs/Wajle Ki Bara.jpg'
+  },
+  { 
+    name: 'Yad Lagla',
+    artist: 'Ajay-Atul',
+    url: 'Marathi songs/Yad Lagla.mp3',
+    cover: 'Marathi songs/Yad Lagla.jpg'
+  },
+  { 
+    name: 'Zingat',
+    artist: 'Ajay-Atul',
+    url: 'Marathi songs/Zingat.mp3',
+    cover: 'Marathi songs/Zingat.jpg'
+  },
+  { 
+    name: 'Khulach Zalo Ga',
+    artist: 'Aishwarya Malgave',
+    url: 'Marathi songs/Khulach_Zalo_Ga.mp3',
+    cover: 'Marathi songs/Khulach_Zalo_Ga.jpg'
+  },
+  { 
+    name: 'Zindagi Zindagi',
+    artist: 'Sachin Dev Burman',
+    url: 'Marathi songs/Zindagi_Zindagi.mp3',
+    cover: 'Marathi songs/Zindagi_Zindagi.jpg'
+  },
+  { 
+    name: 'Jiv Rangala',
+    artist: 'Ajay-Atul',
+    url: 'Marathi songs/Jiv_Rangala.mp3',
+    cover: 'Marathi songs/Jiv_Rangala.jpg'
+  },
+  { 
+    name: 'Man UdhanVaryache',
+    artist: 'Shankar Mahadevan',
+    url: 'Marathi songs/Man_Udhan_Varyache.mp3',
+    cover: 'Marathi songs/Man_Udhan_Varyache.jpg'
+  },
+  { 
+    name: 'Tu Hi Re Maza Mitva',
+    artist: 'Shankar Mahadevan',
+    url: 'Marathi songs/Tu_Hi_Re_Maza_Mitva.mp3',
+    cover: 'Marathi songs/Tu_Hi_Re_Maza_Mitva.jpg'
+  },
+  { 
+    name: 'Hrudayat Vaje Something',
+    artist: '',
+    url: 'Marathi songs/Hrudayat_Vaje_Something.mp3',
+    cover: 'Marathi songs/Hrudayat_Vaje_Something.jpg'
+  },
+  { 
+    name: 'Rakhumai Rakhumai',
+    artist: '',
+    url: 'Marathi songs/Rakhumai_Rakhumai.mp3',
+    cover: 'Marathi songs/Rakhumai_Rakhumai.jpg'
+  },
+  { 
+    name: 'Sur Niragas Ho',
+    artist: '',
+    url: 'Marathi songs/Sur_Niragas_Ho.mp3',
+    cover: 'Marathi songs/Sur_Niragas_Ho.jpg'
+  },
+  { 
+    name: 'Saath De Tu Mala',
+    artist: '',
+    url: 'Marathi songs/Saath_De_Tu_Mala.mp3',
+    cover: 'Marathi songs/Saath_De_Tu_Mala.jpg'
+  },
+  { 
+    name: 'Kitida Navyane Tula Athvave',
+    artist: '',
+    url: 'Marathi songs/Kitida_Navyane_Tula_Athvave.mp3',
+    cover: 'Marathi songs/Kitida_Navyane_Tula_Athvave.jpg'
+  },
+  { 
+    name: 'Deva Thujha Gabharyala',
+    artist: '',
+    url: 'Marathi songs/Deva_Thujha_Gabharyala.mp3',
+    cover: 'Marathi songs/Deva_Thujha_Gabharyala.jpg'
+  },
+  { 
+    name: 'Bulati Hai Magar Jane Ka Nahi',
+    artist: '',
+    url: 'Marathi songs/Bulati_Hai_Magar_Jane_Ka_Nahi.mp3',
+    cover: 'Marathi songs/Bulati_Hai_Magar_Jane_Ka_Nahi.jpg'
+  }
+  ]
+  });
