@@ -5,30 +5,46 @@
         {{ msg }}
     </code> {% endfor %} {% endif %}
 </ul>
-<div class="jumbotron">
+<style>
+    .bg {
+        background-image: url('static/image/hbg1.jpg');
+    }
+    
+    .bgbg {
+        background-image: url('static/image/bg4.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .text-danger {
+        color: red;
+    }
+</style>
+<div class="jumbotron bgbg">
     <div class="container">
-        <h1 class="display-3  text-primary font-weight-bolder">B_Site</h1>
-        <p class="text-primary">This is a site for the people with golden dreams that is for the blind people. This site is made by four awesome developers of VJTI for the entertainment of the blind people. This site contains dialy news, latest songs, an oral diary.
+        <h1 class="display-3  text-danger font-weight-bolder">B_Site</h1>
+        <p class="text-danger">This is a site for the people with golden dreams that is for the blind people. This site is made by four awesome developers of VJTI for the entertainment of the blind people. This site contains dialy news, latest songs, an oral diary.
     </div>
 </div>
 <div class="container">
     <div class="card-group">
         <div class="card mx-1">
-            <img src="{%static 'image/news.jpg'%}" class="card-img-top" alt="...">
+            <img src="{%static '/image/news.jpg'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-primary font-weight-bolder">LATEST NEWS</h5>
-                <p class="card-text text-primary ">Stay updated with latest & fresh News even in today's busy lifestyle.</p>
+                <p class="card-text text-primary ">Stay updated with latest & fresh News even in today's busy lifestyle.
+                </p>
             </div>
         </div>
         <div class="card mx-1">
-            <img src="{%static 'image/music.jpg'%}" class="card-img-top" alt="...">
+            <img src="{%static '/image/music.jpg'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-primary font-weight-bolder">MELODIOUS MUSIC</h5>
                 <p class="card-text text-primary">Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.</p>
             </div>
         </div>
         <div class="card mx-1">
-            <img src="{%static 'image/notebook.jpg'%}" class="card-img-top" alt="...">
+            <img src="{%static '/image/notebook.jpg'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-primary font-weight-bolder">MONEY SAVER</h5>
                 <p class="card-text text-primary">It’s not how much money you make, but how much money you keep, how hard it works for you!

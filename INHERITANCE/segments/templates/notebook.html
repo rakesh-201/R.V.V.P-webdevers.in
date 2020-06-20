@@ -8,6 +8,10 @@
         overflow: auto;
         width: -webkit-fill-available;
     }
+    
+    .bg {
+        background-image: url('static/image/notebookbg.jpg');
+    }
 </style>
 <div class="container">
     <div class="jumbotron mt-5 border border-warning ">
@@ -39,6 +43,11 @@
     </div>
 </div>
 {% endblock content %} {% block js %}
+<style>
+    .badge {
+        float: right;
+    }
+</style>
 <script>
     $(document).ready(function() {
         console.log("starting");
@@ -58,6 +67,7 @@
                 var a = ""
                 a = `<li class="list-group-item d-flex justify-content-between align-items-center">
                     ${txt}
+                    <button class="badge badge-danger badge-pill">delete</button>
                     <span class="badge badge-primary badge-pill">${date}</span>
                 </li>`
                 $('#50').append(a)
@@ -89,6 +99,7 @@
                             var a = ""
                             a = `<li class="list-group-item d-flex justify-content-between align-items-center">
                                 ${txt}
+                                <button class="badge badge-danger badge-pill">delete</button>
                                 <span class="badge badge-primary badge-pill">${date}</span>
                             </li>`
                             $('#50').append(a)

@@ -2,6 +2,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <style>
+    .bg {
+        background-image: url('static/image/bg6.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
     body {
         margin: 0;
         padding: 0;
@@ -51,6 +57,10 @@
         clip-path: circle(400px at center 100px);
         transition: 0.5s;
         transition-delay: 0.5s;
+    }
+    
+    .text-danger {
+        color: rgb(255, 0, 0);
     }
     
     .cont .box:hover .imgBx {
@@ -127,14 +137,14 @@
     {% load static %}
     <div class="cont mt-2 text-warning">
         <div>
-            <p class="text-warning mb-3">It all started with INHERITANCE. A program that is conducted in VJTI, wherein the SYs assign some project to the FYs so that they get an idea of how projects are made, what is team work, how to manage time and more than anything else how to
-                utilize summer vacation. This site is made by Four students of VJTI.</p>
+            <h5 class="text-danger text-weight-bolder mb-3">It all started with INHERITANCE. A program that is conducted in VJTI, wherein the SYs assign some project to the FYs so that they get an idea of how projects are made, what is team work, how to manage time and more than anything else how to
+                utilize summer vacation. This site is made by Four students of VJTI.</h5>
         </div>
         <div class="box mx-2">
             <div class="imgBx">
                 <img src="{% static '/image/rakesh.jpg'%}">
             </div>
-            <div class="content">
+            <div class="content text-danger">
                 <h2>Rakesh Rajpurohit</h2>
                 <p>A student of VJTI. Branch IT.</p>
 
@@ -145,7 +155,7 @@
             <div class="imgBx">
                 <img src="{% static '/image/1.jpeg' %}">
             </div>
-            <div class="content">
+            <div class="content text-danger">
                 <h2>Vishal Dange</h2>
                 <p>A student of VJTI. Branch IT.
                 </p>
@@ -157,7 +167,7 @@
             <div class="imgBx">
                 <img src="{% static '/image/2.jpeg' %}">
             </div>
-            <div class="content">
+            <div class="content text-danger">
                 <h2>Vedant Mondkar</h2>
                 <p>A student of VJTI. Branch IT.</p>
 
@@ -167,7 +177,7 @@
             <div class="imgBx">
                 <img src="{% static '/image/3.jpeg' %}">
             </div>
-            <div class="content">
+            <div class="content text-danger">
                 <h2>Prashant Bhala</h2>
                 <p>A student of VJTI. Branch IT.</p>
 

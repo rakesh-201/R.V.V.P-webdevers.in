@@ -14,7 +14,9 @@
         }
         
         body {
-            background-color: #9b59b6;
+            background-image: url('static/image/bglg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
             font-family: 'Open Sans', sans-serif;
             display: flex;
             align-items: center;
@@ -276,22 +278,22 @@
 
 <body>
 
-    <div class="container">
+    <div class="container ">
         <div class="header">
             <h2>LogIn</h2>
         </div>
         <form action="/login_page" method="POST" class="form">{% csrf_token %}
             <div class="form-control">
-                <label for="username">Email</label>
-                <input type="text" name="email" placeholder="user@mail.com" id="username" />
+                <label for="username" class="bac">Email</label>
+                <input type="text" name="email" class="bac" placeholder="user@mail.com" id="username" />
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
                 <small>Error message</small>
             </div>
 
             <div class="form-control">
-                <label for="username">Password</label>
-                <input type="password" name="password" placeholder="**********" id="password" />
+                <label for="username" class="bac">Password</label>
+                <input type="password" name="password" class="bac" placeholder="**********" id="password" />
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
                 <small>Error message</small>
@@ -310,66 +312,66 @@
     <script>
         {
             /* const form = document.getElementById('form');
-                    const email = document.getElementById('username');
-
-                    const password = document.getElementById('password');
-
-
-                    form.addEventListener('submit', e => {
-                        e.preventDefault();
-
-                        checkInputs();
-                    });
-
-                    function checkInputs() {
-                        // trim to remove the whitespaces
-                        const emailValue = email.value.trim();
-
-                        const passwordValue = password.value.trim();
-
-
-                        if (emailValue === '') {
-                            setErrorFor(email, 'Email cannot be blank');
-                        } else if (!isEmail(emailValue)) {
-                            setErrorFor(email, 'Not a valid email');
-                        } else {
-                            setSuccessFor(email);
-                        }
-
-                        function isEmail(email) {
-                            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-                        }
-
-                        if (passwordValue === '') {
-                            setErrorFor(password, 'Password cannot be blank');
-                        } else {
-                            setSuccessFor(password);
-                        }
-
-
-                    }
-
-                    function setErrorFor(input, message) {
-                        const formControl = input.parentElement;
-                        const small = formControl.querySelector('small');
-                        formControl.className = 'form-control error';
-                        small.innerText = message;
-                    }
-
-                    function setSuccessFor(input) {
-                        const formControl = input.parentElement;
-                        formControl.className = 'form-control success';
-                    }
-
-                    $(document).ready(function() {
-
-                        $("#getUName").hide();
-
-                        $("#forgetPassword").click(function() {
-                            $(".container").hide();
-                            $("#getUName").show();
-                        });
-                    }); */
+                                const email = document.getElementById('username');
+                
+                                const password = document.getElementById('password');
+                
+                
+                                form.addEventListener('submit', e => {
+                                    e.preventDefault();
+                
+                                    checkInputs();
+                                });
+                
+                                function checkInputs() {
+                                    // trim to remove the whitespaces
+                                    const emailValue = email.value.trim();
+                
+                                    const passwordValue = password.value.trim();
+                
+                
+                                    if (emailValue === '') {
+                                        setErrorFor(email, 'Email cannot be blank');
+                                    } else if (!isEmail(emailValue)) {
+                                        setErrorFor(email, 'Not a valid email');
+                                    } else {
+                                        setSuccessFor(email);
+                                    }
+                
+                                    function isEmail(email) {
+                                        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+                                    }
+                
+                                    if (passwordValue === '') {
+                                        setErrorFor(password, 'Password cannot be blank');
+                                    } else {
+                                        setSuccessFor(password);
+                                    }
+                
+                
+                                }
+                
+                                function setErrorFor(input, message) {
+                                    const formControl = input.parentElement;
+                                    const small = formControl.querySelector('small');
+                                    formControl.className = 'form-control error';
+                                    small.innerText = message;
+                                }
+                
+                                function setSuccessFor(input) {
+                                    const formControl = input.parentElement;
+                                    formControl.className = 'form-control success';
+                                }
+                
+                                $(document).ready(function() {
+                
+                                    $("#getUName").hide();
+                
+                                    $("#forgetPassword").click(function() {
+                                        $(".container").hide();
+                                        $("#getUName").show();
+                                    });
+                                }); */
         }
         $(document).ready(() => {
             $.ajax({

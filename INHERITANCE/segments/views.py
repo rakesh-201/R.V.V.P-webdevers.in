@@ -42,6 +42,7 @@ def home(request):
         if res:
             playsound.playsound("home1.mp3")
             playsound.playsound("home2.mp3")
+            playsound.playsound("home31.mp3")
             r = sr.Recognizer()
             global nn
             nn = 0
@@ -62,12 +63,18 @@ def home(request):
                 tts.save(filename)
                 playsound.playsound(filename)
                 os.remove(filename)
-                if 'create' in query:
+                if 'create' in query.lower():
                     nn = 0
                     return HttpResponse("register")
                 elif 'login' in query.lower():
                     nn = 0
                     return HttpResponse("login_page")
+                elif 'about' in query.lower():
+                    nn = 0
+                    return HttpResponse("about")
+                elif 'contact' in query.lower():
+                    nn = 0
+                    return HttpResponse("contact")
                 else:
                     print(query)
                     playsound.playsound("constraints.mp3")
@@ -125,9 +132,17 @@ def auxiliary_home(request):
         playsound.playsound(filename)
         os.remove(filename)
         if 'create' in query:
+            nn = 0
             return HttpResponse("register")
         elif 'login' in query.lower():
+            nn = 0
             return HttpResponse("login_page")
+        elif 'about' in query.lower():
+            nn = 0
+            return HttpResponse("about")
+        elif 'contact' in query.lower():
+            nn = 0
+            return HttpResponse("contact")
         else:
             print(query)
             playsound.playsound("constraints.mp3")

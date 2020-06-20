@@ -3,16 +3,6 @@
     .carou {
         border: 4px solid red;
     }
-    
-    .bg {
-        background-image: url('static/image/bg6.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    .bgc {
-        background-color: red;
-    }
 </style>
 <ul id="msg">
     {% if messages %} {% for msg in messages %}
@@ -20,7 +10,7 @@
         {{ msg }}
     </code> {% endfor %} {% endif %}
 </ul>
-<div id="carouselExampleCaptions" class="carousel slide  carou" data-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide carou" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -35,22 +25,22 @@
         <div class="carousel-item active">
             <img src="{% static '/diary.jpg'%}" class="d-block w-100" width="100" height="360" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h1 class="text-danger font-weight-bolder"> B_Site </h1>
-                <h3 class="text-danger font-weight-bolder typed"></h3>
+                <h2 class="text-primary font-weight-bolder"> B_Site </h2>
+                <h5 class="text-primary font-weight-bolder typed"></h5>
             </div>
         </div>
         <div class="carousel-item">
             <img src="{% static '/music.jpeg'%}" class="d-block w-100" width="100" height="360" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h1 class="text-danger font-weight-bolder"> B_Site </h1>
-                <h3 class="text-danger typed-1"></h3>
+                <h2 class="text-primary  font-weight-bolder"> B_Site </h2>
+                <h5 class="text-primary  font-weight-bolder typed-1"></h5>
             </div>
         </div>
         <div class="carousel-item">
             <img src="{% static '/news.jpeg'%}" class="d-block w-100" width="100" height="360" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h1 class="text-danger  font-weight-bolder"> B_Site </h1>
-                <h3 class="text-danger  font-weight-bolder typed-2"></h3>
+                <h2 class="text-primary  font-weight-bolder"> B_Site </h2>
+                <h5 class="text-primary  font-weight-bolder typed-2"></h5>
             </div>
         </div>
     </div>
@@ -65,26 +55,25 @@
 </div>
 <div class="container">
     <div class="card-group">
-        <div class="card mx-2 my-2 carou">
-            <img src="{%static '/image/news.jpg'%}" class="card-img-top" alt="...">
-            <div class="card-body bgc">
-                <h5 class="card-title text-warning font-weight-bolder">LATEST NEWS</h5>
-                <p class="card-text text-warning ">Stay updated with latest & fresh News even in today's busy lifestyle.
-                </p>
+        <div class="card mx-1 my-2 carou">
+            <img src="{%static 'image/news.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-primary font-weight-bolder">LATEST NEWS</h5>
+                <p class="card-text text-primary ">Stay updated with latest & fresh News even in today's busy lifestyle.</p>
             </div>
         </div>
         <div class="card mx-1 my-2 carou">
-            <img src="{%static '/image/music.jpg'%}" class="card-img-top" alt="...">
-            <div class="card-body bgc">
-                <h5 class="card-title text-warning font-weight-bolder">MELODIOUS MUSIC</h5>
-                <p class="card-text text-warning">Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.</p>
+            <img src="{%static 'image/music.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-primary font-weight-bolder">MELODIOUS MUSIC</h5>
+                <p class="card-text text-primary">Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.</p>
             </div>
         </div>
         <div class="card mx-1 my-2 carou">
-            <img src="{%static '/image/notebook.jpg'%}" class="card-img-top" alt="...">
-            <div class="card-body bgc">
-                <h5 class="card-title text-warning font-weight-bolder">MY DAIRY</h5>
-                <p class="card-text text-warning">It’s not how much money you make, but how much money you keep, how hard it works for you!
+            <img src="{%static 'image/notebook.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-primary font-weight-bolder">MY DAIRY</h5>
+                <p class="card-text text-primary">It’s not how much money you make, but how much money you keep, how hard it works for you!
             </div>
         </div>
     </div>
@@ -162,9 +151,9 @@
                     window.location.href = '/register'
                 } else if (text == 'login_page') {
                     window.location.href = '/login_page'
-                } else if (text == 'about') {
+                }else if (text == 'about') {
                     window.location.href = '/about'
-                } else if (text == 'contact') {
+                }else if (text == 'contact') {
                     window.location.href = '/contact'
                 }
             }

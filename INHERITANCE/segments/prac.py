@@ -1,11 +1,7 @@
+from gtts import gTTS
 from playsound import playsound
-import datetime
-import multiprocessing
-if 1:
-    p = multiprocessing.Process(target=playsound, args=("home1.mp3",))
-    p.start()
-    input()
-    p.terminate()
 
-    
-    
+# tts = gTTS("You may also go to our About and Contact pages by speaking about and contact respectively.")
+filename = "home31.mp3"
+# tts.save(filename)
+playsound(filename)
