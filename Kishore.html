@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="singerPage.css">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="bootstrap.bundle.min.js / bootstrap.bundle.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-    <link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Kishore songs</title>
+
+    <script src="jquery-3.5.1.min.js"></script>
 
 
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body class="normal">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button id="gobackBtn" class="btn btn-outline-success my-2 my-sm-0"><a href="music hpg.html">Go
             Back</a></button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +34,37 @@
                     class="btn btn-outline-success my-2 my-sm-0">Search</button>
             </form>
         </div>   
-    </nav>
+    </nav> -->
 
     <div class="main">
+
+        <div class="searchSong">
+            <div class="searchContainer">
+                <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="text"
+                    placeholder="Search for songs">
+                <a class="searchBtn ">
+                    <svg width="25" height="25" viewBox="0 0 25 25">
+                        <path class="fill_path" fill="#FFF" fill-rule="evenodd"
+                            d="M69.5 34a6.5 6.5 0 0 1 6.5 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 69.5 47a6.5 6.5 0 1 1 0-13zm0 2C67 36 65 38 65 40.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z"
+                            transform="translate(-59 -32)"></path>
+                    </svg>
+                    Search
+                </a>
+            </div>
+        </div>
+
+        <div class="theme">
+            <!-- <button type="button" data-toggle="popover" title="Dark mode" data-content="Check out the new Black theme"
+                onclick="changeTheme()"><i class="fa fa-moon-o" style="font-size:48px;color:black;"></i></button> -->
+            <button><a tabindex="0" role="button" data-toggle="popover" data-trigger="hover" title="Dark mode"
+                    onclick="changeTheme()" data-content="Check out the new Black theme"><i class="fa fa-moon-o"
+                        style="font-size:48px;color:black;"></i></a></button>
+        </div>
+
+
         <div class="container">
             <div class="row">
-                <div class="col-md-12" id="general">
+                <!-- <div class="col-md-12" id="general">
                     <h4 style="text-align: center;">Enjoy The Songs</h4>
                 </div>
                 <br>
@@ -49,7 +76,21 @@
                     <a href="javascript:void();" class="album-poster">
                         <img src="kishore.jpeg" id="singerImg" alt="Rafi Image">
                     </a>
+                </div> -->
+
+                <div class="col-md-12" id="singerName">
+                    <h4 style="text-align: center; margin-top: 15px;">Best Of Kishore Kumar</h4>
                 </div>
+
+                <div class="col-md-12 singerImage">
+                    <a href="https://en.wikipedia.org/wiki/Mohammed_Rafi" tabindex="0" role="button"
+                        data-toggle="popover" data-trigger="hover" title="Get Info"
+                        data-content="Click to get info about artist" class="singerImg album-poster">
+                        <img src="kishore.jpeg" id="singerImg" alt="Rafi Image">
+                    </a>
+                </div>
+
+                <hr>
 
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster"  data-switch="0">
@@ -59,7 +100,7 @@
                         <h4>Pal pal dil ke paas</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Blackmail</b></p>
                 </div>
                 
                 <div class="songCard col-md-3">
@@ -71,7 +112,7 @@
 
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Kati Patang</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -82,7 +123,7 @@
                         <h4>O mere dil ke chain</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Mere Jeevan Sathi</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -93,7 +134,7 @@
                         <h4>Tere bina zindagi se koi</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Lata Mangeshkar</b></p>
+                    <p><b>Aandhi</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -103,7 +144,7 @@
                     <div class="songNameContainer">
                         <h4>Raat kali ek khwab me</h4>
                     </div>
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Buddha Mil Gaya</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -114,7 +155,7 @@
                         <h4>Meri soni meri tamanna</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Asha Bhosle</b></p>
+                    <p><b>Yaadon Ki Barat</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -125,7 +166,7 @@
                         <h4>Neele neele ambar par</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Kalaakar</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -136,7 +177,7 @@
                         <h4>Kehdu tumhe ya chup rahu</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Asha Bhosle</b></p>
+                    <p><b>Deewar</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -147,7 +188,7 @@
                         <h4>Khaike paan banaras wala</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Don</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -158,7 +199,7 @@
                         <h4>Kora kagaz tha ye man mera</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Lata Mangeshkar</b></p>
+                    <p><b>Aaradhna</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -169,7 +210,7 @@
                         <h4>Mere mehboob qayamat hogi</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Mr.X In Bombay</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -180,7 +221,7 @@
                         <h4>Mere sapno ki rani</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Aaradhna</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -191,7 +232,7 @@
                         <h4>O saathi chal</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Asha Bhosle</b></p>
+                    <p><b>Seeta Aur Geeta</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -202,7 +243,7 @@
                         <h4>Chhod do aanchal</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Asha Bhosle</b></p>
+                    <p><b>Paying Guest</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -213,7 +254,7 @@
                         <h4>Dil kya kare</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Julee</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -224,7 +265,7 @@
                         <h4>Gaata rahe mera dil</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Lata Mangeshkar</b></p>
+                    <p><b>Guide</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -235,7 +276,7 @@
                         <h4>Gham ka fasana</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Manchali</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -245,7 +286,7 @@
                     <div class="songNameContainer">
                         <h4>Gum hai kisi ke</h4>
                     </div>
-                    <p><b>Kishore Kumar, Lata Mangeshkar</b></p>
+                    <p><b>Rampur ka Lakshman</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -256,7 +297,7 @@
                         <h4>Jai jai shiv shankar</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Lata Mangeshkar</b></p>
+                    <p><b>Aap Ki Kasam</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -267,7 +308,7 @@
                         <h4>Rimjhim gire saavan</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Manzil</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -278,7 +319,7 @@
                         <h4>Sara zamana</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Yaarana</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -289,7 +330,7 @@
                         <h4>Tum aa gaye ho</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar, Lata Mangeshkar</b></p>
+                    <p><b>Aandhi</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -300,7 +341,7 @@
                         <h4>Wada tera wada</h4>
                     </div>
                     
-                    <p><b>Kishore Kumar</b></p>
+                    <p><b>Dushman</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
@@ -311,9 +352,58 @@
                         <h4>Ek mai aur ek tu</h4>
                     </div>
                     
-                    <p><b>Asha Bhosle, Kishore Kumar</b></p>
+                    <p><b>Khel Khel Mein</b></p>
                 </div>
 
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="24">
+                        <img src="Lata_Songs/Suno_kaho.jpeg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Suno kaho suna</h4>
+                    </div>                   
+                    <p><b>Aap Ki Kasam</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="25">
+                        <img src="Lata_Songs/Bheegi_bheegi.jpeg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Bheegi bheegi raaton me</h4>
+                    </div>                   
+                    <p><b>Ajanbee</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="25">
+                        <img src="Kishore_songs/Sagar_jaisi.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>sagar jaisi aankhovali</h4>
+                    </div>                   
+                    <p><b>Sagar</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="25">
+                        <img src="Kishore_songs/Aise_na.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Aise na mujhe tum dekho</h4>
+                    </div>                   
+                    <p><b>Darling Darling</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="25">
+                        <img src="Kishore_songs/Ha_tu_hai.jpeg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Ha tu hai wahi</h4>
+                    </div>                   
+                    <p><b>Yeh waada raha</b></p>
+                </div>
 
             </div>
 
