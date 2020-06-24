@@ -1,21 +1,27 @@
 $(".album-poster").on("click", function () {
-    var dataSwitchId = $(this).attr("data-switch");
-    //console.log(dataSwitchId);
-  
-    ap.list.switch(dataSwitchId);
-  
-    ap.play();
-    $("#aplayer").addClass("showPlayer");
-  });
-  
-  
-  
-  
-  
-  const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    listFolded: true,
-    audio: [
+  var dataSwitchId = $(this).attr("data-switch");
+  //console.log(dataSwitchId);
+
+  ap.list.switch(dataSwitchId);
+
+  ap.play();
+  $("#aplayer").addClass("showPlayer");
+});
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+
+
+
+const ap = new APlayer({
+  container: document.getElementById('aplayer'),
+  listFolded: true,
+  audio: [
     {
       name: 'Pal pal dil ke paas',
       artist: 'Kishore Kumar',
@@ -51,7 +57,7 @@ $(".album-poster").on("click", function () {
       artist: 'Kishore Kumar,Asha Bhosale',
       url: 'Kishore_songs/Meri_soni.mp3',
       cover: 'Kishore_songs/Meri_soni.png'
-    }, 
+    },
     {
       name: 'Neele neele ambar par',
       artist: 'Kishore Kumar',
@@ -61,13 +67,13 @@ $(".album-poster").on("click", function () {
     {
       name: 'Kehdu tumhe ya chup rahu',
       artist: 'Kishore Kumar, Asha Bhosle',
-      url: 'Kishore _songs/Kehdu_tumhe.mp3',
+      url: 'Kishore_songs/Kehdu_tumhe.mp3',
       cover: 'Kishore_songs/Kehdu_tumhe.jpg'
     },
     {
       name: 'Khaike paan banaras wala',
-      artist:'Kishore Kumar',
-      url:'Kishore_songs/Khaike_paan.mp3',
+      artist: 'Kishore Kumar',
+      url: 'Kishore_songs/Khaike_paan.mp3',
       cover: 'Kishore_songs/Khaike_paan.jpg'
     },
     {
@@ -81,13 +87,13 @@ $(".album-poster").on("click", function () {
       artist: 'Kishore Kumar',
       url: 'Kishore_songs/Mere_mehboob.mp3',
       cover: 'Kishore_songs/Mere_mehboob.jpg'
-    },   
+    },
     {
       name: 'Mere sapno ki rani',
       artist: 'Kishore Kumar',
       url: 'Kishore_songs/Mere_sapno.mp3',
       cover: 'Kishore songs/Mere sapno.jpg'
-    },  
+    },
     {
       name: 'O saathi chal',
       artist: 'Kishore Kumar, Asha Bhosale',
@@ -127,7 +133,7 @@ $(".album-poster").on("click", function () {
     {
       name: 'Jai jai shiv shankar',
       artist: 'Kishore Kumar, Lata Mangeshkar',
-      url: 'Kishore _songs/Jai_jai.mp3',
+      url: 'Kishore_songs/Jai_jai.mp3',
       cover: 'Kishore_songs/Jai_jai.jpg'
     },
     {
@@ -147,7 +153,7 @@ $(".album-poster").on("click", function () {
       artist: 'Kishore Kumar, Lata mageshkar',
       url: 'Kishore_songs/Tum_aa.mp3',
       cover: 'Kishore_songs/Tum_aa.jpg'
-    },   
+    },
     {
       name: 'Wada tera wada',
       artist: 'Kishore Kumar',
@@ -160,22 +166,92 @@ $(".album-poster").on("click", function () {
       url: 'Asha_songs/Ek_mai.mp3',
       cover: 'Asha_songs/Ek_mai.jpg'
     },
-    ]
-  });
-  
-  let search=document.getElementById("searchTxt");
-  search.addEventListener("input",function(){
-      let inputVal=search.value;
-      console.log("input event fired!",inputVal);
-      let songCards=document.getElementsByClassName("songCard");
-      Array.from(songCards).forEach(function(element){
-          let songTxt=element.getElementsByTagName("h4")[0].innerText;
-              if(songTxt.includes(inputVal)){
-                  element.style.display="block";
-              }
-              else{
-                  element.style.display="none";
-              }
-      })
-      
+    {
+      name: 'Suno kaho suna',
+      artist: 'Kishore Kumar. Lata MAngeshkar',
+      url: 'Lata_Songs/Suno_kaho.mp3',
+      cover: 'Lata_Songs/Suno_kaho.jpeg'
+    },
+    {
+      name: 'Bheegi bheegi raaton me',
+      artist: 'Kishore Kumar, Lata Mangeshkar',
+      url: 'Lata_Songs/Bheegi_bheegi.mp3',
+      cover: 'Lata_Songs/Bheegi_bheegi.jpeg'
+    },
+    {
+      name: 'Sagar jaisi aankhovali',
+      artist: 'Kishore Kumar',
+      url: 'Kishore_songs/Sagar_jaisi.mp3',
+      cover: 'Kishore_songs/Sagar_jaisi.jpg'
+    },
+    {
+      name: 'aise na mujhe tum dekho',
+      artist: 'Kishore Kumar',
+      url: 'Kishore_songs/Aise_na.mp3',
+      cover: 'Kishore_songs/Aise_na.jpg'
+    },
+    {
+      name: 'Ha tu hai wahi',
+      artist: 'Kishore Kumar',
+      url: 'Kishore_songs/Ha_tu_hai.mp3',
+      cover: 'Kishore_songs/Ha_tu_hai.jpeg'
+    },
+  ]
+});
+
+let search = document.getElementById("searchTxt");
+search.addEventListener("input", function () {
+  let inputVal = search.value;
+  inputVal = inputVal.toLocaleLowerCase();
+  console.log("input event fired!", inputVal);
+  let songCards = document.getElementsByClassName("songCard");
+  Array.from(songCards).forEach(function (element) {
+    let songTxt = element.getElementsByTagName("h4")[0].innerText;
+    songTxt = songTxt.toLocaleLowerCase();
+    if (songTxt.includes(inputVal)) {
+      element.style.display = "block";
+    }
+    else {
+      element.style.display = "none";
+    }
   })
+
+})
+
+function changeTheme(){
+  let body = document.body;
+  if(body.classList == "normal"){
+    body.classList = "dark";
+    let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+    Array.from(songName).forEach((element)=>{
+      element.style.color="yellow";
+    })
+    let artists = document.querySelectorAll("b");
+    Array.from(artists).forEach((element)=>{
+      element.style.color ="lightgreen";
+    })
+    
+  }else{
+    body.classList = "normal";
+    let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+    Array.from(songName).forEach((element)=>{
+      element.style.color="blue";
+    })
+    let artists = document.querySelectorAll("b");
+    Array.from(artists).forEach((element)=>{
+      element.style.color ="green";
+    })
+  }
+}
+
+function changeIcon(element){
+    let icon = element.childNodes[0];
+    if(icon.classList == "fa fa-heart-o"){
+      icon.classList ="fa fa-heart";
+    }
+    else{
+      icon.classList = "fa fa-heart-o";
+    }
+    
+}
+
