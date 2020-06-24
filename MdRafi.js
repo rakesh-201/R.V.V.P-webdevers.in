@@ -25,8 +25,8 @@ const ap = new APlayer({
     {
       name: 'Tumne Kisi ki jaan ko',
       artist: 'Mohammad Rafi ',
-      url: 'MdRafi Songs/Tumne kisi.mp3',
-      cover: 'MdRafi Songs/Tumne kisi.jpg'
+      url: 'MdRafi_Songs/Tumne_kisi.mp3',
+      cover: 'MdRafi_Songs/Tumne_kisi.jpg'
     },
     {
       name: 'Dil tera deewana hai sanam',
@@ -43,7 +43,7 @@ const ap = new APlayer({
     {
       name: 'Dil abhi bhara nahi',
       artist: 'Mohammad Rafi, Asha Bhosale',
-      url: 'MdRafi Songs/Dil_abhi.mp3',
+      url: 'MdRafi_Songs/Dil_abhi.mp3',
       cover: 'MdRafi_Songs/Dil_abhi.png'
     },
     {
@@ -91,7 +91,7 @@ const ap = new APlayer({
     {
       name: 'Khuli palak mein',
       artist: 'Mohammad Rafi',
-      url: 'MdRaf_Songs/Khuli_palak.mp3',
+      url: 'MdRafi_Songs/Khuli_palak.mp3',
       cover: 'MdRafi_Songs/Khuli_palak.png'
     },
     {
@@ -217,32 +217,32 @@ const ap = new APlayer({
     {
       name: 'Aaja teri yaad aayi',
       artist: 'Mohammad Rafi, Lata Mangeshkar',
-      url: 'MdRafi Songs/Aaja_teri.mp3',
-      cover: 'MdRafi Songs/Aaja_teri.jpg'
+      url: 'MdRafi_Songs/Aaja_teri.mp3',
+      cover: 'MdRafi_Songs/Aaja_teri.jpg'
     },
     {
       name: 'Mast baharon ka mai aashiq',
       artist: 'Mohammad Rafi',
-      url: 'MdRafi Songs/Mast_baharon.mp3',
-      cover: 'MdRafi Songs/Mast_bahron.jpg'
+      url: 'MdRafi_Songs/Mast_baharon.mp3',
+      cover: 'MdRafi_Songs/Mast_bahron.jpg'
     },
     {
       name: 'Ab aan milo sajna',
       artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata Songs/Aan_milo.mp3',
-      cover: 'Lata Songs/Aan_milo.jpg'
+      url: 'Lata_Songs/Aan_milo.mp3',
+      cover: 'Lata_Songs/Aan_milo.jpg'
     },
     {
       name: 'Din sara guzara',
       artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata Songs/Din_sara.mp3',
-      cover: 'Lata Songs/Din_sara.jpg'
+      url: 'Lata_Songs/Din_sara.mp3',
+      cover: 'Lata_Songs/Din_sara.jpg'
     },
     {
       name: 'Chup gaye saare',
       artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata Songs/Chup_gaye.mp3',
-      cover: 'Lata Songs/Chup_gaye.jpeg'
+      url: 'Lata_Songs/Chup_gaye.mp3',
+      cover: 'Lata_Songs/Chup_gaye.jpeg'
     },
   ]
 });
