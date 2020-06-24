@@ -217,32 +217,32 @@ const ap = new APlayer({
     {
       name: 'Aaja teri yaad aayi',
       artist: 'Mohammad Rafi, Lata Mangeshkar',
-      url: 'MdRafi Songs/Aaja teri.mp3',
-      cover: 'MdRafi Songs/Aaja teri.jpg'
+      url: 'MdRafi Songs/Aaja_teri.mp3',
+      cover: 'MdRafi Songs/Aaja_teri.jpg'
     },
     {
       name: 'Mast baharon ka mai aashiq',
       artist: 'Mohammad Rafi',
-      url: 'MdRafi Songs/Mast baharon.mp3',
-      cover: 'MdRafi Songs/Mast bahron.jpg'
+      url: 'MdRafi Songs/Mast_baharon.mp3',
+      cover: 'MdRafi Songs/Mast_bahron.jpg'
     },
     {
       name: 'Ab aan milo sajna',
       artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata Songs/Aan milo.mp3',
-      cover: 'Lata Songs/Aan milo.jpg'
+      url: 'Lata Songs/Aan_milo.mp3',
+      cover: 'Lata Songs/Aan_milo.jpg'
     },
     {
       name: 'Din sara guzara',
       artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata Songs/Din sara.mp3',
-      cover: 'Lata Songs/Din sara.jpg'
+      url: 'Lata Songs/Din_sara.mp3',
+      cover: 'Lata Songs/Din_sara.jpg'
     },
     {
       name: 'Chup gaye saare',
       artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata Songs/Chup gaye.mp3',
-      cover: 'Lata Songs/Chup gaye.jpeg'
+      url: 'Lata Songs/Chup_gaye.mp3',
+      cover: 'Lata Songs/Chup_gaye.jpeg'
     },
   ]
 });
@@ -302,4 +302,6 @@ function changeIcon(element){
     }
     
 }
+
+
 
