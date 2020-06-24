@@ -8,7 +8,13 @@ $(".album-poster").on("click", function() {
     $("#aplayer").addClass("showPlayer");
 });
 
+$(function() {
+    $('[data-toggle="popover"]').popover()
+})
 
+$('.popover-dismiss').popover({
+    trigger: 'focus'
+})
 
 
 
@@ -18,146 +24,146 @@ const ap = new APlayer({
     audio: [{
             name: 'Tumne Kisi ki jaan ko',
             artist: 'Mohammad Rafi ',
-            url: 'static/MdRafi_Songs/Tumne_kisi.mp3',
-            cover: 'static/MdRafi_Songs/Tumne_kisi.jpg'
+            url: 'MdRafi_Songs/Tumne_kisi.mp3',
+            cover: 'MdRafi_Songs/Tumne_kisi.jpg'
         },
         {
             name: 'Dil tera deewana hai sanam',
             artist: 'Mohammad Rafi, Lata Mangeshkar',
-            url: 'static/MdRafi_Songs/Dil_tera.mp3',
-            cover: 'static/MdRafi_Songs/Dil_tera.jpg'
+            url: 'MdRafi_Songs/Dil_tera.mp3',
+            cover: 'MdRafi_Songs/Dil_tera.jpg'
         },
         {
             name: 'Tumne mujhe dekha',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Tumne_mujhe.mp3',
-            cover: 'static/MdRafi_Songs/Tumne_mujhe.jpg'
+            url: 'MdRafi_Songs/Tumne_mujhe.mp3',
+            cover: 'MdRafi_Songs/Tumne_mujhe.jpg'
         },
         {
             name: 'Dil abhi bhara nahi',
             artist: 'Mohammad Rafi, Asha Bhosale',
-            url: 'MdRafi Songs/Dil_abhi.mp3',
-            cover: 'static/MdRafi_Songs/Dil_abhi.png'
+            url: 'MdRafi_Songs/Dil_abhi.mp3',
+            cover: 'MdRafi_Songs/Dil_abhi.png'
         },
         {
             name: 'Hue hai tumpe aashiq hum',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Hue_hai.mp3',
-            cover: 'static/MdRafi_Songs/Hue_hai.jpg'
+            url: 'MdRafi_Songs/Hue_hai.mp3',
+            cover: 'MdRafi_Songs/Hue_hai.jpg'
         },
         {
             name: 'Chura Liya Hai Tumne',
             artist: 'Asha Bhosale,Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Chura_liya.mp3',
-            cover: 'static/MdRafi_Songs/Chura_liya.jpg'
+            url: 'MdRafi_Songs/Chura_liya.mp3',
+            cover: 'MdRafi_Songs/Chura_liya.jpg'
         },
         {
             name: 'O mere sona re',
             artist: 'Asha Bhosale,Mohammad Rafi',
-            url: 'static/MdRafi_Songs/O_mere_sona.mp3',
-            cover: 'static/MdRafi_Songs/O_mere_sona.jpg'
+            url: 'MdRafi_Songs/O_mere_sona.mp3',
+            cover: 'MdRafi_Songs/O_mere_sona.jpg'
         },
         {
             name: 'Isharon isharon mein',
             artist: 'Asha Bhosale,Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Isharon_isharon.mp3',
-            cover: 'static/MdRafi_Songs/Isharon_isharon.jpg'
+            url: 'MdRafi_Songs/Isharon_isharon.mp3',
+            cover: 'MdRafi_Songs/Isharon_isharon.jpg'
         },
         {
             name: 'Yeh jo chilman hai',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Ye_jo_chilman.mp3',
-            cover: 'static/MdRafi_Songs/Ye_jo_chilman.jpg'
+            url: 'MdRafi_Songs/Ye_jo_chilman.mp3',
+            cover: 'MdRafi_Songs/Ye_jo_chilman.jpg'
         },
         {
             name: 'Tumse o haseena',
             artist: 'Mohammad Rafi,Suman Kalynpur',
-            url: 'static/MdRafi_Songs/Tumse_o_haseena.mp3',
-            cover: 'static/MdRafi_Songs/Tumse_o_haseena.jpg'
+            url: 'MdRafi_Songs/Tumse_o_haseena.mp3',
+            cover: 'MdRafi_Songs/Tumse_o_haseena.jpg'
         },
         {
             name: 'Zulfon ko hatale chehre se',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Zulfon_ko.mp3',
-            cover: 'static/MdRafi_Songs/zulfon_ko.jpeg'
+            url: 'MdRafi_Songs/Zulfon_ko.mp3',
+            cover: 'MdRafi_Songs/zulfon_ko.jpeg'
         },
         {
             name: 'Khuli palak mein',
             artist: 'Mohammad Rafi',
-            url: 'MdRaf_Songs/Khuli_palak.mp3',
-            cover: 'static/MdRafi_Songs/Khuli_palak.png'
+            url: 'MdRafi_Songs/Khuli_palak.mp3',
+            cover: 'MdRafi_Songs/Khuli_palak.png'
         },
         {
             name: 'Dhal gaya din',
             artist: 'Mohammad Rafi,Suman Kalyanpur',
-            url: 'static/MdRafi_Songs/Dhal_gaya.mp3',
-            cover: 'static/MdRafi_Songs/Dhal_gaya.png'
+            url: 'MdRafi_Songs/Dhal_gaya.mp3',
+            cover: 'MdRafi_Songs/Dhal_gaya.png'
         },
         {
             name: 'Itna toh yaad hai mujhe',
             artist: 'Mohammad Rafi,Lata Mangeshkar',
-            url: 'static/MdRafi_Songs/Itna_to.mp3',
-            cover: 'static/MdRafi_Songs/Itna_to.jpg'
+            url: 'MdRafi_Songs/Itna_to.mp3',
+            cover: 'MdRafi_Songs/Itna_to.jpg'
         },
         {
             name: 'Kaun hai jo sapno me aaya',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Kaun_hai_jo.mp3',
-            cover: 'static/MdRafi_Songs/Kaun_hai_jo.jpg'
+            url: 'MdRafi_Songs/Kaun_hai_jo.mp3',
+            cover: 'MdRafi_Songs/Kaun_hai_jo.jpg'
         },
         {
             name: 'Jaanewalo jara',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Jaanewalo_jara.mp3',
-            cover: 'static/MdRafi_Songs/Jaanewalo_jara.jpg'
+            url: 'MdRafi_Songs/Jaanewalo_jara.mp3',
+            cover: 'MdRafi_Songs/Jaanewalo_jara.jpg'
         },
         {
             name: 'Badan pe sitare',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Badan_pe_sitare.mp3',
-            cover: 'static/MdRafi_Songs/Badan_pe_sitare.jpg'
+            url: 'MdRafi_Songs/Badan_pe_sitare.mp3',
+            cover: 'MdRafi_Songs/Badan_pe_sitare.jpg'
         },
         {
             name: 'Baharon phool barsaon',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Baharon_phool.mp3',
-            cover: 'static/MdRafi_Songs/Baharon_phool.jpeg'
+            url: 'MdRafi_Songs/Baharon_phool.mp3',
+            cover: 'MdRafi_Songs/Baharon_phool.jpeg'
         },
         {
             name: 'Wo teer dil pe chala',
             artist: 'Mohammad Rafi,Asha Bhosle',
-            url: 'static/MdRafi_Songs/Wo_teer.mp3',
-            cover: 'static/MdRafi_Songs/Wo_teer.jpg'
+            url: 'MdRafi_Songs/Wo_teer.mp3',
+            cover: 'MdRafi_Songs/Wo_teer.jpg'
         },
         {
             name: 'Kitna pyar wada',
             artist: 'Mohammad Rafi,Lata Mangeshkar',
-            url: 'static/MdRafi_Songs/Kitna_Pyara.mp3',
-            cover: 'static/MdRafi_Songs/Kitna_pyara.jpg'
+            url: 'MdRafi_Songs/Kitna_Pyara.mp3',
+            cover: 'MdRafi_Songs/Kitna_pyara.jpg'
         },
         {
             name: 'Khuda bhi aasman se',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Khuda_bhi.mp3',
-            cover: 'static/MdRafi_Songs/Khuda_bhi.jpg'
+            url: 'MdRafi_Songs/Khuda_bhi.mp3',
+            cover: 'MdRafi_Songs/Khuda_bhi.jpg'
         },
         {
             name: 'Mai zindagi ka saath',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Mai_zindagi.mp3',
-            cover: 'static/MdRafi_Songs/Mai_zindagi.jpg'
+            url: 'MdRafi_Songs/Mai_zindagi.mp3',
+            cover: 'MdRafi_Songs/Mai_zindagi.jpg'
         },
         {
             name: 'Patta patta boota boota',
             artist: 'Mohammad Rafi, Lata Mangeshkar',
-            url: 'static/MdRafi_Songs/Patta_patta.mp3',
-            cover: 'static/MdRafi_Songs/Patta_patta.jpg'
+            url: 'MdRafi_Songs/Patta_patta.mp3',
+            cover: 'MdRafi_Songs/Patta_patta.jpg'
         },
         {
             name: 'Yeh reshmi zulfen',
             artist: 'Mohammad Rafi',
-            url: 'static/MdRafi_Songs/Ye_reshmi.mp3',
-            cover: 'static/MdRafi_Songs/Ye_reshmi.jpg'
+            url: 'MdRafi_Songs/Ye_reshmi.mp3',
+            cover: 'MdRafi_Songs/Ye_reshmi.jpg'
         },
         {
             name: 'Deewana hua badal',
@@ -198,15 +204,45 @@ const ap = new APlayer({
         {
             name: 'Bekhudi mein sanam',
             artist: 'Lata Mangeshkar, Mohammad Rafi ',
-            url: 'Lata_Songs/Bekhudi_mein.mp3',
-            cover: 'Lata_Songs/Bekhudi_mein.jpg'
+            url: 'Lata_songs/Bekhudi_mein.mp3',
+            cover: 'Lata_songs/Bekhudi_mein.jpg'
         },
         {
             name: 'Yuhi tum mujhse baat',
             artist: 'Mohammad Rafi, Lata Mangeshkar',
-            url: 'Lata_Songs/Yuhi_tum.mp3',
-            cover: 'Lata_Songs/Yuhi_tum.jfif'
-        }
+            url: 'Lata_songs/Yuhi_tum.mp3',
+            cover: 'Lata_songs/Yuhi_tum.jfif'
+        },
+        {
+            name: 'Aaja teri yaad aayi',
+            artist: 'Mohammad Rafi, Lata Mangeshkar',
+            url: 'MdRafi_Songs/Aaja_teri.mp3',
+            cover: 'MdRafi_Songs/Aaja_teri.jpg'
+        },
+        {
+            name: 'Mast baharon ka mai aashiq',
+            artist: 'Mohammad Rafi',
+            url: 'MdRafi_Songs/Mast_baharon.mp3',
+            cover: 'MdRafi_Songs/Mast_bahron.jpg'
+        },
+        {
+            name: 'Ab aan milo sajna',
+            artist: 'Lata mageshkar, Mohammad Rafi',
+            url: 'Lata_Songs/Aan_milo.mp3',
+            cover: 'Lata_Songs/Aan_milo.jpg'
+        },
+        {
+            name: 'Din sara guzara',
+            artist: 'Lata mageshkar, Mohammad Rafi',
+            url: 'Lata_Songs/Din_sara.mp3',
+            cover: 'Lata_Songs/Din_sara.jpg'
+        },
+        {
+            name: 'Chup gaye saare',
+            artist: 'Lata mageshkar, Mohammad Rafi',
+            url: 'Lata_Songs/Chup_gaye.mp3',
+            cover: 'Lata_Songs/Chup_gaye.jpeg'
+        },
     ]
 });
 
@@ -227,3 +263,39 @@ search.addEventListener("input", function() {
     })
 
 })
+
+function changeTheme() {
+    let body = document.body;
+    if (body.classList == "normal") {
+        body.classList = "dark";
+        let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+        Array.from(songName).forEach((element) => {
+            element.style.color = "yellow";
+        })
+        let artists = document.querySelectorAll("b");
+        Array.from(artists).forEach((element) => {
+            element.style.color = "lightgreen";
+        })
+
+    } else {
+        body.classList = "normal";
+        let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+        Array.from(songName).forEach((element) => {
+            element.style.color = "blue";
+        })
+        let artists = document.querySelectorAll("b");
+        Array.from(artists).forEach((element) => {
+            element.style.color = "green";
+        })
+    }
+}
+
+function changeIcon(element) {
+    let icon = element.childNodes[0];
+    if (icon.classList == "fa fa-heart-o") {
+        icon.classList = "fa fa-heart";
+    } else {
+        icon.classList = "fa fa-heart-o";
+    }
+
+}

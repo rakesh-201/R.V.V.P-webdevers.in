@@ -1,18 +1,34 @@
 {% extends 'layout_song.html' %}
 {% block content %}
 {% load static %}
+
   <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="{% static '/singerPage.css'%}">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-  <title>{% block title %}Hindi songs
-  {% endblock title %}</title>
-
-
+  <title>Hindi songs</title>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button id="gobackBtn" class="btn btn-outline-success my-2 my-sm-0"><a href="music hpg.html">Go
+        Back</a></button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search for songs"
+                aria-label="Search">
+            <button onclick="this.preventDefault()" id="searchBtn"
+                class="btn btn-outline-success my-2 my-sm-0">Search</button>
+        </form>
+    </div>   
+</nav>
+
   <div class="main">
     <div class="container">
       <div class="row">
@@ -173,7 +189,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="18">
-            <img src="{% static '/Hindi_songs/Dil_abhi_bhara_nhi.jpg' %}">
+            <img src="{% static '/Hindi_songs/Dil_abhi_bhara_nhi.jpg' %}' %}">
           </a>
           <h4>Dil abhi bhara nhi</h4>
           <p><b>Jaspinder Narula and Shankar Mahadevan</b></p>
@@ -181,7 +197,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="19">
-            <img src="{% static '/Hindi_songs/Dil_Hi_Toh_Hai.jpg' %}">
+            <img src="{% static '/Hindi_songs/Dil_Hi_Toh_Hai.jpg' %}' %}">
           </a>
           <h4>Dil Hi Toh Hai</h4>
           <p><b>Antara Mitra and Arjit Singh</b></p>
@@ -189,7 +205,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="20">
-            <img src="{% static '/Hindi_songs/FIRSE_MACHAYENGE.jpg' %}">
+            <img src="{% static '/Hindi_songs/FIRSE_MACHAYENGE.jpg' %}' %}">
           </a>
           <h4>FIRSE MACHAYENGE</h4>
           <p><b>EMIWAY BANTAI</b></p>
@@ -197,7 +213,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="21">
-            <img src="{% static '/Hindi_songs/Gali_Gali.jpg' %}">
+            <img src="{% static '/Hindi_songs/Gali_Gali.jpg' %}' %}">
           </a>
           <h4>Gali Gali</h4>
           <p><b>Neha Kakkar</b></p>
@@ -205,7 +221,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="22">
-            <img src="{% static '/Hindi_songs/Garmi_Song.jpg' %}">
+            <img src="{% static '/Hindi_songs/Garmi_Song.jpg' %}' %}">
           </a>
           <h4>Garmi Song</h4>
           <p><b>Badshah and Neha Kakkar</b></p>
@@ -213,7 +229,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="23">
-            <img src="{% static '/Hindi_songs/Ghammand_Kar.jpg' %}">
+            <img src="{% static '/Hindi_songs/Ghammand_Kar.jpg' %}' %}">
           </a>
           <h4>Ghammand Kar</h4>
           <p><b>Parampara Thakur and Sachet Tandon</b></p>
@@ -221,7 +237,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="24">
-            <img src="{% static '/Hindi_songs/Ghunghroo.jpg' %}">
+            <img src="{% static '/Hindi_songs/Ghunghroo.jpg' %}' %}">
           </a>
           <h4>Ghunghroo</h4>
           <p><b>Arjit Singh</b></p>
@@ -229,7 +245,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="25">
-            <img src="{% static '/Hindi_songs/High_Rated.jpg' %}">
+            <img src="{% static '/Hindi_songs/High_Rated.jpg' %}' %}">
           </a>
           <h4>High Rated</h4>
           <p><b>Gururandhawa</b></p>
@@ -237,7 +253,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="26">
-            <img src="{% static '/Hindi_songs/Ik_Mulakat.jpg' %}">
+            <img src="{% static '/Hindi_songs/Ik_Mulakat.jpg' %}' %}">
           </a>
           <h4>Ik Mulakat</h4>
           <p><b>Altamash Faridi, Palak Muchhal, Meet Bros</b></p>
@@ -245,7 +261,7 @@
 
         <div class="songCard col-md-3">
           <a href="javascript:void();" class="album-poster" data-switch="27">
-            <img src="{% static '/Hindi_songs/Illegal_Weapon_2.0 .jpg' %}">
+            <img src="{% static '/Hindi_songs/Illegal_Weapon_2.0.jpg' %}">
           </a>
           <h4>Illegal Weapon 2.0</h4>
           <p><b>Garry Sandhu and Jasmine Sandias</b></p>
@@ -281,6 +297,118 @@
           </a>
           <h4>Kamariya</h4>
           <p><b>Aastha Gill, Divya Kumar and Sachin Sanghvi</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="32">
+            <img src="{% static '/Hindi_songs/Vaaste.jpg' %}">
+          </a>
+          <h4>Vaaste</h4>
+          <p><b>Dhvani Bhanushali</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="33">
+            <img src="{% static '/Hindi_songs/Ishq_tera.jpg' %}">
+          </a>
+          <h4>Ishq Tera</h4>
+          <p><b>Guru Randhawa</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="34">
+            <img src="{% static '/Hindi_songs/Leja_Re.jpg' %}">
+          </a>
+          <h4>Leja Re</h4>
+          <p><b>Dhvani Bhanushali</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="35">
+            <img src="{% static '/Hindi_songs/Naina.jpg' %}">
+          </a>
+          <h4>Naina</h4>
+          <p><b>Arijit Singh</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="36">
+            <img src="{% static '/Hindi_songs/Tera_Ban_Jaaunga.jpg' %}">
+          </a>
+          <h4>Tera Ban Jaaunga</h4>
+          <p><b>Akhil Sachdeva and Tulsi Kumar</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="37">
+            <img src="{% static '/Hindi_songs/Kabira.jpg' %}">
+          </a>
+          <h4>Kabira</h4>
+          <p><b>Rekha Bhardwaj and Tochi Raina</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="38">
+            <img src="{% static '/Hindi_songs/Teri_Mitti.jpg' %}">
+          </a>
+          <h4>Teri Mitti</h4>
+          <p><b>B Praak</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="39">
+            <img src="{% static '/Hindi_songs/Ve_Mahi.jpg' %}">
+          </a>
+          <h4>Ve Maahi</h4>
+          <p><b>Arijit Singh and Asees Kaur</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="40">
+            <img src="{% static '/Hindi_songs/Zara_Zara_Behekta_Hai.jpg' %}">
+          </a>
+          <h4>Zara Zara Behekta Hai</h4>
+          <p><b>Bombay Jayashri</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="41">
+            <img src="{% static '/Hindi_songs/Tera_Fitoor.jpg' %}">
+          </a>
+          <h4>Tera Fitoor</h4>
+          <p><b>Arijit Singh</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="42">
+            <img src="{% static '/Hindi_songs/Tera_Baap_Aaya.jpg' %}">
+          </a>
+          <h4>Tera Baap Aaya</h4>
+          <p><b>Farhad Bhiwandiwala</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="43">
+            <img src="{% static '/Hindi_songs/Shankara_Re_Shankara.jpg' %}">
+          </a>
+          <h4>Shankara Re Shankara</h4>
+          <p><b>Mehul Vyas</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="44">
+            <img src="{% static '/Hindi_songs/Baala.jpg' %}">
+          </a>
+          <h4>Baala</h4>
+          <p><b>Sohail Sen and Vishal Dadlani</b></p>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="45">
+            <img src="{% static '/Hindi_songs/O_SAKI_SAKI.jpg' %}">
+          </a>
+          <h4>O SAKI SAKI</h4>
+          <p><b>Neha Kakkar and Tulsi Kumar</b></p>
         </div>
 
       </div>
@@ -344,9 +472,6 @@
   <div id="aplayer">
 
   </div>
-
-
-
 
 {% block js %}
 

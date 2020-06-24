@@ -20,7 +20,8 @@ const ap = new APlayer({
             artist: 'Kumar Sanu, Mika Singh, Neha Kakkar',
             url: 'static/Hindi_songs/Aankh_Mare.mp3',
             cover: 'static/Hindi_songs/Aankh_Mare.jpg'
-        }, {
+        },
+        {
             name: 'Ae Dil Hai Mushkil',
             artist: 'Arjit Singh',
             url: 'static/Hindi_songs/Ae_Dil_Hai_Mushkil.mp3',
@@ -205,6 +206,90 @@ const ap = new APlayer({
             artist: 'Aastha Gill, Divya Kumar and Sachin Sanghvi',
             url: 'static/Hindi_songs/Kamariya.mp3',
             cover: 'static/Hindi_songs/Kamariya.jpg'
+        },
+        {
+            name: 'Vaaste',
+            artist: 'Dhvani Bhanushali',
+            url: 'static/Hindi_songs/Vaaste.mp3',
+            cover: 'static/Hindi_songs/Vaaste.jpg'
+        },
+        {
+            name: 'Ishq tera',
+            artist: 'Guru Randhawa',
+            url: 'static/Hindi_songs/Ishq_tera.mp3',
+            cover: 'static/Hindi_songs/Ishq_tera.jpg'
+        },
+        {
+            name: 'Leja Re',
+            artist: 'Dhvani Bhanushali',
+            url: 'static/Hindi_songs/Leja_Re.mp3',
+            cover: 'static/Hindi_songs/Leja_Re.jpg'
+        },
+        {
+            name: 'Naina',
+            artist: '',
+            url: 'static/Hindi_songs/Naina.mp3',
+            cover: 'static/Hindi_songs/Naina.jpg'
+        },
+        {
+            name: 'Tera Ban Jaaunga',
+            artist: 'Akhil Sachdeva and Tulsi',
+            url: 'static/Hindi_songs/Tera_Ban_Jaaunga.mp3',
+            cover: 'static/Hindi_songs/Tera_Ban_Jaaunga.jpg'
+        },
+        {
+            name: 'Kabira',
+            artist: 'Rekha Bhardwaj and Tochi Raina',
+            url: 'static/Hindi_songs/Kabira.mp3',
+            cover: 'static/Hindi_songs/Kabira.jpg'
+        },
+        {
+            name: 'Teri Mitti',
+            artist: 'B Praak',
+            url: 'static/Hindi_songs/Teri_Mitti.mp3',
+            cover: 'static/Hindi_songs/Teri_Mitti.jpg'
+        },
+        {
+            name: 'Ve Maahi',
+            artist: 'Arijit Singh and Asees Kaur',
+            url: 'static/Hindi_songs/Ve_Maahi.mp3',
+            cover: 'static/Hindi_songs/Ve_Maahi.jpg'
+        },
+        {
+            name: 'Zara Zara Behekta Hai',
+            artist: 'Bombay Jayashri',
+            url: 'static/Hindi_songs/Zara_Zara_Behekta_Hai.mp3',
+            cover: 'static/Hindi_songs/Zara_Zara_Behekta_Hai.jpg'
+        },
+        {
+            name: 'Tera Fitoor',
+            artist: 'Arijit Singh',
+            url: 'static/Hindi_songs/Tera_Fitoor.mp3',
+            cover: 'static/Hindi_songs/Tera_Fitoor.jpg'
+        },
+        {
+            name: 'Tera Baa Aaya',
+            artist: 'Farhad Bhiwandiwala',
+            url: 'static/Hindi_songs/Tera_Baa_Aaya.mp3',
+            cover: 'static/Hindi_songs/Tera_Baa_Aaya.jpg'
+        },
+        {
+            name: 'Shankara Re Shankara',
+            artist: 'Mehul Vyas',
+            url: 'static/Hindi_songs/Shankara_Re_Shankara.mp3',
+            cover: 'static/Hindi_songs/Shankara_Re_Shankara.jpg'
+        },
+        {
+            name: 'Baala',
+            artist: 'Sohail Sen and Vishal Dadlani',
+            url: 'static/Hindi_songs/Baala.mp3',
+            cover: 'static/Hindi_songs/Baala.jpg'
+        },
+        {
+            name: 'O SAKI SAKI',
+            artist: 'Neha Kakkar and Tulsi Kumar',
+            url: 'static/Hindi_songs/O_SAKI_SAKI.mp3',
+            cover: 'static/Hindi_songs/O_SAKI_SAKI.jpg'
         }
     ]
 });

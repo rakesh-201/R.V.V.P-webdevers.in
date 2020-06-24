@@ -218,6 +218,78 @@ const ap = new APlayer({
             artist: 'Ajay-Atul',
             url: 'static/Marathi_songs/Zingat.mp3',
             cover: 'static/Marathi_songs/Zingat.jpg'
+        },
+        {
+            name: 'Khulach Zalo Ga',
+            artist: 'Aishwarya Malgave',
+            url: '/static/Marathi_songs/Khulach_Zalo_Ga.mp3',
+            cover: '/static/Marathi_songs/Khulach_Zalo_Ga.jpg'
+        },
+        {
+            name: 'Zindagi Zindagi',
+            artist: 'Sachin Dev Burman',
+            url: '/static/Marathi_songs/Zindagi_Zindagi.mp3',
+            cover: '/static/Marathi_songs/Zindagi_Zindagi.jpg'
+        },
+        {
+            name: 'Jiv Rangala',
+            artist: 'Ajay-Atul',
+            url: '/static/Marathi_songs/Jiv_Rangala.mp3',
+            cover: '/static/Marathi_songs/Jiv_Rangala.jpg'
+        },
+        {
+            name: 'Man UdhanVaryache',
+            artist: 'Shankar Mahadevan',
+            url: '/static/Marathi_songs/Man_Udhan_Varyache.mp3',
+            cover: '/static/Marathi_songs/Man_Udhan_Varyache.jpg'
+        },
+        {
+            name: 'Tu Hi Re Maza Mitva',
+            artist: 'Shankar Mahadevan',
+            url: '/static/Marathi_songs/Tu_Hi_Re_Maza_Mitva.mp3',
+            cover: '/static/Marathi_songs/Tu_Hi_Re_Maza_Mitva.jpg'
+        },
+        {
+            name: 'Hrudayat Vaje Something',
+            artist: '',
+            url: '/static/Marathi_songs/Hrudayat_Vaje_Something.mp3',
+            cover: '/static/Marathi_songs/Hrudayat_Vaje_Something.jpg'
+        },
+        {
+            name: 'Rakhumai Rakhumai',
+            artist: '',
+            url: '/static/Marathi_songs/Rakhumai_Rakhumai.mp3',
+            cover: '/static/Marathi_songs/Rakhumai_Rakhumai.jpg'
+        },
+        {
+            name: 'Sur Niragas Ho',
+            artist: '',
+            url: '/static/Marathi_songs/Sur_Niragas_Ho.mp3',
+            cover: '/static/Marathi_songs/Sur_Niragas_Ho.jpg'
+        },
+        {
+            name: 'Saath De Tu Mala',
+            artist: '',
+            url: '/static/Marathi_songs/Saath_De_Tu_Mala.mp3',
+            cover: '/static/Marathi_songs/Saath_De_Tu_Mala.jpg'
+        },
+        {
+            name: 'Kitida Navyane Tula Athvave',
+            artist: '',
+            url: '/static/Marathi_songs/Kitida_Navyane_Tula_Athvave.mp3',
+            cover: '/static/Marathi_songs/Kitida_Navyane_Tula_Athvave.jpg'
+        },
+        {
+            name: 'Deva Thujha Gabharyala',
+            artist: '',
+            url: '/static/Marathi_songs/Deva_Thujha_Gabharyala.mp3',
+            cover: '/static/Marathi_songs/Deva_Thujha_Gabharyala.jpg'
+        },
+        {
+            name: 'Bulati Hai Magar Jane Ka Nahi',
+            artist: '',
+            url: '/static/Marathi_songs/Bulati_Hai_Magar_Jane_Ka_Nahi.mp3',
+            cover: '/static/Marathi_songs/Bulati_Hai_Magar_Jane_Ka_Nahi.jpg'
         }
     ]
 });

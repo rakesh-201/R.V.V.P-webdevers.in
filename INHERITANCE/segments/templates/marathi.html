@@ -1,18 +1,35 @@
 {% extends 'layout_song.html' %}
 {% block content %}
 {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static '/singerPage.css'%}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-    <title>{% block title %}Marathi songs
-    {% endblock title %}</title>
+    <title>Marathi songs</title>
 
 
 
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button id="gobackBtn" class="btn btn-outline-success my-2 my-sm-0"><a href="music hpg.html">Go
+            Back</a></button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search for songs"
+                    aria-label="Search">
+                <button onclick="this.preventDefault()" id="searchBtn"
+                    class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </form>
+        </div>   
+    </nav>
+
     <div class="main">
         <div class="container">
             <div class="row">
@@ -400,6 +417,126 @@
                     <p><b>Ajay-Atul</b></p>
                 </div>
 
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="34">
+                        <img src="{% static '/Marathi_songs/Khulach_Zalo_Ga.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Khulach Zalo Ga</h4>
+                    </div>
+                    <p><b>AIshwarya Malgave</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="35">
+                        <img src="{% static '/Marathi_songs/Zindagi_Zindagi.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Zindagi Zindagi</h4>
+                    </div>
+                    <p><b>Sachin Dev Burman</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="36">
+                        <img src="{% static '/Marathi_songs/Jiv_Rangala.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Jiv Rangala</h4>
+                    </div>
+                    <p><b>Ajay-Atul</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="37">
+                        <img src="{% static '/Marathi_songs/Man_Udhan_Varyache.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Man Udhan Varyache</h4>
+                    </div>
+                    <p><b>Shankar Mahadevan</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="38">
+                        <img src="{% static '/Marathi_songs/Tu_Hi_Re_Maza_Mitva.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Tu Hi Re Maza Mitva</h4>
+                    </div>
+                    <p><b>Shankar Mahadevan</b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="39">
+                        <img src="{% static '/Marathi_songs/Hrudayat_Vaje_Something.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Hrudayat Vaje Something</h4>
+                    </div>
+                    <p><b></b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="40">
+                        <img src="{% static '/Marathi_songs/Rakhumai_Rakhumai.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Rakhumai Rakhumai</h4>
+                    </div>
+                    <p><b></b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="41">
+                        <img src="{% static '/Marathi_songs/Sur_Niragas_Ho.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Sur Niragas Ho</h4>
+                    </div>
+                    <p><b></b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="42">
+                        <img src="{% static '/Marathi_songs/Saath_De_Tu_Mala.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Saath De Tu Mala</h4>
+                    </div>
+                    <p><b></b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="43">
+                        <img src="{% static '/Marathi_songs/Kitida_Navyane_Tula_Athvave.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Kitida_Navyane_Tula_Athvave</h4>
+                    </div>
+                    <p><b></b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="44">
+                        <img src="{% static '/Marathi_songs/Deva_Thujha_Gabharyala.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Deva_Thujha_Gabharyala</h4>
+                    </div>
+                    <p><b></b></p>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="45">
+                        <img src="{% static '/Marathi_songs/Bulati_Hai_Magar_Jane_Ka_Nahi.jpg' %}">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Bulati Hai Magar Jane Ka Nahi</h4>
+                    </div>
+                    <p><b></b></p>
+                </div>
+
             </div>
 
             <div class="row">
@@ -461,6 +598,11 @@
     <div id="aplayer">
 
     </div>
+
+
+
+
+
 
 
 
