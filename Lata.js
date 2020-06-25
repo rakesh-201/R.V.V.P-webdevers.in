@@ -25,217 +25,217 @@ $(".album-poster").on("click", function () {
     audio: [
     {
         name: 'Main tere ishq mein',
-        artist: 'Lata Mangeshkar',
+        artist: 'Loafer',
         url: 'Lata_Songs/Main_tere.mp3',
         cover: 'Lata_Songs/Main_tere.jfif'
     },
     {
         name: 'Yeh galiyan yeh chaubara',
-        artist: 'Lata Mangeshkar',
+        artist: 'Prem Rog',
         url: 'Lata_Songs/Yeh_galiyaan.mp3',
         cover: 'Lata_Songs/Yeh_galiyaan.jfif'
     },
     {
         name: 'Pyar Kiya To Darna',
-        artist: 'Lata Mangeshkar',
+        artist: 'Mughal-E-Azam',
         url: 'Lata_Songs/Pyar_kiya.mp3',
         cover: 'Lata_Songs/Pyar_kiya.jfif'
     },
     {
       name: 'Aaj phir jeene ki',
-      artist: 'Lata Mangeshkar',
+      artist: 'Guide',
       url: 'Lata_Songs/Aaj_phir.mp3',
       cover: 'Lata_Songs/Aaj_phir.jpg'
     },
     {
         name: 'Kitna pyara wada',
-        artist: 'Lata Mangeshkar, Mohammad Rafi',
+        artist: 'Caravan',
         url:'MdRafi_Songs/Kitna_Pyara.mp3',
         cover: 'MdRafi_Songs/Kitna_pyara.jpg'
     },
     {
       name: 'Rangeela re',
-      artist: 'Lata Mangeshkar',
+      artist: 'Prem Pujari',
       url:'Lata_Songs/Rangeela_re.mp3',
       cover: 'Lata_Songs/Rangeela_re.jpg'
     },
     {
         name: 'Chhoti si umar mein',
-        artist:'Lata Mangeshkar',
+        artist:'Bairag',
         url:'Lata_Songs/Chhoti_si.mp3',
         cover: 'Lata_Songs/Chhoti_si.jfif'
     },
     {
         name: 'Milo na tum to',
-        artist: 'Lata Mangeshkar',
+        artist: 'Heer Ranjha',
         url: 'Lata_Songs/Milo_na.mp3',
         cover: 'Lata_Songs/Milo_na.jfif'
     },
     {
         name: 'Itna toh yaad hai mujhe',
-        artist: 'Lata Mangeshkar, Mohammad Rafi',
+        artist: 'Mehboob Ki Mehandi',
         url:'MdRafi_Songs/Itna_to.mp3',
         cover: 'MdRafi_Songs/Itna_to.jpg'
     },
     {
       name: 'Bekhudi mein sanam',
-      artist: 'Lata Mangeshkar, Mohammad Rafi ',
+      artist: 'Haseena Man Jayegi',
       url: 'Lata_Songs/Bekhudi_mein.mp3',
       cover: 'Lata_Songs/Bekhudi_mein.jpg'
     },
     {
         name: 'Tere bina Zindagi se koi',
-        artist: 'Lata Mangeshkar, Kishore Kumar',
+        artist: 'Aandhi',
         url: 'Kishore_songs/Tere_bina.mp3',
         cover: 'Kishore_songs/Tere_bina.jpg'
     }, 
     {
         name: 'Patta patta boota boota',
-        artist: 'Lata Mangeshkar, Mohammad Rafi',
+        artist: 'Ek Nazar',
         url:'MdRafi_Songs/Patta_patta.mp3',
         cover: 'MdRafi_Songs/Patta_patta.jpg'
     },
     {
         name: 'Yuhi tum mujhse baat',
-        artist: 'Lata Mangeshkar, Mohammad Rafi',
+        artist: 'Sachha Zhuta',
         url:'Lata_songs/Yuhi_tum.mp3',
         cover: 'Lata_Songs/Yuhi_tum.jfif'
     },
     {
       name: 'Dil tera deewana hai sanam',
-      artist: 'Lata Mangeshkar, Mohammad Rafi',
+      artist: 'Dil tera Deewana',
       url: 'MdRafi_Songs/Dil_tera.mp3',
       cover: 'MdRafi_Songs/Dil_tera.jpg'
     },
     {
       name: 'Kora kagaz tha ye man mera',
-      artist: 'Lata Mangeshkar, Kishore Kumar',
+      artist: 'Aaradhna',
       url: 'Kishore_songs/Kora_kagaz.mp3',
       cover: 'Kishore_songs/Kora_kagaz.jpg'
     },
     {
       name: 'Gaata rahe mera dil',
-      artist: 'Lata Mangeshkar, Kishore Kumar',
+      artist: 'Guide',
       url: 'Kishore_songs/Gaata_rahe.mp3',
       cover: 'Kishore_songs/Gaata_rahe.jpg'
     },
     {
       name: 'Gum hai kisi ke',
-      artist: 'Lata Mangeshkar, Kishore Kumar',
+      artist: 'Rampur ka Lakshman',
       url: 'Kishore_songs/Gum_hai.mp3',
       cover: 'Kishore_songs/Gum_hai.jpg'
     },
     {
       name: 'Jai jai shiv shankar',
-      artist: 'Lata Mangeshkar, Kishore Kumar',
+      artist: 'Aap Ki Kasam',
       url: 'Kishore_songs/Jai_jai.mp3',
       cover: 'Kishore_songs/Jai_jai.jpg'
     },
     {
       name: 'Rimjhim gire saavan',
-      artist: 'Lata Mangeshkar, Kishore Kumar',
+      artist: 'Manzil',
       url: 'Kishore_songs/Rimjhim_gire.mp3',
       cover: 'Kishore_songs/Rimjhim_gire.jpg'
     },
     {
       name: 'Tum aa gaye ho',
-      artist: 'Lata mageshkar, Kishore Kumar',
+      artist: 'Aandhi',
       url: 'Kishore_songs/Tum_aa.mp3',
       cover: 'Kishore_songs/Tum_aa.jpg'
     },
     {
       name: 'Aaja teri yaad aayi',
-      artist: 'Lata mageshkar, Mohammad Rafi',
+      artist: 'Charas',
       url: 'MdRafi_Songs/Aaja_teri.mp3',
       cover: 'MdRafi_Songs/Aaja_teri.jpg'
     },
     {
       name: 'Tere bina jiya jaye na',
-      artist: 'Lata mageshkar',
+      artist: 'Ghar',
       url: 'Lata_Songs/Tere_bina_jiya.mp3',
       cover: 'Lata_Songs/Tere_bina_jiya.jpg'
     },
     {
       name: 'Ajeeb dastan',
-      artist: 'Lata mageshkar',
+      artist: 'Dil Apna Aur Preet Parai',
       url: 'Lata_Songs/Ajib_dastan.mp3',
       cover: 'Lata_Songs/Ajib_dastan.jpeg'
     },
     {
       name: 'Tune o rangeele',
-      artist: 'Lata mageshkar',
+      artist: 'Kudrat',
       url: 'Lata_Songs/Tune_o_rangeele.mp3',
       cover: 'Lata_Songs/Tune_o_rangeele.jpg'
     },
     {
       name: 'Naam gum jaaeyga',
-      artist: 'Lata mageshkar',
+      artist: 'Kinara',
       url: 'Lata_Songs/Naam_gum.mp3',
       cover: 'Lata_Songs/Naam_gum.jpg'
     },
     {
       name: 'Sheesha ho ya dil ho',
-      artist: 'Lata mageshkar',
+      artist: 'Asha',
       url: 'Lata_Songs/Sheesha_ho.mp3',
       cover: 'Lata_Songs/Sheesha_ho.jpg'
     },
     {
       name: 'Sun sahiba soon',
-      artist: 'Lata mageshkar',
+      artist: 'Ram Teri Ganga Maili',
       url: 'Lata_Songs/Sun_sahiba.mp3',
       cover: 'Lata_Songs/Sun_sahiba.jpg'
     },
     {
       name: 'Raina beeti jaaye',
-      artist: 'Lata mageshkar',
+      artist: 'Amar Prem',
       url: 'Lata_Songs/Raina_beeti.mp3',
       cover: 'Lata_Songs/Raina_beeti.jpg'
     },
     {
       name: 'Rajnigandha phool tumhare',
-      artist: 'Lata mageshkar',
+      artist: 'Rajnigandha',
       url: 'Lata_Songs/Rajnigandha.mp3',
       cover: 'Lata_Songs/Rajnigandha.jpg'
     },
     {
       name: 'Bheegi bheegi raaton me',
-      artist: 'Lata mageshkar,Kishore Kumar',
-      url: 'Lata_Songs/Bheegi bheegi.mp3',
-      cover: 'Lata_Songs/Bheegi bheegi.jpeg'
+      artist: 'Ajanbee',
+      url: 'Lata_Songs/Bheegi_bheegi.mp3',
+      cover: 'Lata_Songs/Bheegi_bheegi.jpeg'
     },
     {
       name: 'Suno kaho suna',
-      artist: 'Lata mageshkar,Kishore Kumar',
+      artist: 'Aap Ki Kasam',
       url: 'Lata_Songs/Suno_kaho.mp3',
       cover: 'Lata_Songs/Suno_kaho.jpeg'
     },
     {
       name: 'Chup gaye saare',
-      artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata_Songs/Chup gaye.mp3',
-      cover: 'Lata_Songs/Chup gaye.jpeg'
+      artist: 'Do raaste',
+      url: 'Lata_Songs/Chup_gaye.mp3',
+      cover: 'Lata_Songs/Chup_gaye.jpeg'
     },
     {
       name: 'Din sara guzara',
-      artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata_Songs/Din sara.mp3',
-      cover: 'Lata_Songs/Din sara.jpg'
+      artist: 'Junglee',
+      url: 'Lata_Songs/Din_sara.mp3',
+      cover: 'Lata_Songs/Din_sara.jpg'
     },
     {
       name: 'Ab aan milo sajna',
-      artist: 'Lata mageshkar, Mohammad Rafi',
-      url: 'Lata_Songs/Aan milo.mp3',
-      cover: 'Lata_Songs/Aan milo.jpg'
+      artist: 'Aan milo sajna',
+      url: 'Lata_Songs/Aan_milo.mp3',
+      cover: 'Lata_Songs/Aan_milo.jpg'
     },
     {
       name: 'Piya tose naina lage',
-      artist: 'Lata mageshkar',
+      artist: 'Guide',
       url: 'Lata_Songs/Piya_tose.mp3',
       cover: 'Lata_Songs/Piya_tose.png'
     },
     {
       name: 'Aaja piya tohe',
-      artist: 'Lata mageshkar',
+      artist: 'Baharon Ke Sapne',
       url: 'Lata_Songs/Aaja_piya.mp3',
       cover: 'Lata_Songs/Aaja_piya.jpg'
     }
@@ -297,4 +297,5 @@ function changeIcon(element){
     }
     
 }
+
 
