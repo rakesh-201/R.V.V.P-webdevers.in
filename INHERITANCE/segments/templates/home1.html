@@ -1,10 +1,8 @@
-{% extends 'layout1.html' %} {% block content %} {% load static %}
-<ul id="msg">
-    {% if messages %} {% for msg in messages %}
-    <code class="text-center">
-        {{ msg }}
-    </code> {% endfor %} {% endif %}
-</ul>
+{% extends 'layout1.html' %} {% block content %} {% load static %} {% if messages %} {% for msg in messages %}
+<div class="alert alert-primary mb-0 mx-1" id="msg" role="alert">
+    {{msg}}
+</div>
+{% endfor %} {% endif %}
 <style>
     .bg {
         background-image: url('static/image/hbg1.jpg');
@@ -20,7 +18,7 @@
         color: red;
     }
 </style>
-<div class="jumbotron bgbg">
+<div class="jumbotron bgbg mt-0 ">
     <div class="container">
         <h1 class="display-3  text-danger font-weight-bolder">B_Site</h1>
         <p class="text-danger">This is a site for the people with golden dreams that is for the blind people. This site is made by four awesome developers of VJTI for the entertainment of the blind people. This site contains dialy news, latest songs, an oral diary.

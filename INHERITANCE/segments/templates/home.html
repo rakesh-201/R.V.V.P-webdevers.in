@@ -14,12 +14,11 @@
         background-color: red;
     }
 </style>
-<ul id="msg">
     {% if messages %} {% for msg in messages %}
-    <code class="text-center">
+    <div class="alert alert-danger mb-0 mx-1" id="msg" >
         {{ msg }}
-    </code> {% endfor %} {% endif %}
-</ul>
+    </div> 
+    {% endfor %} {% endif %}
 <div id="carouselExampleCaptions" class="carousel slide  carou" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>

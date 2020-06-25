@@ -9,7 +9,6 @@
 <script src="https://unpkg.com/swiper/js/swiper.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="{% static 'music_hpg.js'%}"></script>
 <style>
     #text {
         display: inline;
@@ -29,8 +28,8 @@
     
     .swiper-container {
         width: 100%;
-        padding-top: 200px;
-        padding-bottom: 200px;
+        padding-top: 100px;
+        padding-bottom: 100px;
         margin-left: 0px;
         margin-bottom: 0;
     }
@@ -94,6 +93,11 @@
         padding-bottom: 40px;
         text-shadow: 0px 10px 10px 22px rgb(255, 32, 2) !important;
     }
+    
+    #txt {
+        text-align: center;
+        color: white;
+    }
 </style>
 
 <body>
@@ -103,31 +107,69 @@
     <main id="musicHome">
 
 
+        <div class="heading mt-5 mb-0">
+            <h1> <i class="fa fa-music fa-md"><i class="fa fa-music fa-md"></i></i> Your Personalized Music App
+                <i class="fa fa-music fa-md"><i class="fa fa-music fa-md"></i></i>
+            </h1>
+        </div>
+        <div id="txt">
+            <h4>Welcome sir!!!</h4>
+            <h4>We have a range of songs for you, right from the songs of sir Kishore to the songs of Arijit Singh</h4>
+            <h4>Hope You Enjoy :)</h4>
+        </div>
         <div class="swiper-container">
-            <div class="heading">
-                <h1> <i class="fa fa-music fa-md"><i class="fa fa-music fa-md"></i></i> Your Personalized Music App
-                    <i class="fa fa-music fa-md"><i class="fa fa-music fa-md"></i></i>
-                </h1>
-                <h4 class="text-center" id="text"></h4>
-            </div>
             <div class="head">
-                <h2>Top Charts</h2>
+                <h2>Sorted By Years</h2>
             </div>
 
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url(static/image/arjit.jpg)">
-                    <h3>Arjit Singh<br><a id="arjit" href="/arijit"><button type="button"
+            <div class="swiper-wrapper mb-5">
+                <div class="swiper-slide" style="background-image:url(static/2020/2020.jpg)">
+                    <h3>Hits of 2020<br><a id="2020" href="/songs_2020"><button type="button" class="btn btn-primary">
+                                Play Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
+                </div>
+                <div class="swiper-slide" style="background-image:url(static/2019/2019.jpg)">
+                    <h3>Hits of 2019<br><a id="2019" href="/songs_2019"><button type="button" class="btn btn-primary">
+                                Play Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="head ">
+                <h2>Sorted By Languages</h2>
+            </div>
+            <div class="swiper-wrapper mb-5">
+                <div class="swiper-slide" style="background-image:url(static/image/Ht20.jpg)">
+                    <h3>Bollywood T20<br><a id="Hindi" href="/hindi"><button type="button" class="btn btn-primary">
+                                Play Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
+                </div>
+                <div class="swiper-slide" style="background-image:url(static/image/Et20.jpg)">
+                    <h3>English T20<br><a id="English" href="/english"><button type="button"
                                 class="btn btn-primary">Play Songs <i
                                     class="fa fa-play  padding-top:1px;"></i></button></a></h3>
+                </div>
+                <div class="swiper-slide" style="background-image:url(static/image/Mt20.jpeg)">
+                    <h3>Marathi T20<br><a id="Marathi" href="/marathi"><button type="button"
+                                class="btn btn-primary">Play Songs <i
+                                    class="fa fa-play padding-top:1px;"></i></button></a></h3>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="head ">
+                <h2>Sorted By Artists</h2>
+            </div>
+            <div class="swiper-wrapper mb-5">
+                <div class="swiper-slide" style="background-image:url(static/image/arjit.jpg)">
+                    <h3>Arjit Singh<br><a id="arjit" href="/arijit"><button type="button" class="btn btn-primary">Play
+                                Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
                 </div>
                 <div class="swiper-slide" style="background-image:url(static/image/atif.jpg)">
                     <h3>Atif Aslam<br><a id="atif" href="/atif"><button type="button" class="btn btn-primary">Play
                                 Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
                 </div>
                 <div class="swiper-slide" style="background-image:url(static/image/lata.jpg)">
-                    <h3>Lata Mangeshkar<br><a id="lata" href="/lata"><button type="button"
-                                class="btn btn-primary">Play Songs <i
-                                    class="fa fa-play  padding-top:1px;"></i></button></a></h3>
+                    <h3>Lata Mangeshkar<br><a id="lata" href="/lata"><button type="button" class="btn btn-primary">Play
+                                Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
                 </div>
                 <div class="swiper-slide" style="background-image:url(static/image/kishore.jpeg)">
                     <h3>Kishore Kumar<br><a id="kishore" href="/kishore"><button type="button"
@@ -143,84 +185,9 @@
                     <h3>Asha Bhosle<br><a id="Asha" href="/asha"><button type="button" class="btn btn-primary">Play
                                 songs<i class="fa fa-play padding-top:1px;"></i></button></a></h3>
                 </div>
-                <div class="swiper-slide" style="background-image:url(static/image/Mt20.jpeg)">
-                    <h3>Marathi T20<br><a id="Marathi" href="/marathi"><button type="button"
-                            class="btn btn-primary">Play Songs <i class="fa fa-play padding-top:1px;"></i></button></a></h3>
-                </div>
-                <div class="swiper-slide" style="background-image:url(static/image/Ht20.jpg)">
-                    <h3>Bollywood T20<br><a id="Hindi" href="/hindi"><button type="button" class="btn btn-primary">
-                      Play Songs <i class="fa fa-play  padding-top:1px;"></i></button></a></h3>
-                </div>
-                <div class="swiper-slide" style="background-image:url(static/image/Et20.jpg)">
-                    <h3>English T20<br><a id="English" href="/english"><button type="button" class="btn btn-primary">Play Songs <i
-                                class="fa fa-play  padding-top:1px;"></i></button></a></h3>
-                </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination">
-                <!-- <div class="loader">
-                    <div class="spinner-grow text-success" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                    <div class="spinner-grow text-danger" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                    <div class="spinner-grow text-warning" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                </div>  -->
-            </div>
-        </div>
-
-
-
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
         </div>
     </main>
-
-    <div id="arjitpg">
-
-    </div>
-
-
-    <div id="atifpg">
-
-    </div>
-
-    <div id="latapg">
-
-    </div>
-
-    <div id="kishorepg">
-
-    </div>
-
-    <div id="MdRafipg">
-
-    </div>
-
-
-
-    <div id="Ashapg">
-
-    </div>
-
-    <div id="Marathipg">
-
-    </div>
-
-    <div id="Hindipg">
-
-    </div>
-
-    <div id="Englishpg">
-
-    </div>
-
-
-
 
     {% block js %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
@@ -253,6 +220,7 @@
             });
         })
     </script>
+    <script src="{% static 'music_hpg.js'%}"></script>
 
 
     {% endblock js %}

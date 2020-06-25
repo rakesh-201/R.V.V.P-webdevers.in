@@ -28,6 +28,8 @@ urlpatterns=[
     path("lata", views.lata, name="lata"),
     path("hindi", views.hindi, name="hindi"),
     path("kishore", views.kishore, name="kishore"),
+    path("songs_2020", views.songs_2020, name="songs_2020"),
+    path("songs_2019", views.songs_2019, name="songs_2019"),
 ]
 
 handler400 = views.error_400;

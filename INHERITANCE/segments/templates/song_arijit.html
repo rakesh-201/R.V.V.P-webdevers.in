@@ -1,546 +1,469 @@
 <!doctype html>
 <html lang="en">
-{% load static %}
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-    <title>Hello, world!</title>
-    <style>
-        body {
-            background-color: #000;
-            font-family: Open sans;
-        }
-        
-        html {
-            background-color: black !important;
-        }
-        
-        img {
-            width: 100%;
-            min-height: 250px;
-            padding: 5px;
-            background-color: rgba(155, 199, 255, 0.938);
-            cursor: pointer;
-        }
-        
-        .main {
-            padding: 40px 0;
-            background-image: linear-gradient(rgb(137, 227, 255), blue);
-        }
-        
-        .col-md-2 {
-            margin: 30px 20px 0px 5px;
-            padding-bottom: 10px;
-        }
-        
-        .album-poster {
-            position: relative;
-            display: block;
-            border-radius: 7px;
-            overflow: hidden;
-            width: 200px;
-            height: 200px;
-            box-shadow: 0px -2px 15px #7bff00a1;
-            transition: all ease 0.4s;
-            border: 4px solid rgb(255, 128, 138);
-        }
-        
-        .album-poster:hover {
-            box-shadow: none;
-            transform: scale(0.98) translateY(5px);
-        }
-        
-        h3 {
-            font-size: 34px;
-            margin-bottom: 34px;
-            padding-bottom: 15px;
-            cursor: pointer;
-        }
-        
-        p {
-            font-size: 15px;
-        }
-        
-        h4 {
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-top: 5px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        
-        span {
-            color: rgb(5, 12, 114) !important;
-            font-size: 25px;
-        }
-        
-        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
-            background: #feffbf;
-            height: 4px;
-        }
-        
-        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
-            background: #0079db !important;
-            height: 14px;
-        }
-        
-        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
-            background-color: #0071ce !important;
-        }
-        
-        .aplayer .aplayer-icon {
-            width: 40px;
-            height: 40px;
-        }
-        
-        .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
-            fill: #000;
-        }
-        
-        .aplayer .aplayer-info .aplayer-music {
-            margin-bottom: 5px;
-        }
-        
-        .aplayer .aplayer-body .aplayer-info .aplayer-controller .aplayer-time button {
-            border: 5px solid rgb(111, 59, 255);
-            padding: 5px 5px 10px 5px;
-            margin-bottom: 10px;
-            background-color: rgb(253, 230, 255);
-        }
-        
-        .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-time-inner {
-            margin-top: 5px;
-        }
-        
-        #aplayer {
-            box-shadow: 3px -4px 22px rgb(255, 0, 0);
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            width: 100%;
-            padding-bottom: 20px;
-            margin: 0;
-            box-shadow: 0 -2px 2px #dadada;
-            border: 5px solid rgb(95, 164, 255);
-            background-color: rgb(176, 255, 255);
-            transition: all ease 0.5;
-        }
-        
-        #aplayer.showPlayer {
-            bottom: 0;
-        }
-        
-        .col-md-12 h4 {
-            font-weight: 800;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: rgb(17, 73, 255);
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-            box-shadow: 0px -3px 20px rgb(255, 251, 6);
-            margin-top: ;
-        }
-        
-        .col-md-12 img {
-            margin-bottom: 40px;
-            border-radius: 50%;
-            box-shadow: 0px -2px 20px rgb(0, 255, 21);
-        }
-        
-        h4 {
-            padding-top: 10px;
-            color: rgb(208, 255, 187);
-        }
-        
-        .col-md-3 p {
-            color: rgb(255, 78, 78);
-            font-weight: 500;
-            font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
-        }
-    </style>
 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'm1.css'%}">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+  <title>Arijit Singh Songs</title>
+
+  <script src="jquery-3.5.1.min.js"></script>
 </head>
 
-<body>
+<body class="normal">
+
+  
+
     <div class="main">
+       
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-            <form class="form-inline  my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 style="text-align: center;">Best Of Arijit Singh</h4><img src="{% static '/image/arjit.jpg' %}">
-                </div>
-                <hr>
-                <hr>
-
-                <div class=" songCard  col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="0">
-                        <img src="{% static '/image/Bekhayali.jpg' %}">
-                    </a>
-                    <h4>Bekhayali</h4>
-                    <p>Kabir Singh</p>
-                </div>
-
-                <div class=" songCard  col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="1">
-                        <img src="{% static '/image/Dil_Hi_Toh_Hai.jpg' %}">
-                    </a>
-                    <h4>Dil Hi Toh Hai</h4>
-                    <p>The Sky Is Pink</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="2">
-                        <img src="{% static '/image/Sanam_Re.jpg' %}">
-                    </a>
-                    <h4>Sanam Re</h4>
-                    <p>hh</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="3">
-                        <img src="{% static '/image/Khairiyat.jpg' %}">
-                    </a>
-                    <h4>"Khairiyat</h4>
-                    <p>chichhore</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="4">
-                        <img src="{% static '/image/Phir-Le_Aya_Dil.jpg' %}">
-                    </a>
-                    <h4>Phir Le Aaya Dil</h4>
-                    <p>Song Info</p>
-                </div>
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="5">
-                        <img src="{% static '/image/Pal.jpg' %}">
-                    </a>
-                    <h4>Pal</h4>
-                    <p>Song Info</p>
-                </div>
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="6">
-                        <img src="{% static '/image/Sooraj_Dooba_Hai_Aaj.jpg' %}">
-                    </a>
-                    <h4>Sooraj Dooba Hai Aaj</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="7">
-                        <img src="{% static '/image/Sukoon_Mila.jpg' %}">
-                    </a>
-                    <h4>Sukoon Mila</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="8">
-                        <img src="{% static '/image/Tera_Hoke_Rahoon.jpg' %}">
-                    </a>
-                    <h4>Tera Hoke Rahoon</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="9">
-                        <img src="{% static '/image/Tu_Hi_Hai_Aashiqui.jpg' %}">
-                    </a>
-                    <h4>Tu Hi Hai Aashiqui</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="10">
-                        <img src="{% static '/image/Tum_Hi_Ho.jpg' %}">
-                    </a>
-                    <h4>Tum Hi Ho</h4>
-                    <p>Song Info</p>
-                </div>
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="11">
-                        <img src="{% static '/image/Tum_Saath_Ho.jpg' %}">
-                    </a>
-                    <h4>Tum Saath Ho</h4>
-                    <p>Song Info</p>
-                </div>
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="12">
-                        <img src="{% static '/image/Darkhaast.jpg' %}">
-                    </a>
-                    <h4>Darkhaast</h4>
-                    <p>Song Info</p>
-                </div>
-
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="13">
-                        <img src="{% static '/image/Laal_Ishq.jpg' %}">
-                    </a>
-                    <h4>Laal Ishq</h4>
-                    <p>Song Info</p>
-                </div>
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="14">
-                        <img src="{% static '/image/Ilahi.jpg' %}">
-                    </a>
-                    <h4>Illahi</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="15">
-                        <img src="{% static '/image/Ik_Vaari_ya.jpg' %}">
-                    </a>
-                    <h4>Ik Vaari ya</h4>
-                    <p>Ik Vaari ya</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="16">
-                        <img src="{% static '/image/Hawayein.jpg' %}">
-                    </a>
-                    <h4>Hawayein</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="17">
-                        <img src="{% static '/image/Dhokha_Dhadi.jpg' %}">
-                    </a>
-                    <h4>Dhokha Dhadi</h4>
-                    <p>Song Info</p>
-                </div>
-
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="17">
-                        <img src="{% static '/image/Mast_Magan.jpg' %}">
-                    </a>
-                    <h4>Mast Magan</h4>
-                    <p>Song Info</p>
-                </div>
-
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="17">
-                        <img src="{% static '/image/Meet.jpg' %}">
-                    </a>
-                    <h4>Meet</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="17">
-                        <img src="{% static '/image/Tu_Mila_Toh_Haina.jpg' %}">
-                    </a>
-                    <h4>Tu Mila Toh Haina</h4>
-                    <p>Song Info</p>
-                </div>
-
-                <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster" data-switch="17">
-                        <img src="{% static '/image/Tujh_Kitna_Chahne_Lage.jpg' %}">
-                    </a>
-                    <h4>Tujhe Kitna Chahne Lage</h4>
-                    <p>Song Info</p>
-                </div>
-
-
+        <div class="searchSong">
+            <div class="searchContainer">
+                <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="text"
+                    placeholder="Search for songs">
+                <a class="searchBtn ">
+                    <svg width="25" height="25" viewBox="0 0 25 25">
+                        <path class="fill_path" fill="#FFF" fill-rule="evenodd"
+                            d="M69.5 34a6.5 6.5 0 0 1 6.5 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 69.5 47a6.5 6.5 0 1 1 0-13zm0 2C67 36 65 38 65 40.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z"
+                            transform="translate(-59 -32)"></path>
+                    </svg>
+                    Search Songs
+                </a>
             </div>
+        </div>
+
+        <div class="theme">
+           
+            <button><a tabindex="0" role="button" data-toggle="popover" data-trigger="hover" title="Dark mode"
+                    onclick="changeTheme()" data-content="Check out the new Black theme"><i class="fa fa-moon-o"
+                        style="font-size:48px;color:black;"></i></a></button>
+        </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" id="singerName">
+            <h4 style="text-align: center; margin-top: 15px;">Best Of Arijit Singh</h4>
+        </div>
+
+        <div class="col-md-12 singerImage">
+            <a href="https://en.wikipedia.org/wiki/Arjit_Singh" tabindex="0" role="button"
+                data-toggle="popover" data-trigger="hover" title="Get Info"
+                data-content="Click to get info about artist" class="singerImg album-poster">
+                <img src="{% static '/arjit/arjit.jpg'%}" id="singerImg" alt="Arjit Image">
+            </a>
+        </div>
+
+        <hr>
+
+        <hr>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="0">
+            <img src="{% static '/arjit/Bekhayali.jpg'%}">
+          </a>
+          <h4>Bekhayali</h4>
+          <p>Kabir Singh <a data-placement="right" data-toggle="tooltip" id="favIcon" title="Add to favourites">
+          </p>
+
+          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
 
         </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="1">
+
+            <img src="{% static '/arjit/Dil_Hi_Toh_Hai.jpg'%}"></a>
+          <h4>Dil Hi Toh Hai</h4>
+          <p>The Sky Is Pink</p>
+
+          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="2">
+            <img src="{% static '/arjit/Sanam_Re.jpg'%}"></a>
+
+          <h4>Sanam Re</h4>
+          <p>Sanam Re</p>
+          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="3">
+
+            <img src="{% static '/arjit/Khairiyat.jpg'%}"> </a>
+          <h4>Khairiyat</h4>
+          <p>Chhichhore</p>
+          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="4">
+
+            <img src="{% static '/arjit/Phir_Le_Aya_Dil.jpg'%}"> </a>
+          <h4>Phir Le Aaya Dil</h4>
+          <p>Barfi</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="5">
+            <img src="{% static '/arjit/Pal.jpg'%}">
+          </a>
+          <h4>Pal</h4>
+          <p>Jalebi</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="6">
+            <img src="{% static '/arjit/Sooraj_Dooba_Hai_Aaj.jpg'%}">
+          </a>
+          <h4>Sooraj Dooba Hai Aaj</h4>
+          <p>Roy</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="7">
+            <img src="{% static '/arjit/Sukoon_Mila.jpg'%}">
+          </a>
+          <h4>Sukoon Mila</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="8">
+            <img src="{% static '/arjit/Tera_Hoke_Rahoon.jpg'%}">
+          </a>
+          <h4>Tera Hoke Rahoon</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="9">
+            <img src="{% static '/arjit/Tu_Hi_Hai_Aashiqui.jpg'%}">
+          </a>
+          <h4>Tu Hi Hai Aashiqui</h4>
+          <p>Aashiqui 2</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="10">
+            <img src="{% static '/arjit/Tum_Hi_Ho.jpg'%}">
+          </a>
+          <h4>Tum Hi Ho</h4>
+          <p>Aashiqui 2</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="11">
+            <img src="{% static '/arjit/Tum_Saath_Ho.jpg'%}">
+          </a>
+          <h4> Agar Tum Saath Ho</h4>
+          <p>Tamasha</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="12">
+            <img src="{% static '/arjit/Darkhaast.jpg'%}">
+          </a>
+          <h4>Darkhaast</h4>
+          <p>Shivaay</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="13">
+            <img src="{% static '/arjit/Laal_Ishq.jpg'%}">
+          </a>
+          <h4>Laal Ishq</h4>
+          <p>Goliyon Ki Rasleela Ram-Leela </p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="14">
+            <img src="{% static '/arjit/Illahi.jpg'%}">
+          </a>
+          <h4>Illahi</h4>
+          <p>Yeh Jawaani Hai Deewani</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="15">
+            <img src="{% static '/arjit/Ik_Vaari_ya.jpg'%}">
+          </a>
+          <h4>Ik Vaari ya</h4>
+          <p>Raabata</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="16">
+            <img src="{% static '/arjit/Hawayein.jpg'%}">
+          </a>
+          <h4>Hawayein</h4>
+          <p>Jab Harry Met Sejal</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="17">
+            <img src="{% static '/arjit/Dhokha_Dhadi.jpg'%}">
+          </a>
+          <h4>Dhokha Dhadi</h4>
+          <p>R... Rajkumar</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="18">
+            <img src="{% static '/arjit/Mast_Magan.jpg'%}">
+          </a>
+          <h4>Mast Magan</h4>
+          <p>2 states</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="19">
+            <img src="{% static '/arjit/Meet.jpg'%}">
+          </a>
+          <h4>Meet</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="20">
+            <img src="{% static '/arjit/Tu_Mila_Toh_Haina.jpg'%}">
+          </a>
+          <h4>Tu Mila Toh Haina</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="21">
+            <img src="{% static '/arjit/Tujhe_Kitna_Chahne_Lage.jpg'%}">
+          </a>
+          <h4>Tujhe Kitna Chahne Lage</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="22">
+            <img src="{% static '/arjit/Chahun_Main_Ya_Naa.jpg'%}">
+          </a>
+          <h4>Chahun Main Ya Na</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="23">
+            <img src="{% static '/arjit/Bolna.jpg'%}">
+          </a>
+          <h4>Mahi Bolna</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="24">
+            <img src="{% static '/arjit/Janam_Janam.jpg'%}">
+          </a>
+          <h4>Janam Janam</h4>
+          <p>Dilwale</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="25">
+            <img src="{% static '/arjit/Kabhi_Jo_Baadal_Barse.jpg'%}">
+          </a>
+          <h4>Kabhi Jo Baadal Barse</h4>
+          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="26">
+            <img src="{% static '/arjit/Main_Phir_Bhi_Tumko_Chahunga.jpg'%}">
+          </a>
+          <h4>Main Phir Bhi Tumko Chahunga</h4>
+          <p>Half Girlfriend</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="27">
+            <img src="{% static '/arjit/Main_Rang_Sharbaton_Ka.jpg'%}">
+          </a>
+          <h4>Main Rang Sharbto..</h4>
+          <p>Phata Poster Nikala Hero</p>
+          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="28">
+            <img src="{% static '/arjit/Nashe_Si_Chadh_Gayi.jpg'%}">
+          </a>
+          <h4>Nashe Si Chadh Gayi</h4>
+          <p>Song Info</p>
+          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="29">
+            <img src="{% static '/arjit/Milne_Hai_Mujhse_Aayi.jpg'%}">
+          </a>
+          <h4>Milne_Hai_Mujhse _Aayi</h4>
+          <p>Aashiqui 2</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="30">
+            <img src="{% static '/arjit/Pachtaoge.jpg'%}">
+          </a>
+          <h4>Pachtaoge</h4>
+          <p>Jaani ve</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="31">
+            <img src="{% static '/arjit/Roke_Na_Ruke_Naina.jpg'%}">
+          </a>
+          <h4>Roke Na Ruke Naina</h4>
+          <p>Badrinath Ki Dulhania</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="32">
+            <img src="{% static '/arjit/Shayad.jpg'%}">
+          </a>
+          <h4>Shayad</h4>
+          <p>Love Aaj Kal</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="33">
+            <img src="{% static '/arjit/Tose_Naina.jpg'%}">
+          </a>
+          <h4>Tose Naina</h4>
+          <p>Mickey Virus</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+
+        <div class="songCard col-md-3">
+          <a href="javascript:void();" class="album-poster" data-switch="34">
+            <img src="{% static '/arjit/GIMA_Awards.jpg'%}">
+          </a>
+          <h4>Arijit Singh at GIMA_Awards</h4>
+          <p>Mashup</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+                        title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
+                            class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
+        </div>
+               
+        <br>
+
+              <span><h1 style="color:brown; font-family: cursive;"> More Songs <br> Coming Soon !!!</h1></span>
+             <hr>
+
+
+      </div>
     </div>
-    </div>
+
 
     <div id="aplayer">
-
+     
+      <a data-placement="right" data-toggle="tooltip"  title="Shuffle"> <button type="button" class="aplayer-icon aplayer-icon-order"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M22.667 4l7 6-7 6 7 6-7 6v-4h-3.653l-3.76-3.76 2.827-2.827 2.587 2.587h2v-8h-2l-12 12h-6v-4h4.347l12-12h3.653v-4zM2.667 8h6l3.76 3.76-2.827 2.827-2.587-2.587h-4.347v-4z"></path></svg></button> </a>
     </div>
+   
+
+
+
 
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-    <script>
-        $(".album-poster").on("click", function() {
-    var dataSwitchId = $(this).attr("data-switch");
-    //console.log(dataSwitchId);
 
-    ap.list.switch(dataSwitchId);
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="{% static '/m1.js'%}"> </script>
 
-    ap.play();
-    $("#aplayer").addClass("showPlayer");
-});
-
-
-const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    listFolded: true,
-    audio: [{
-            name: 'Bekhayali',
-            artist: 'Arjit Singh',
-            url: 'static/songs/Bekhayali.mp3',
-            cover: 'static/image/Bekhayali.jpg'
-        }, {
-            name: 'Dil_Hi_Toh_Hai',
-            artist: 'Arjit Singh',
-            url: 'static/songs/Dil_Hi_Toh_Hai.mp3',
-            cover: 'static/image/Dil_Hi_Toh_Hai.jpg'
-        },
-        {
-            name: 'Sanam Re',
-            artist: 'Arjit Singh',
-            url: 'static/songs/Sanam_Re.mp3',
-            cover: 'static/image/Sanam_Re.jpg'
-        },
-        {
-            name: 'Khairiyat',
-            artist: 'Arjit Singh',
-            url: 'static/songs/Khairiyat.mp3',
-            cover: 'static/image/Khairiyat.jpg'
-        },
-        {
-            name: 'Phir Le Aaya Dil',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Phir_Le_Aya_Dil.mp3',
-            cover: 'static/image/Phir_Le_Aya_Dil.jpg'
-        },
-        {
-            name: 'Pal',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Pal.mp3',
-            cover: 'static/image/Pal.jpg'
-        },
-        {
-            name: 'Sooraj Dooba Hai Aaj',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Sooraj_Dooba_Hai_Aaj.mp3',
-            cover: 'static/image/Sooraj_Dooba_Hai_Aaj.jpg'
-        },
-        {
-            name: 'Sukoon Mila',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Sukoon_Mila.mp3',
-            cover: 'static/image/Sukoon_Mila.jpg'
-        },
-        {
-            name: 'Tera Hoke Rahoon',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Tera_Hoke_Rahoon.mp3',
-            cover: 'static/image/Tera_Hoke_Rahoon.jpg'
-        },
-        {
-            name: 'Tu Hi Hai Aashiqui',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Tu_Hi_Hai_Aashiqui.mp3',
-            cover: 'static/image/Tu_Hi_Hai_Aashiqui.jpg'
-        },
-        {
-            name: 'Tum Hi Ho',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Tum_Hi_Ho.mp3',
-            cover: 'static/image/Tum_Hi_Ho.jpg'
-        },
-        {
-            name: 'Tum Saath Ho',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Tum_Saath_Ho.mp3',
-            cover: 'static/image/Tum_Saath_Ho.jpg'
-        },
-        {
-            name: 'Darkhaast',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Darkhaast.mp3',
-            cover: 'static/image/arjit.jpg'
-        },
-        {
-            name: 'Laal Ishq',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Laal_Ishq.mp3',
-            cover: 'static/image/Laal_Ishq.jpg'
-        },
-        {
-            name: 'Ilahi',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Ilahi.mp3',
-            cover: 'static/image/Ilahi.jpg'
-        },
-        {
-            name: 'Ik Vaari ya',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Ik_Vaari_ya.mp3',
-            cover: 'static/image/Ik_Vaari_ya.jpg'
-        },
-        {
-            name: 'Hawayein',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Hawayein.mp3',
-            cover: 'static/image/Hawayein.jpg'
-        },
-        {
-            name: 'Dhokha Dhadi',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Dhokha_Dhadi.mp3',
-            cover: 'static/image/Dhokha_Dhadi.jpg'
-        },
-        {
-            name: 'Mast Magan',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Mast_Magan.mp3',
-            cover: 'static/image/Mast_Magan.jpg'
-        },
-        {
-            name: 'Meet',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Meet.mp3',
-            cover: 'static/image/Meet.jpg'
-        },
-        {
-            name: 'Tu Mila Toh Haina',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Tu_Mila_Toh_Haina.mp3',
-            cover: 'static/image/Tu_Mila_Toh_Haina.jpg'
-        },
-        {
-            name: ' Tujhe Kitna Chahne Lage',
-            artist: 'Arjit Simgh',
-            url: 'static/songs/Tujhe_Kitna_Chahne_Lage.mp3',
-            cover: 'static/image/Tujhe_Kitna_Chahne_Lage.jpg'
-        },
-    ]
-});
-let search = document.getElementById("searchTxt");
-search.addEventListener("input", function() {
-    let inputVal = search.value;
-    console.log("input event fired!", inputVal);
-    let songCards = document.getElementsByClassName("songCard");
-    Array.from(songCards).forEach(function(element) {
-        let songTxt = element.getElementsByTagName("h4")[0].innerText;
-
-        if (songTxt.includes(inputVal)) {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
-    })
-
-})
-    </script>
 
 </body>
 

@@ -647,6 +647,16 @@ def kishore(request):
         return render(request, "kishore.html")
     return redirect("home")
 
+def songs_2020(request):
+    if get():
+        return render(request, "2020.html")
+    return redirect("home")
+
+def songs_2019(request):
+    if get():
+        return render(request, "2019.html")
+    return redirect("home")
+
 def error_404(request, *args, **kwargs):
     return render(request, "404.html")
 

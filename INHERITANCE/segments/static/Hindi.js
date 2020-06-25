@@ -8,10 +8,6 @@ $(".album-poster").on("click", function() {
     $("#aplayer").addClass("showPlayer");
 });
 
-
-
-
-
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     listFolded: true,
@@ -108,8 +104,8 @@ const ap = new APlayer({
         {
             name: 'Das Bahane 2.0',
             artist: 'Vishal-Shekhar',
-            url: 'static/Hindi_songs/Das_Bahane 2.0.mp3',
-            cover: 'static/Hindi_songs/Das_Bahane 2.0.jpg'
+            url: 'static/Hindi_songs/Das_Bahane_2.0.mp3',
+            cover: 'static/Hindi_songs/Das_Bahane_2.0.jpg'
         },
         {
             name: 'Deewani Mastani',
@@ -138,8 +134,8 @@ const ap = new APlayer({
         {
             name: 'FIRSE MACHAYENGE',
             artist: 'EMIWAY BANTAI',
-            url: 'static/Hindi_songs/FIRSE MACHAYENGE.mp3',
-            cover: 'static/Hindi_songs/FIRSE MACHAYENGE.jpg'
+            url: 'static/Hindi_songs/FIRSE_MACHAYENGE.mp3',
+            cover: 'static/Hindi_songs/FIRSE_MACHAYENGE.jpg'
         },
         {
             name: 'Gali Gali.jpg',
@@ -268,10 +264,10 @@ const ap = new APlayer({
             cover: 'static/Hindi_songs/Tera_Fitoor.jpg'
         },
         {
-            name: 'Tera Baa Aaya',
+            name: 'Tera Baap Aaya',
             artist: 'Farhad Bhiwandiwala',
-            url: 'static/Hindi_songs/Tera_Baa_Aaya.mp3',
-            cover: 'static/Hindi_songs/Tera_Baa_Aaya.jpg'
+            url: 'static/Hindi_songs/Tera_Baap_Aaya.mp3',
+            cover: 'static/Hindi_songs/Tera_Baap_Aaya.jpg'
         },
         {
             name: 'Shankara Re Shankara',
