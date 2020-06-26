@@ -13,13 +13,26 @@
     .car {
         height: 410px;
     }
+    
+    #bg {
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 350px;
+        border: 2px solid red;
+        border-radius: 20px;
+    }
 </style>
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> {% load static %}
-<div class="container">
-    <h1 class="text-danger">Latest News...</h1>
+<div class="container container1">
+    <div class="text-center bg-primary" id="bg">
+        <h1 class="text-danger">Latest News</h1>
+    </div>
+</div>
+<div class="container container2">
 
 </div>
-
 {% endblock content %} {% block js %}
 <script>
     $(document).ready(function() {
@@ -27,20 +40,20 @@
             type: 'GET',
             URL: '/news',
             data: {
-                'response': 1,
+                'response': 2,
             },
             encode: true,
-            success: function(text) {
-                console.log(text);
-                txt = JSON.parse(text)
-                let z = 1
-                var a = `<div class="row" id = "1">
+        }).done((text) => {
+            console.log(text);
+            txt = JSON.parse(text)
+            let z = 1
+            var a = `<div class="row" id = "1">
                         </div>`
-                $('.container').append(a);
-                for (i in txt) {
-                    a = ""
-                    a = `
-                            <div class = "column col-3">  
+            $('.container1').append(a);
+            for (i in txt) {
+                a = ""
+                a = `
+                            <div class = "column col-md-3" id="column" >  
                                 <div id="50" class=" text-danger" height = "100px">
                                     <div class="card car my-3">
                                         <img src="{% static '/news_pg1.jpg' %}" class="card-img-top" height="250px" alt="...">
@@ -51,31 +64,47 @@
                                 </div>
                             </div>
                         `
-                    $(`#${z}`).append(a)
-                    if ((i + 1) % 4 == 0) {
-                        z += 1
-                        a = `<div class="row" id = "${z}">
+                $(`#${z}`).append(a)
+                if ((i + 1) % 4 == 0) {
+                    z += 1
+                    a = `<div class="row" id = "${z}">
                             </div>`
-                        $('.container').append(a);
-                    }
+                    $('.container1').append(a);
                 }
-                $.ajax({
-                    type: 'GET',
-                    URL: '/news',
-                    data: {
-                        response: 0,
-                    },
-                    encode: true,
-                    success: function(text) {
-                        console.log(text);
-                        txt = JSON.parse(text)
-                        let z = 1
-                        var a = `<div class="row" id = "1">
-                        </div>`
-                        $('.container').append(a);
-                        for (i in txt) {
-                            a = ""
+            }
+            $.ajax({
+                type: 'GET',
+                URL: '/news',
+                data: {
+                    'response': 1,
+                },
+                encode: true,
+                success: function(text) {
+                    $.ajax({
+                        type: 'GET',
+                        URL: '/news',
+                        data: {
+                            response: 0,
+                        },
+                        encode: true,
+                        success: function(text) {
+                            console.log(text);
+                            txt = JSON.parse(text)
+                            let z = 1
+                            var a = `
+                                <div class="text-center bg-primary" id="bg">
+                                    <h1 class="text-danger">Sorted News</h1>
+                                </div>
+                                `
+                            $('.container2').append(a);
                             a = `
+                            <div class="row" id = "1">
+                            </div>
+                            `
+                            $('.container2').append(a);
+                            for (i in txt) {
+                                a = ""
+                                a = `
                                     <div class = "column col-3">  
                                         <div id="50" class=" text-danger" height = "100px">
                                             <div class="card car my-3">
@@ -87,17 +116,18 @@
                                         </div>
                                     </div>
                                 `
-                            $(`#${z}`).append(a)
-                            if ((i + 1) % 4 == 0) {
-                                z += 1
-                                a = `<div class="row" id = "${z}">
+                                $(`#${z}`).append(a)
+                                if ((i + 1) % 4 == 0) {
+                                    z += 1
+                                    a = `<div class="row" id = "${z}">
                             </div>`
-                                $('.container').append(a);
+                                    $('.container2').append(a);
+                                }
                             }
                         }
-                    }
-                })
-            }
+                    })
+                }
+            })
         })
     })
 </script>

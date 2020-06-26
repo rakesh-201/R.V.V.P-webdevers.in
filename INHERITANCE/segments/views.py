@@ -407,6 +407,17 @@ def news(request):
     if get():
         if request.method == 'GET':
             response = request.GET.get('response')
+            if response == '2':
+                url = "http://newsapi.org/v2/top-headlines?country=in&apiKey=619d592e3df744d7afc8d8492e0de271"
+                news = requests.get(url).text
+                news = json.loads(news)
+                articles = news['articles']
+                arts = []
+                for article in articles:
+                    arts.append(article['title'])
+                    print(article['title'])
+                art = json.dumps(arts)
+                return HttpResponse(art)
             if response == '1':
                 url = "http://newsapi.org/v2/top-headlines?country=in&apiKey=619d592e3df744d7afc8d8492e0de271"
                 news = requests.get(url).text
@@ -446,7 +457,7 @@ def news(request):
                         url_ = "http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=619d592e3df744d7afc8d8492e0de271"
                     else:
                         print(query)
-                        return HttpResponse(json.dumps(["Thank You..."])) 
+                        return redirect("News") 
                 except Exception as e:
                     global rr
                     rr += 1

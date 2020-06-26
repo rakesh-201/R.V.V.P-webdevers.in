@@ -9,6 +9,15 @@
         width: -webkit-fill-available;
     }
     
+    #diary {
+        padding-top: 4.5px;
+        padding-bottom: 5px;
+    }
+    
+    #del {
+        width: 80px;
+    }
+    
     .bg {
         background-image: url('static/image/notebookbg.jpg');
     }
@@ -67,10 +76,10 @@
                 id = text['txt'][i][2]
                 var a = ""
                 a = `<li class="list-group-item d-flex justify-content-between align-items-center">
-                    <div class="col-10" >${txt}</div>
+                    <div class="col-9" >${txt}</div>
                     <div class="align-right" >
-                        <button class="badge badge-danger badge-pill mx-1 my-1" onclick="{delete_(${id})}" >delete</button>
-                        <span class="badge badge-primary badge-pill mx-1 my-1 mt-1">${date}</span>
+                        <button class="badge badge-danger badge-pill mx-1 my-1" id="del" onclick="{delete_(${id})}" >delete</button>
+                        <span class="badge badge-primary badge-pill mx-1 my-1" id="diary">${date}</span>
                     </div>
                 </li>`
                 $('#50').append(a)
@@ -102,12 +111,12 @@
                             id = text['txt'][i][2]
                             var a = ""
                             a = `<li class="list-group-item d-flex justify-content-between align-items-center">
-                                <div class="col-10">
+                                <div class="col-9">
                                     ${txt}
                                 </div>
                             <div class="align-right" >
-                                <button class="badge badge-danger badge-pill mx-1 my-1 " onclick="{delete_(${id})}" >delete</button>
-                                <span class="badge badge-primary badge-pill mx-1 my-1">${date}</span>
+                                <button class="badge badge-danger badge-pill mx-1 my-1 " id="del" onclick="{delete_(${id})}" >delete</button>
+                                <span class="badge badge-primary badge-pill mx-1 my-1" id="diary" >${date}</span>
                             </div>
                             </li>`
                             $('#50').append(a)
@@ -137,12 +146,12 @@
                 id = text['txt'][i][2]
                 var a = ""
                 a = `<li class="list-group-item d-flex justify-content-between align-items-center">
-                    <div class="col-10">
+                    <div class="col-9">
                         ${txt}
                     </div>
                     <div class="align-right" >
-                        <button class="badge badge-danger badge-pill mx-1 my-1 " onclick="{delete_(${id})}" >delete</button>
-                        <span class="badge badge-primary badge-pill mx-1 my-1 mt-1">${date}</span>
+                        <button class="badge badge-danger badge-pill mx-1 my-1 " id="del" onclick="{delete_(${id})}" >delete</button>
+                        <span class="badge badge-primary badge-pill mx-1 my-1 mt-1" id="diary" >${date}</span>
                     </div>
                     </li>`
                 $('#50').append(a)
