@@ -522,6 +522,24 @@ def notebook(request):
         os.remove('voice.mp3')
     global aa
     if get():
+        dele = request.GET.get('del')
+        if dele:
+            id_ = request.GET.get('id_')
+            del_ = Diary.objects.filter(D_id = int(id_), id = request.user.id)
+            print('done')
+            del_.delete()
+            print('done')
+            diary = Diary.objects.filter(id = request.user.id)
+            stories = diary.values('D_desc', 'date', 'D_id')
+            _dict_ = []
+            for i in stories:
+                desc = i['D_desc']
+                date = i['date'].strftime("%d-%m-%Y")
+                id_ = i['D_id']
+                dict_ = [desc, date, id_]
+                _dict_.append(dict_)
+            txt = json.dumps({'txt':_dict_})  
+            return HttpResponse(txt)
         if request.method == 'POST':
             if (aa+1)%3 == 0:
                 aa += 1
@@ -570,14 +588,15 @@ def notebook(request):
             else:
                 aa += 1
                 diary = Diary.objects.filter(id = request.user.id)
-                stories = diary.values('D_desc', 'date')
+                stories = diary.values('D_desc', 'date', 'D_id')
                 print('entered')
                 print(stories)
                 _dict_ = []
                 for i in stories:
                     desc = i['D_desc']
                     date = i['date'].strftime("%d-%m-%Y")
-                    dict_ = [desc, date]
+                    id_ = i['D_id']
+                    dict_ = [desc, date, id_]
                     _dict_.append(dict_)
                 txt = json.dumps({'txt':_dict_})    
                 return HttpResponse(txt)

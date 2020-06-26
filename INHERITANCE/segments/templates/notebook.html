@@ -64,11 +64,14 @@
             for (i in text['txt']) {
                 txt = text['txt'][i][0]
                 date = text['txt'][i][1]
+                id = text['txt'][i][2]
                 var a = ""
                 a = `<li class="list-group-item d-flex justify-content-between align-items-center">
-                    ${txt}
-                    <button class="badge badge-danger badge-pill">delete</button>
-                    <span class="badge badge-primary badge-pill">${date}</span>
+                    <div class="col-10" >${txt}</div>
+                    <div class="align-right" >
+                        <button class="badge badge-danger badge-pill mx-1 my-1" onclick="{delete_(${id})}" >delete</button>
+                        <span class="badge badge-primary badge-pill mx-1 my-1 mt-1">${date}</span>
+                    </div>
                 </li>`
                 $('#50').append(a)
             }
@@ -96,11 +99,16 @@
                         for (i in text['txt']) {
                             txt = text['txt'][i][0]
                             date = text['txt'][i][1]
+                            id = text['txt'][i][2]
                             var a = ""
                             a = `<li class="list-group-item d-flex justify-content-between align-items-center">
-                                ${txt}
-                                <button class="badge badge-danger badge-pill">delete</button>
-                                <span class="badge badge-primary badge-pill">${date}</span>
+                                <div class="col-10">
+                                    ${txt}
+                                </div>
+                            <div class="align-right" >
+                                <button class="badge badge-danger badge-pill mx-1 my-1 " onclick="{delete_(${id})}" >delete</button>
+                                <span class="badge badge-primary badge-pill mx-1 my-1">${date}</span>
+                            </div>
                             </li>`
                             $('#50').append(a)
                         }
@@ -109,5 +117,37 @@
             })
         })
     })
+
+    function delete_(_id) {
+        console.log('in');
+        $.ajax({
+            type: "GET",
+            URL: '/delete',
+            data: {
+                del: 1,
+                id_: _id,
+            },
+            encode: true,
+        }).done((text) => {
+            text = JSON.parse(text)
+            $('#50').empty()
+            for (i in text['txt']) {
+                txt = text['txt'][i][0]
+                date = text['txt'][i][1]
+                id = text['txt'][i][2]
+                var a = ""
+                a = `<li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="col-10">
+                        ${txt}
+                    </div>
+                    <div class="align-right" >
+                        <button class="badge badge-danger badge-pill mx-1 my-1 " onclick="{delete_(${id})}" >delete</button>
+                        <span class="badge badge-primary badge-pill mx-1 my-1 mt-1">${date}</span>
+                    </div>
+                    </li>`
+                $('#50').append(a)
+            }
+        })
+    }
 </script>
 {% endblock js %}
