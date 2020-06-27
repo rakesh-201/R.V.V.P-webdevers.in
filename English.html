@@ -1,0 +1,417 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="SingerPage.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+    <title>International songs</title>
+
+
+</head>
+
+ <body class="normal">
+
+
+
+        <div class="main">
+    
+    
+            <div class="searchSong">
+                <div class="searchContainer">
+                    <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="text"
+                        placeholder="Search for songs">
+                    <a class="searchBtn ">
+                        <svg width="25" height="25" viewBox="0 0 25 25">
+                            <path class="fill_path" fill="#FFF" fill-rule="evenodd"
+                                d="M69.5 34a6.5 6.5 0 0 1 6.5 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 69.5 47a6.5 6.5 0 1 1 0-13zm0 2C67 36 65 38 65 40.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z"
+                                transform="translate(-59 -32)"></path>
+                        </svg>
+                        Search Songs
+                    </a>
+                </div>
+            </div>
+    
+            <div class="theme">
+    
+                <button><a tabindex="0" role="button" data-toggle="popover" data-trigger="hover" title="Dark mode"
+                        onclick="changeTheme()" data-content="Check out the new Black theme"><i class="fa fa-moon-o"
+                            style="font-size:48px;color:black;"></i></a></button>
+            </div>
+    
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-12" id="singerName">
+                    <h4 style="text-align: center;">Top International Songs</h4>
+                </div>
+                <br>
+                <br>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="0">
+                        <img src="English songs/Stuck with u.jpeg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Stuck with u</h4>
+                    </div>
+                    <p><b>Ariana Grande & Justin Bieber</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                    onclick="changeIcon(this)" title="Add favorites"
+                    data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                        style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="1">
+                        <img src="English songs/Intentions.jpeg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Intentions</h4>
+                    </div>
+                    <p><b>Justin Bieber</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="2">
+                        <img src="English songs/Lil Mosey.jfif">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Blueberry Faygo</h4>
+                    </div>
+                    <p><b>Lil Mosey</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="3">
+                        <img src="English songs/LM3ALLEM-arabic.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>LM3ALLEM-arabic</h4>
+                    </div>
+                    <p><b>Saad Lamjarred</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="4">
+                        <img src="English songs/Doja cat.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Say So</h4>
+                    </div>
+                    <p><b>Doja Cat</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="5">
+                        <img src="English songs/NAV - No Debate feat.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Travis Scott - Turks</h4>
+                    </div>
+                    <p><b>NAV & Gunna</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="6">
+                        <img src="English songs/The box.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>The box</h4>
+                    </div>
+                    <p><b>Roddy Ricch</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="7">
+                        <img src="English songs/Stupid love.png">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Stupid love</h4>
+                    </div>
+                    <p><b>Lady Gaga </b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="8">
+                        <img src="English songs/Whats poppin.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Whats poppin</h4>
+                    </div>
+                    <p><b>Jack Harlow</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="9">
+                        <img src="English songs/The Weeknd - Blinding Lights.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>The Weekend - Blinding Lights</h4>
+                    </div>
+                    <p><b>Weeknd</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="10">
+                        <img src="English songs/Be Kind.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Be Kind</h4>
+                    </div>
+                    <p><b>Marshallow and Halsey</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="11">
+                        <img src="English songs/Baby.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Baby</h4>
+                    </div>
+                    <p><b>Justin Bieber</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="12">
+                        <img src="English songs/Roses.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Roses Imanbek Remix</h4>
+                    </div>
+                    <p><b>SAINt JHN</b></p>
+                     <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="13">
+                        <img src="English songs/Despacito.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Despacito</h4>
+                    </div>
+                    <p><b>Louis Founsi</b></p>
+                     <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="14">
+                        <img src="English songs/Dont Start Now.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Don't Start Now</h4>
+                    </div>
+                    <p><b>Dua Lipa</b></p>
+                     <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="15">
+                        <img src="English songs/Joker BGM song.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Joker BGM song</h4>
+                    </div>
+                    <p><b>Indila</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="16">
+                        <img src="English songs/Shape Of You.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Shape Of You</h4>
+                    </div>
+                    <p><b>Ed Sherran</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="17">
+                        <img src="English songs/Sick and Tired.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Sick and Tired</h4>
+                    </div>
+                    <p><b>Anastacia</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="18">
+                        <img src="English songs/Yummy.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Yummy</h4>
+                    </div>
+                    <p><b>Justin Bieber</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+                <div class="songCard col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="19">
+                        <img src="English songs/Animal Trance.jpg">
+                    </a>
+                    <div class="songNameContainer">
+                        <h4>Animal trance</h4>
+                    </div>
+                    <p><b>Jules Craig</b></p>
+                    <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover"
+                        onclick="changeIcon(this)" title="Add favorites"
+                        data-content="Now make your own playlist by adding into favorites"><i class="fa fa-heart-o"
+                            style="font-size:35px;color:red"></i></button>
+                </div>
+
+            </div>
+
+            <br>
+            <hr>
+            <h1 style="color:blueviolet;font-family: cursive;">More Songs Coming Soon!!!</h1>
+
+
+
+           
+        </div>
+    </div>
+
+    <div id="aplayer">
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+    <script src="English.js"> </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+            
+        
