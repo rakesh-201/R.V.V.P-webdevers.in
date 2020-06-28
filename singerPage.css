@@ -158,10 +158,10 @@
   }
   img{
     width:100%;
-  min-height:250px ;
-  padding :5px;
-  background-color: rgba(172, 0, 252, 0.938);
-  cursor: pointer;
+    min-height:250px ;
+    padding :5px;
+    background-color: rgba(172, 0, 252, 0.938);
+    cursor: pointer;
   }
   /* .main{
     padding:40px 0;
@@ -277,9 +277,6 @@
   left:0;
   width:100%;
   padding-bottom: 20px;
-  
-  
-  
   margin :0;
   box-shadow :0 -2px 2px #dadada;
   border:5px solid rgb(240, 252, 242);
@@ -429,10 +426,10 @@
     margin-top: 5%;
     margin-left: 90%;
   }
-  .favorite{
+  .favBtn{
     border:0px;
     background: none;
-    margin-left: 25%;
+    margin-left: 10%;
   }
   button:focus {
     outline: none!important;
@@ -440,5 +437,12 @@
   .songNameContainer{
     height: 20%;
   }
-
-  
+  .Large{
+    margin-left: 1%;
+  }
+  .medium{
+    margin-left: 24%;
+  }
+  .verySmall{
+    margin-left: 37%;
+  }
