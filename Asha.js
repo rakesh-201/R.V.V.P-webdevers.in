@@ -196,11 +196,53 @@ $(".album-poster").on("click", function () {
       artist: 'Asha Bhosle',
       url: 'Asha_songs/Maang_ke.mp3',
       cover: 'Asha_songs/Maang_ke.jpg'
+    },
+    {
+      name: 'Dil abhi bhara nahi',
+      artist: 'Hum Dono',
+      url: 'MdRafi_Songs/Dil_abhi.mp3',
+      cover: 'MdRafi_Songs/Dil_abhi.png'
+    },
+    {
+      name: 'Chura Liya Hai Tumne',
+      artist: 'Yaadon ki Baarat',
+      url: 'MdRafi_Songs/Chura_liya.mp3',
+      cover: 'MdRafi_Songs/Chura_liya.jpg'
+    },
+    {
+      name: 'O mere sona re',
+      artist: 'Teesri Manzil',
+      url: 'MdRafi_Songs/O_mere_sona.mp3',
+      cover: 'MdRafi_Songs/O_mere_sona.jpg'
+    },
+    {
+      name: 'Isharon isharon mein',
+      artist: 'Kashmir Ki Kali',
+      url: 'MdRafi_Songs/Isharon_isharon.mp3',
+      cover: 'MdRafi_Songs/Isharon_isharon.jpg'
     }
   ]
   });
   
-  let search = document.getElementById("searchTxt");
+
+ 
+  console.log(ap.audio);
+  let audiofiles=[
+      'Asha_songs/Deewana_hua.mp3',
+      'Asha_songs/Dhal_gaya.mp3','Asha_songs/Jaiye_aap.mp3','Asha_songs/O_saathi.mp3','Asha_songs/Piya_tu.mp3', 
+      'Asha_songs/Uden_jab.mp3','Asha_songs/Aaiye_meharbaan.mp3','Asha_songs/Do_lafzon.mp3',  
+      'Asha_songs/Ek_mai.mp3','Asha_songs/Gun_guna.mp3','Asha_songs/Jab_chali.mp3',
+      'Asha_songs/Saara_pyar.mp3','Asha_songs/Roka_kai.mp3',
+      'Asha_songs/Sar_par.mp3','Asha_songs/Raat_ke.mp3','Asha_songs/Chhod_do.mp3',  
+      'Asha_songs/Deewana_mastana.mp3','Asha_songs/Ek_pardesi.mp3','Asha_songs/Ye_mera.mp3',
+      'Kishore_songs/Ha_tu_hai.mp3','Asha_songs/Lekar_hum.mp3','Asha_songs/O_haseena.mp3', 
+      'Asha_songs/Ye_ladka.mp3','Asha_songs/Dil_cheez.mp3','Asha_songs/Aao_na.mp3','Asha_songs/Pyar_ka.mp3',
+      'Asha_songs/In_aankhon.mp3','Asha_songs/Jab_chhaye.mp3','Asha_songs/Maang_ke.mp3','MdRafi_Songs/Dil_abhi.mp3',
+      'MdRafi_Songs/Chura_liya.mp3','MdRafi_Songs/O_mere_sona.mp3', 'MdRafi_Songs/Isharon_isharon.mp3'
+];     
+
+
+let search = document.getElementById("searchTxt");
 search.addEventListener("input", function () {
   let inputVal = search.value;
   inputVal = inputVal.toLocaleLowerCase();
@@ -255,3 +297,76 @@ function changeIcon(element){
     }
     
 }
+
+let songCards = document.getElementsByClassName("songCard");
+var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+// console.log(myFavprop);
+Array.from(songCards).forEach((e)=>{
+  let songCard = e.childNodes;
+  let songName = songCard[3].childNodes[1].innerHTML;
+  if (myFavprop.some(e => e.songName === songName)) {
+    /*localStorage contains this song*/
+    console.log(songCard[7].childNodes[0]);
+    let favBtn  = songCard[7].childNodes[0];
+    console.log("Both are same");
+    console.log(favBtn);
+    favBtn.classList = "fa fa-heart";
+  }
+
+})
+ 
+
+$(function () {
+  $(".favBtn").on("click", function (e) {
+    var icon = e.target;
+    var songCard = this.parentNode.childNodes;
+    var imgFile = songCard[1].childNodes[1].src;
+    var songName = songCard[3].childNodes[1].innerHTML;
+    var songInfo = songCard[5].childNodes[0].innerHTML;
+    var dataId = $(songCard[1]).attr("data-switch");
+    var audioFile = audiofiles[dataId];
+    console.log(audioFile);
+    var propToAdd = {
+      imgFile: imgFile,
+      songName: songName,
+      songInfo: songInfo,
+      audioFile: audioFile
+    }
+    var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+    console.log(propToAdd);
+    console.log(myFavprop);
+    if (icon.classList == "fa fa-heart") {    
+      
+      if (myFavprop == null) {
+        myFavprop = [];
+      }
+      console.log(myFavprop);
+      if(myFavprop != null){
+         if(myFavprop.some(e => e.songName === propToAdd.songName)){
+           console.log("already included");
+            if(propToAdd == myFavprop[j]){
+               propToAdd = {};
+            }
+         }else{
+          console.log("pushing");
+          myFavprop.push(propToAdd);
+         }
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+    if(icon.classList == "fa fa-heart-o"){
+      for(let j=0;j<myFavprop.length;j++){
+        if((myFavprop[j].songName == propToAdd.songName)&&(myFavprop[j].songInfo == propToAdd.songInfo)){
+          console.log("already included");
+          myFavprop.splice(j,1);
+        }
+        console.log(myFavprop);
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+
+  })
+})
+
+
+
