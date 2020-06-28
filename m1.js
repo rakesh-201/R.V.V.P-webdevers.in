@@ -9,13 +9,13 @@ $(".album-poster").on("click",function(){
 });
 
 $(function () {
-    $('[data-toggle="popover"]').popover()
-  })
-  
-  $('.popover-dismiss').popover({
-    trigger: 'focus'
-  })
-  
+  $('[data-toggle="popover"]').popover()
+})
+
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+
   
 
 const ap = new APlayer({
@@ -27,7 +27,7 @@ const ap = new APlayer({
       url: 'Vishal/arjit/Bekhayali.mp3',
       cover: 'Vishal/arjit/Bekhayali.jpg'
   },{ 
-    name: 'Dil Hi TohHai',
+    name: 'Dil Hi Toh Hai',
     artist: 'Arjit Singh',
     url: 'Vishal/arjit/Dil_Hi_Toh_Hai.mp3',
     cover: 'Vishal/arjit/Dil_Hi_Toh_Hai.jpg'
@@ -236,6 +236,25 @@ const ap = new APlayer({
 
 ]
 });
+
+console.log(ap.audio);
+let audiofiles=[
+  'Vishal/arjit/Bekhayali.mp3','Vishal/arjit/Dil_Hi_Toh_Hai.mp3','Vishal/arjit/Sanam_Re.mp3',
+  'Vishal/arjit/Khairiyat.mp3', 'Vishal/arjit/Phir_Le_Aya_Dil.mp3','Vishal/arjit/Pal.mp3',
+  'Vishal/arjit/Sooraj_Dooba_Hai_Aaj.mp3','Vishal/arjit/Sukoon_Mila.mp3', 'Vishal/arjit/Tera_Hoke_Rahoon.mp3',
+  'Vishal/arjit/Tu_Hi_Hai_Aashiqui.mp3', 'Vishal/arjit/Tum Hi Ho.mp3','Vishal/arjit/Tum_Saath_Ho.mp3',
+  'Vishal/arjit/Darkhaast.mp3', 'Vishal/arjit/Laal_Ishq.mp3', 'Vishal/arjit/Ilahi.mp3','Vishal/arjit/Ik_Vaari_ya.mp3',
+  'Vishal/arjit/Hawayein.mp3', 'Vishal/arjit/Mast_Magan.mp3', 'Vishal/arjit/Meet.mp3',
+  'Vishal/arjit/Tu_Mila_Toh_Haina.mp3','Vishal/arjit/Tujhe_Kitna_Chahne_Lage.mp3','Vishal/arjit/chahun_Main_Ya_Naa.mp3',
+  'Vishal/arjit/Bolna.mp3', 'Vishal/arjit/Janam_Janam.mp3','Vishal/arjit/Kabhi_Jo_Baadal_Barse.mp3',
+  'Vishal/arjit/Main_Phir_Bhi_Tumko_Chahunga.mp3','Vishal/arjit/Main_Rang_Sharbaton_Ka.mp3',
+  'Vishal/arjit/Nashe_Si_Chadh_Gayi.mp3', 'Vishal/arjit/Milne_Hai_Mujhse _Aayi.mp3','Vishal/arjit/Pachtaoge.mp3',
+  'Vishal/arjit/Roke_Na_Ruke_Naina.mp3','Vishal/arjit/Tose_Naina.mp3', 'Vishal/arjit/GIMA_Awards.mp3'
+
+  
+
+
+];
 let search = document.getElementById("searchTxt");
 search.addEventListener("input", function () {
   let inputVal = search.value;
@@ -254,40 +273,111 @@ search.addEventListener("input", function () {
   })
 
 })
-function changeTheme(){
-    let body = document.body;
-    if(body.classList == "normal"){
-      body.classList = "dark";
-      let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
-      Array.from(songName).forEach((element)=>{
-        element.style.color="yellow";
-      })
-      let artists = document.querySelectorAll("b");
-      Array.from(artists).forEach((element)=>{
-        element.style.color ="lightgreen";
-      })
-      
-    }else{
-      body.classList = "normal";
-      let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
-      Array.from(songName).forEach((element)=>{
-        element.style.color="blue";
-      })
-      let artists = document.querySelectorAll("b");
-      Array.from(artists).forEach((element)=>{
-        element.style.color ="green";
-      })
+function changeTheme() {
+  let body = document.body;
+  if (body.classList == "normal") {
+    body.classList = "dark";
+    let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+    Array.from(songName).forEach((element) => {
+      element.style.color = "yellow";
+    })
+    let artists = document.querySelectorAll("b");
+    Array.from(artists).forEach((element) => {
+      element.style.color = "lightgreen";
+    })
+
+  } else {
+    body.classList = "normal";
+    let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+    Array.from(songName).forEach((element) => {
+      element.style.color = "blue";
+    })
+    let artists = document.querySelectorAll("b");
+    Array.from(artists).forEach((element) => {
+      element.style.color = "green";
+    })
+  }
+}
+function changeIcon(element) {
+  let icon = element.childNodes[0];
+  if (icon.classList == "fa fa-heart-o") {
+    
+    icon.classList = "fa fa-heart";
+  }
+  else {
+    icon.classList = "fa fa-heart-o";
+  }
+
+}
+
+let songCards = document.getElementsByClassName("songCard");
+var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+// console.log(myFavprop);
+Array.from(songCards).forEach((e)=>{
+  let songCard = e.childNodes;
+  let songName = songCard[3].childNodes[1].innerHTML;
+  if (myFavprop.some(e => e.songName === songName)) {
+    /*localStorage contains this song*/
+    console.log(songCard[7].childNodes[0]);
+    let favBtn  = songCard[7].childNodes[0];
+    console.log("Both are same");
+    console.log(favBtn);
+    favBtn.classList = "fa fa-heart";
+  }
+
+})
+ 
+
+$(function () {
+  $(".favBtn").on("click", function (e) {
+    var icon = e.target;
+    var songCard = this.parentNode.childNodes;
+    var imgFile = songCard[1].childNodes[1].src;
+    var songName = songCard[3].childNodes[1].innerHTML;
+    var songInfo = songCard[5].childNodes[0].innerHTML;
+    var dataId = $(songCard[1]).attr("data-switch");
+    var audioFile = audiofiles[dataId];
+    console.log(audioFile);
+    var propToAdd = {
+      imgFile: imgFile,
+      songName: songName,
+      songInfo: songInfo,
+      audioFile: audioFile
     }
-  }
-  
-  function changeIcon(element){
-      let icon = element.childNodes[0];
-      if(icon.classList == "fa fa-heart-o"){
-        icon.classList ="fa fa-heart";
-      }
-      else{
-        icon.classList = "fa fa-heart-o";
-      }
+    var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+    console.log(propToAdd);
+    console.log(myFavprop);
+    if (icon.classList == "fa fa-heart") {    
       
-  }
+      if (myFavprop == null) {
+        myFavprop = [];
+      }
+      console.log(myFavprop);
+      if(myFavprop != null){
+         if(myFavprop.some(e => e.songName === propToAdd.songName)){
+           console.log("already included");
+            if(propToAdd == myFavprop[j]){
+               propToAdd = {};
+            }
+         }else{
+          console.log("pushing");
+          myFavprop.push(propToAdd);
+         }
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+    if(icon.classList == "fa fa-heart-o"){
+      for(let j=0;j<myFavprop.length;j++){
+        if((myFavprop[j].songName == propToAdd.songName)&&(myFavprop[j].songInfo == propToAdd.songInfo)){
+          console.log("already included");
+          myFavprop.splice(j,1);
+        }
+        console.log(myFavprop);
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+
+  })
+});
+
 

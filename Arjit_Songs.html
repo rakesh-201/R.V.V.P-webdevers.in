@@ -56,7 +56,7 @@
                 data-toggle="popover" data-trigger="hover" title="Get Info"
                 data-content="Click to get info about artist" class="singerImg album-poster">
                 <img src="Vishal/arjit/arjit.jpg" id="singerImg" alt="Arjit Image">
-            </a>arjit/
+            </a>
         </div>
 
         <hr>
@@ -67,11 +67,13 @@
           <a href="javascript:void();" class="album-poster" data-switch="0">
             <img src="Vishal/arjit/Bekhayali.jpg">
           </a>
-          <h4>Bekhayali</h4>
-          <p>Kabir Singh <a data-placement="right" data-toggle="tooltip" id="favIcon" title="Add to favourites">
+         <div class="songNameContainer">
+                <h4>Bekhayali</h4>
+          </div>
+          <p id="songInfo"><b>Kabir Singh </b>
           </p>
 
-          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+          <button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
 
@@ -81,10 +83,10 @@
           <a href="javascript:void();" class="album-poster" data-switch="1">
 
             <img src="Vishal/arjit/Dil_Hi_Toh_Hai.jpg"></a>
-          <h4>Dil Hi Toh Hai</h4>
-          <p>The Sky Is Pink</p>
+          <div class="songNameContainer"><h4>Dil Hi Toh Hai</h4></div>
+          <p><b>The Sky Is Pink</b></p>
 
-          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+          <button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -93,9 +95,9 @@
           <a href="javascript:void();" class="album-poster" data-switch="2">
             <img src="Vishal/arjit/Sanam_Re.jpg"></a>
 
-          <h4>Sanam Re</h4>
-          <p>Sanam Re</p>
-          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+         <div class="songNameContainer"><h4>Sanam Re</h4></div>
+          <p><b>Sanam Re</b></p>
+          <button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -104,9 +106,10 @@
           <a href="javascript:void();" class="album-poster" data-switch="3">
 
             <img src="Vishal/arjit/Khairiyat.jpg"> </a>
-          <h4>Khairiyat</h4>
-          <p>Chhichhore</p>
-          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+            <div class="songNameContainer">
+          <h4>Khairiyat</h4></div>
+          <p><b>Chhichhore</b></p>
+          <button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -115,8 +118,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="4">
 
             <img src="Vishal/arjit/Phir_Le_Aya_Dil.jpg"> </a>
-          <h4>Phir Le Aaya Dil</h4>
-          <p>Barfi</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Phir Le Aaya Dil</h4></div>
+          <p><b>Barfi</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -124,8 +127,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="5">
             <img src="Vishal/arjit/Pal.jpg">
           </a>
-          <h4>Pal</h4>
-          <p>Jalebi</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+            <div class="songNameContainer"><h4>Pal</h4></div>
+          <p><b>Jalebi</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -133,8 +136,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="6">
             <img src="Vishal/arjit/Sooraj_Dooba_Hai_Aaj.jpg">
           </a>
-          <h4>Sooraj Dooba Hai Aaj</h4>
-          <p>Roy</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Sooraj Dooba Hai Aaj</h4></div>
+          <p><b>Roy</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -143,8 +146,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="7">
             <img src="Vishal/arjit/Sukoon_Mila.jpg">
           </a>
-          <h4>Sukoon Mila</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Sukoon Mila</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -153,8 +156,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="8">
             <img src="Vishal/arjit/Tera_Hoke_Rahoon.jpg">
           </a>
-          <h4>Tera Hoke Rahoon</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Tera Hoke Rahoon</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -163,8 +166,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="9">
             <img src="Vishal/arjit/Tu_Hi_Hai_Aashiqui.jpg">
           </a>
-          <h4>Tu Hi Hai Aashiqui</h4>
-          <p>Aashiqui 2</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+            <div class="songNameContainer"><h4>Tu Hi Hai Aashiqui</h4></div>
+          <p><b>Aashiqui 2</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -173,8 +176,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="10">
             <img src="Vishal/arjit/Tum_Hi_Ho.jpg">
           </a>
-          <h4>Tum Hi Ho</h4>
-          <p>Aashiqui 2</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Tum Hi Ho</h4></div>
+          <p><b>Aashiqui 2</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -182,8 +185,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="11">
             <img src="Vishal/arjit/Tum_Saath_Ho.jpg">
           </a>
-          <h4> Agar Tum Saath Ho</h4>
-          <p>Tamasha</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4> Agar Tum Saath Ho</h4></div>
+          <p><b>Tamasha</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -191,8 +194,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="12">
             <img src="Vishal/arjit/Darkhaast.jpg">
           </a>
-          <h4>Darkhaast</h4>
-          <p>Shivaay</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Darkhaast</h4></div>
+          <p><b>Shivaay</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -202,8 +205,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="13">
             <img src="Vishal/arjit/Laal_Ishq.jpg">
           </a>
-          <h4>Laal Ishq</h4>
-          <p>Goliyon Ki Rasleela Ram-Leela </p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Laal Ishq</h4></div>
+          <p><b>Goliyon Ki Rasleela Ram-Leela </b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -211,8 +214,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="14">
             <img src="Vishal/arjit/Illahi.jpg">
           </a>
-          <h4>Illahi</h4>
-          <p>Yeh Jawaani Hai Deewani</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Illahi</h4></div>
+          <p><b>Yeh Jawaani Hai Deewani</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -221,8 +224,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="15">
             <img src="Vishal/arjit/Ik_Vaari_ya.jpg">
           </a>
-          <h4>Ik Vaari ya</h4>
-          <p>Raabata</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Ik Vaari ya</h4></div>
+          <p><b>Raabata</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -231,8 +234,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="16">
             <img src="Vishal/arjit/Hawayein.jpg">
           </a>
-          <h4>Hawayein</h4>
-          <p>Jab Harry Met Sejal</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+            <div class="songNameContainer"><h4>Hawayein</h4></div>
+          <p><b>Jab Harry Met Sejal</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -241,8 +244,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="17">
             <img src="Vishal/arjit/Dhokha_Dhadi.jpg">
           </a>
-          <h4>Dhokha Dhadi</h4>
-          <p>R... Rajkumar</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Dhokha Dhadi</h4></div>
+          <p><b>R... Rajkumar</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -252,8 +255,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="18">
             <img src="Vishal/arjit/Mast_Magan.jpg">
           </a>
-          <h4>Mast Magan</h4>
-          <p>2 states</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Mast Magan</h4></div>
+          <p><b>2 states</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -263,8 +266,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="19">
             <img src="Vishal/arjit/Meet.jpg">
           </a>
-          <h4>Meet</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Meet</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -273,8 +276,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="20">
             <img src="Vishal/arjit/Tu_Mila_Toh_Haina.jpg">
           </a>
-          <h4>Tu Mila Toh Haina</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Tu Mila Toh Haina</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -283,8 +286,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="21">
             <img src="Vishal/arjit/Tujhe_Kitna_Chahne_Lage.jpg">
           </a>
-          <h4>Tujhe Kitna Chahne Lage</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Tujhe Kitna Chahne Lage</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -293,8 +296,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="22">
             <img src="Vishal/arjit/Chahun_Main_Ya_Naa.jpg">
           </a>
-          <h4>Chahun Main Ya Na</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Chahun Main Ya Na</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -304,8 +307,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="23">
             <img src="Vishal/arjit/Bolna.jpg">
           </a>
-          <h4>Mahi Bolna</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+            <div class="songNameContainer"><h4>Mahi Bolna</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -314,8 +317,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="24">
             <img src="Vishal/arjit/Janam_Janam.jpg">
           </a>
-          <h4>Janam Janam</h4>
-          <p>Dilwale</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Janam Janam</h4></div>
+          <p><b>Dilwale</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -324,8 +327,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="25">
             <img src="Vishal/arjit/Kabhi_Jo_Baadal_Barse.jpg">
           </a>
-          <h4>Kabhi Jo Baadal Barse</h4>
-          <p>Song Info</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Kabhi Jo Baadal Barse</h4></div>
+          <p><b>Song Info</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -334,8 +337,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="26">
             <img src="Vishal/arjit/Main_Phir_Bhi_Tumko_Chahunga.jpg">
           </a>
-          <h4>Main Phir Bhi Tumko Chahunga</h4>
-          <p>Half Girlfriend</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Main Phir Bhi Tumko Chahunga</h4></div>
+          <p><b>Half Girlfriend</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -344,9 +347,9 @@
           <a href="javascript:void();" class="album-poster" data-switch="27">
             <img src="Vishal/arjit/Main_Rang_Sharbaton_Ka.jpg">
           </a>
-          <h4>Main Rang Sharbto..</h4>
-          <p>Phata Poster Nikala Hero</p>
-          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Main Rang Sharbto..</h4></div>
+          <p><b>Phata Poster Nikala Hero</b></p>
+          <button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -355,9 +358,9 @@
           <a href="javascript:void();" class="album-poster" data-switch="28">
             <img src="Vishal/arjit/Nashe_Si_Chadh_Gayi.jpg">
           </a>
-          <h4>Nashe Si Chadh Gayi</h4>
-          <p>Song Info</p>
-          <button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Nashe Si Chadh Gayi</h4></div>
+          <p><b>Song Info</b></p>
+          <button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -366,8 +369,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="29">
             <img src="Vishal/arjit/Milne_Hai_Mujhse_Aayi.jpg">
           </a>
-          <h4>Milne_Hai_Mujhse _Aayi</h4>
-          <p>Aashiqui 2</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Milne_Hai_Mujhse _Aayi</h4></div>
+          <p><b>Aashiqui 2</b></p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -376,8 +379,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="30">
             <img src="Vishal/arjit/Pachtaoge.jpg">
           </a>
-          <h4>Pachtaoge</h4>
-          <p>Jaani ve</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+            <div class="songNameContainer"><h4>Pachtaoge</h4></div>
+          <p><b>Jaani ve</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -387,8 +390,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="31">
             <img src="Vishal/arjit/Roke_Na_Ruke_Naina.jpg">
           </a>
-          <h4>Roke Na Ruke Naina</h4>
-          <p>Badrinath Ki Dulhania</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Roke Na Ruke Naina</h4></div>
+          <p><b>Badrinath Ki Dulhania</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -398,8 +401,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="32">
             <img src="Vishal/arjit/Shayad.jpg">
           </a>
-          <h4>Shayad</h4>
-          <p>Love Aaj Kal</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Shayad</h4></div>
+          <p><b>Love Aaj Kal</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -409,8 +412,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="33">
             <img src="Vishal/arjit/Tose_Naina.jpg">
           </a>
-          <h4>Tose Naina</h4>
-          <p>Mickey Virus</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Tose Naina</h4></div>
+          <p><b>Mickey Virus</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
@@ -419,8 +422,8 @@
           <a href="javascript:void();" class="album-poster" data-switch="34">
             <img src="Vishal/arjit/GIMA_Awards.jpg">
           </a>
-          <h4>Arjit Singh at GIMA_Awards</h4>
-          <p>Mashup</p><button class="favorite" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
+           <div class="songNameContainer"> <h4>Arjit Singh at GIMA_Awards</h4></div>
+          <p><b>Mashup</b></p><button class="favBtn medium" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" onclick="changeIcon(this)"
                         title="Add favorites" data-content="Now make your own playlist by adding into favorites"><i
                             class="fa fa-heart-o" style="font-size:35px;color:red"></i></button>
         </div>
