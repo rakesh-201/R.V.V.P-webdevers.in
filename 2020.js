@@ -58,8 +58,8 @@ $(".album-poster").on("click", function () {
 {
   name:'loca',
   artist:'Arjit Singh',
-  url:'vishal/2020/Loca.mp3',
-  cover:'vishal/2020/Loca.jpg'
+  url:'Vishal/2020/Loca.mp3',
+  cover:'Vishal/2020/Loca.jpg'
 },
 {
   name:'Lagdi Lahore Di',
@@ -139,6 +139,17 @@ $(".album-poster").on("click", function () {
 
   ]
   });
+
+  let audiofiles = [
+    'Vishal/2020/Bezubaan_Kab_Se.mp3','Vishal/2020/Tum_Hi_Aana.mp3','Vishal/2020/Chashni.mp3',
+    'Vishal/2020/Hermosa.mp3','Vishal/2020/Chal_Ghar_Chalen.mp3','Vishal/2020/Makhna.mp3',
+    'Vishal/2020/Loca.mp3','Vishal/2020/Genda_Phool.mp3','Vishal/2020/Manjha.mp3','Vishal/2020/Masakali.mp3',
+    'Vishal/2020/Muqabla.mp3','Vishal/2020/Muqabla.mp3','Vishal/2020/The_Hook_Up_Song.mp3','Vishal/2020/Freak.mp3',
+    'Vishal/2020/Power.mp3','Vishal/2020/Rain_Over_Me_Pitbull.mp3','Vishal/2020/Stupid_Love.mp3',
+    'Vishal/arjit/Shayad.mp3',
+
+
+  ];
   let search = document.getElementById("searchTxt");
   search.addEventListener("input", function () {
     let inputVal = search.value;
@@ -170,13 +181,8 @@ $(".album-poster").on("click", function () {
       let artists = document.querySelectorAll("b");
       Array.from(artists).forEach((element)=>{
         element.style.color ="lightgreen";
-      })
-
-    
-
-      
-
-          }else{
+      })   
+    }else{
       body.classList = "normal";
       let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
       Array.from(songName).forEach((element)=>{
@@ -198,3 +204,80 @@ $(".album-poster").on("click", function () {
         icon.classList = "fa fa-heart-o";
       }
     }
+    
+
+    let songCards = document.getElementsByClassName("songCard");
+var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+// console.log(myFavprop);
+Array.from(songCards).forEach((e) => {
+  let songCard = e.childNodes;
+  let songName = songCard[3].childNodes[1].innerHTML;
+  if (myFavprop.some(e => e.songName === songName)) {
+    /*localStorage contains this song*/
+    console.log(songCard[7].childNodes[0]);
+    let favBtn = songCard[7].childNodes[0];
+    console.log("Both are same");
+    console.log(favBtn);
+    favBtn.classList = "fa fa-heart";
+  }
+
+})
+
+
+$(function () {
+  $(".favBtn").on("click", function (e) {
+    var icon = e.target;
+    var songCard = this.parentNode.childNodes;
+    var imgFile = songCard[1].childNodes[1].src;
+    var songName = songCard[3].childNodes[1].innerHTML;
+    var songInfo = songCard[5].childNodes[0].innerHTML;
+    var dataId = $(songCard[1]).attr("data-switch");
+    var audioFile = audiofiles[dataId];
+    console.log(audioFile);
+    var propToAdd = {
+      imgFile: imgFile,
+      songName: songName,
+      songInfo: songInfo,
+      audioFile: audioFile
+    }
+    var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+    console.log(propToAdd);
+    console.log(myFavprop);
+    if (icon.classList == "fa fa-heart") {
+
+      if (myFavprop == null) {
+        myFavprop = [];
+      }
+      console.log(myFavprop);
+      if (myFavprop != null) {
+        if (myFavprop.some(e => e.songName === propToAdd.songName)) {
+          console.log("already included");
+          if (propToAdd == myFavprop[j]) {
+            propToAdd = {};
+          }
+        } else {
+          console.log("pushing");
+          myFavprop.push(propToAdd);
+        }
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+    if (icon.classList == "fa fa-heart-o") {
+      for (let j = 0; j < myFavprop.length; j++) {
+        if ((myFavprop[j].songName == propToAdd.songName) && (myFavprop[j].songInfo == propToAdd.songInfo)) {
+          console.log("already included");
+          myFavprop.splice(j, 1);
+        }
+        console.log(myFavprop);
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+
+  })
+});
+  
+  
+
+      
+
+     
