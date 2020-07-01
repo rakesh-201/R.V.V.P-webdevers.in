@@ -30,6 +30,7 @@ urlpatterns=[
     path("kishore", views.kishore, name="kishore"),
     path("songs_2020", views.songs_2020, name="songs_2020"),
     path("songs_2019", views.songs_2019, name="songs_2019"),
+    path("favourite", views.favourite, name="favourite"),
 ]
 
 handler400 = views.error_400;

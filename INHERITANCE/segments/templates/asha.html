@@ -4,14 +4,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% load static %}
     <link rel="stylesheet" href="{% static 'singerPage.css' %}">
     <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="bootstrap.bundle.min.js / bootstrap.bundle.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
     <title>Asha songs</title>
 
@@ -43,25 +44,32 @@
 
         <div class="searchSong">
             <div class="searchContainer">
-                <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="text"
-                    placeholder="Search for songs">
+                <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="text" placeholder="Search for songs">
                 <a class="searchBtn ">
                     <svg width="25" height="25" viewBox="0 0 25 25">
-                        <path class="fill_path" fill="#FFF" fill-rule="evenodd"
-                            d="M69.5 34a6.5 6.5 0 0 1 6.5 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 69.5 47a6.5 6.5 0 1 1 0-13zm0 2C67 36 65 38 65 40.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z"
-                            transform="translate(-59 -32)"></path>
-                    </svg>
-                    Search
+                            <path class="fill_path" fill="#FFF" fill-rule="evenodd"
+                                d="M69.5 34a6.5 6.5 0 0 1 6.5 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 69.5 47a6.5 6.5 0 1 1 0-13zm0 2C67 36 65 38 65 40.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z"
+                                transform="translate(-59 -32)"></path>
+                        </svg> Search
                 </a>
             </div>
         </div>
 
+        <style>
+            .btn-in {
+                background-color: aqua;
+                border: 2px solid black;
+                color: black;
+            }
+        </style>
         <div class="theme">
+            <a href="/songs"><button class="btn text-weight-bolder btn-in mb-4 mr-2">Back</button></a>
             <!-- <button type="button" data-toggle="popover" title="Dark mode" data-content="Check out the new Black theme"
                     onclick="changeTheme()"><i class="fa fa-moon-o" style="font-size:48px;color:black;"></i></button> -->
-            <button><a tabindex="0" role="button" data-toggle="popover" data-trigger="hover" title="Dark mode"
-                    onclick="changeTheme()" data-content="Check out the new Black theme"><i class="fa fa-moon-o"
-                        style="font-size:48px;color:black;"></i></a></button>
+            <button style="background-color:aqua;"><a tabindex="0" role="button" data-toggle="popover"
+                        data-trigger="hover" title="Dark mode" onclick="changeTheme()"
+                        data-content="Check out the new Black theme"><i class="fa fa-moon-o"
+                            style="font-size:48px;color:black;"></i></a></button>
         </div>
 
         <div class="container">
@@ -85,9 +93,7 @@
                 </div>
 
                 <div class="col-md-12 singerImage">
-                    <a href="https://en.wikipedia.org/wiki/Asha_Bhosle" tabindex="0" role="button"
-                        data-toggle="popover" data-trigger="hover" title="Get Info"
-                        data-content="Click to get info about artist" class="singerImg album-poster">
+                    <a href="https://en.wikipedia.org/wiki/Asha_Bhosle" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" title="Get Info" data-content="Click to get info about artist" class="singerImg album-poster">
                         <img src="{% static '/Asha_songs/Asha.jpg' %}" id="singerImg" alt="Rafi Image">
                     </a>
                 </div>
@@ -110,7 +116,7 @@
                     </a>
                     <div class="songNameContainer">
                         <h4>Dhal gaya din</h4>
-                    </div>                
+                    </div>
                     <p><b>Hamjoli</b></p>
                 </div>
 
@@ -121,7 +127,7 @@
                     <div class="songNameContainer">
                         <h4>Jaiye aap kaha jayenge</h4>
                     </div>
-                    
+
                     <p><b>Mere Sanam</b></p>
                 </div>
 
@@ -132,7 +138,7 @@
                     <div class="songNameContainer">
                         <h4>O saathi chal</h4>
                     </div>
-                    
+
                     <p><b>Seeta Aur Geeta</b></p>
                 </div>
 
@@ -143,7 +149,7 @@
                     <div class="songNameContainer">
                         <h4>Piya tu ab to aaja</h4>
                     </div>
-                    
+
                     <p><b>Caravan</b></p>
                 </div>
 
@@ -154,7 +160,7 @@
                     <div class="songNameContainer">
                         <h4>Uden jab jab zulfen teri</h4>
                     </div>
-                    
+
                     <p><b>Naya Daur</b></p>
                 </div>
 
@@ -165,7 +171,7 @@
                     <div class="songNameContainer">
                         <h4>Aaiye meharbaan</h4>
                     </div>
-                    
+
                     <p><b>Howrah Bridge</b></p>
                 </div>
 
@@ -176,7 +182,7 @@
                     <div class="songNameContainer">
                         <h4>Do lafzon ki hai</h4>
                     </div>
-                    
+
                     <p><b>The Great Gambler</b></p>
                 </div>
 
@@ -187,7 +193,7 @@
                     <div class="songNameContainer">
                         <h4>Ek mai aur ek tu</h4>
                     </div>
-                    
+
                     <p><b>Khel Khel Mein</b></p>
                 </div>
 
@@ -198,7 +204,7 @@
                     <div class="songNameContainer">
                         <h4>Gun guna rahe hai bhanware</h4>
                     </div>
-                    
+
                     <p><b>Aaradhna</b></p>
                 </div>
 
@@ -209,7 +215,7 @@
                     <div class="songNameContainer">
                         <h4>Jab chali thandi hawa</h4>
                     </div>
-                    
+
                     <p><b>Do Badan</b></p>
                 </div>
 
@@ -220,7 +226,7 @@
                     <div class="songNameContainer">
                         <h4>Saara pyar tumhara</h4>
                     </div>
-                    
+
                     <p><b>Anand Ashram</b></p>
                 </div>
 
@@ -231,7 +237,7 @@
                     <div class="songNameContainer">
                         <h4>Roka kai baar maine</h4>
                     </div>
-                    
+
                     <p><b>Mere Sanam</b></p>
                 </div>
 
@@ -242,7 +248,7 @@
                     <div class="songNameContainer">
                         <h4>Sar par topi laal</h4>
                     </div>
-                    
+
                     <p><b>Tumsa Nahi Dekha</b></p>
                 </div>
 
@@ -253,7 +259,7 @@
                     <div class="songNameContainer">
                         <h4>Raat ke hamsafar</h4>
                     </div>
-                    
+
                     <p><b>An Evening In Paris</b></p>
                 </div>
 
@@ -264,7 +270,7 @@
                     <div class="songNameContainer">
                         <h4>Chhod do aanchal</h4>
                     </div>
-                    
+
                     <p><b>Paying Guest</b></p>
                 </div>
 
@@ -275,7 +281,7 @@
                     <div class="songNameContainer">
                         <h4>Deewana mastana hua dil</h4>
                     </div>
-                    
+
                     <p><b>Bombai Ka Babu</b></p>
                 </div>
 
@@ -286,7 +292,7 @@
                     <div class="songNameContainer">
                         <h4>Ek pardesi mera dil le gaya</h4>
                     </div>
-                    
+
                     <p><b>Phagun</b></p>
                 </div>
 
@@ -297,7 +303,7 @@
                     <div class="songNameContainer">
                         <h4>Yeh Mera dil</h4>
                     </div>
-                    
+
                     <p><b>Don</b></p>
                 </div>
 
@@ -417,17 +423,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-    <script src="{% static 'Asha.js' %}"> </script>
+    <script src="{% static 'Asha.js' %}">
+    </script>
 
 </body>
 

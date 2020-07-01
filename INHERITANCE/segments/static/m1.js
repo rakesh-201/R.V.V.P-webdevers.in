@@ -236,6 +236,21 @@ const ap = new APlayer({
 
     ]
 });
+
+console.log(ap.audio);
+let audiofiles = [
+    'arjit/Bekhayali.mp3', 'arjit/Dil_Hi_Toh_Hai.mp3', 'arjit/Sanam_Re.mp3',
+    'arjit/Khairiyat.mp3', 'arjit/Phir_Le_Aya_Dil.mp3', 'arjit/Pal.mp3',
+    'arjit/Sooraj_Dooba_Hai_Aaj.mp3', 'arjit/Sukoon_Mila.mp3', 'arjit/Tera_Hoke_Rahoon.mp3',
+    'arjit/Tu_Hi_Hai_Aashiqui.mp3', 'arjit/Tum Hi Ho.mp3', 'arjit/Tum_Saath_Ho.mp3',
+    'arjit/Darkhaast.mp3', 'arjit/Laal_Ishq.mp3', 'arjit/Ilahi.mp3', 'arjit/Ik_Vaari_ya.mp3',
+    'arjit/Hawayein.mp3', 'arjit/Mast_Magan.mp3', 'arjit/Meet.mp3',
+    'arjit/Tu_Mila_Toh_Haina.mp3', 'arjit/Tujhe_Kitna_Chahne_Lage.mp3', 'arjit/chahun_Main_Ya_Naa.mp3',
+    'arjit/Bolna.mp3', 'arjit/Janam_Janam.mp3', 'arjit/Kabhi_Jo_Baadal_Barse.mp3',
+    'arjit/Main_Phir_Bhi_Tumko_Chahunga.mp3', 'arjit/Main_Rang_Sharbaton_Ka.mp3',
+    'arjit/Nashe_Si_Chadh_Gayi.mp3', 'arjit/Milne_Hai_Mujhse _Aayi.mp3', 'arjit/Pachtaoge.mp3',
+    'arjit/Roke_Na_Ruke_Naina.mp3', 'arjit/Tose_Naina.mp3', 'arjit/GIMA_Awards.mp3'
+];
 let search = document.getElementById("searchTxt");
 search.addEventListener("input", function() {
     let inputVal = search.value;
@@ -289,3 +304,76 @@ function changeIcon(element) {
     }
 
 }
+
+let songCards = document.getElementsByClassName("songCard");
+var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+console.log(myFavprop);
+Array.from(songCards).forEach((e) => {
+    let songCard = e.childNodes;
+    let songName = songCard[3].childNodes[1].innerHTML;
+    if (myFavprop) {
+        if (myFavprop.some(e => e.songName === songName)) {
+            /*localStorage contains this song*/
+            console.log(songCard[7].childNodes[0]);
+            let favBtn = songCard[7].childNodes[0];
+            console.log("Both are same");
+            console.log(favBtn);
+            favBtn.classList = "fa fa-heart";
+        }
+    }
+
+})
+
+
+$(function() {
+    $(".favBtn").on("click", function(e) {
+        console.log(e)
+        var icon = e.target;
+        var songCard = this.parentNode.childNodes;
+        var imgFile = songCard[1].childNodes[1].src;
+        var songName = songCard[3].childNodes[1].innerHTML;
+        var songInfo = songCard[5].childNodes[0].innerHTML;
+        var dataId = $(songCard[1]).attr("data-switch");
+        var audioFile = audiofiles[dataId];
+        console.log(audioFile);
+        var propToAdd = {
+            imgFile: imgFile,
+            songName: songName,
+            songInfo: songInfo,
+            audioFile: `static/${audioFile}`
+        }
+        var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+        console.log(propToAdd);
+        console.log(myFavprop);
+        if (icon.classList == "fa fa-heart") {
+
+            if (myFavprop == null) {
+                myFavprop = [];
+            }
+            console.log(myFavprop);
+            if (myFavprop != null) {
+                if (myFavprop.some(e => e.songName === propToAdd.songName)) {
+                    console.log("already included");
+                    if (propToAdd == myFavprop[j]) {
+                        propToAdd = {};
+                    }
+                } else {
+                    console.log("pushing");
+                    myFavprop.push(propToAdd);
+                }
+            }
+            localStorage.setItem("favProp", JSON.stringify(myFavprop));
+        }
+        if (icon.classList == "fa fa-heart-o") {
+            for (let j = 0; j < myFavprop.length; j++) {
+                if ((myFavprop[j].songName == propToAdd.songName) && (myFavprop[j].songInfo == propToAdd.songInfo)) {
+                    console.log("already included");
+                    myFavprop.splice(j, 1);
+                }
+                console.log(myFavprop);
+            }
+            localStorage.setItem("favProp", JSON.stringify(myFavprop));
+        }
+
+    })
+});

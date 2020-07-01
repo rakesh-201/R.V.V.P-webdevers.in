@@ -16,107 +16,152 @@ $('.popover-dismiss').popover({
     trigger: 'focus'
 })
 
+
+
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     listFolded: true,
     audio: [{
-            name: 'Kinna Sona',
+            name: 'Jeene Laga Hoon',
             artist: 'Arjit Singh',
-            url: 'static/2019/Kinna_Sona.mp3',
-            cover: 'static/2019/Kinna_Sona.jpg'
+            url: 'Vishal/atif/Jeene_Laga_Hoon.mp3',
+            cover: 'Vishal/atif/Jeene_Laga_Hoon.jpg'
+        }, {
+            name: 'Maula',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Maula.mp3',
+            cover: 'Vishal/atif/Maula.jpg'
         },
         {
-            name: 'Garmi',
-            artist: 'Arjit Singh',
-            url: 'static/2019/Garmi.mp3',
-            cover: 'static/2019/Garmi.jpg'
+            name: 'Pehli Nazar Mein',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Pehli_Nazar_Mein.mp3',
+            cover: 'Vishal/atif/Pehli_Nazar_Mein.jpg'
         },
         {
-            name: 'Teri Mitti',
-            artist: 'Arjit Singh',
-            url: 'static/2019/Teri_Mitti.mp3',
-            cover: 'static/2019/Teri_Mitti.jpg'
+            name: 'Piya O Re Piya',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Piya_O_Re_Piya.mp3',
+            cover: 'Vishal/atif/Piya_O_Re_Piya.jpg'
         },
         {
-            name: 'Hawa Banke',
-            artist: 'Arjit Singh',
-            url: 'static/2019/Hawa_Banke.mp3',
-            cover: 'static/2019/Hawa_Banke.jpg'
-        },
-        {
-            name: 'O_Saki_Saki',
+            name: 'Pehli Dafa',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Pehli_Dafa.mp3',
+            cover: 'Vishal/atif/Pehli_Dafa.jpg'
 
-            url: 'static/2019/O_Saki_Saki.mp3',
-            cover: 'static/2019/O_Saki_Saki.jpg'
         },
         {
-            name: 'Makhna',
-            artist: 'Arjit Singh',
-            url: 'static/2020/Makhna.mp3',
-            cover: 'static/2020/Makhna.jpg'
+            name: 'Tere Bin',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Tere_Bin.mp3',
+            cover: 'Vishal/atif/Tere_Bin.jpg'
         },
         {
-            name: 'Chandigarh Me',
-            artist: 'Arjit Singh',
-            url: 'static/2019/Chandigarh_Mein.mp3',
-            cover: 'static/2019/Chandigarh_Mein.jpg'
+            name: 'Tere Sang Yaara',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Tere_Sang_Yaara.mp3',
+            cover: 'Vishal/atif/Tere_Sang_Yaara.jpg'
         },
         {
-            name: 'Tujhe Kitna Chahne Lage Hum',
-            artist: 'Arjit Singh',
-            url: 'static/2019/Tujhe_Kitna_Chahne_Lage.mp3',
-            cover: 'static/2019/Tujhe_Kitna_Chahne_Lage.jpg'
+            name: 'Woh Lamhe Woh Baatein',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Woh_Lamhe_Woh_Baatein.mp3',
+            cover: 'Vishal/atif/Woh_Lamhe_Woh_Baatein.jpg'
         },
         {
-            name: 'Thodi Jagah',
-            artist: 'Arjit Singh',
-            url: 'static/2019/Thodi_Jagah.mp3',
-            cover: 'static/2019/Thodi_Jagah.jpg'
+            name: 'Baarish',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Baarish.mp3',
+            cover: 'Vishal/atif/Baarish.jpg'
         },
         {
-            name: 'Psycho Saiyaan',
-            artist: 'Arjit Singh',
-            url: 'static/2019/Psycho_Saiyaan.mp3',
-            cover: 'static/2019/Psycho_Saiyaan.jpg'
+            name: 'Gulabi Aankhein',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Gulabi_Aankhein.mp3',
+            cover: 'Vishal/atif/Gulabi_Aankhein.jpg'
+        },
+
+        {
+            name: 'Sukoon Mila',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Sukoon_Mila.mp3',
+            cover: 'Vishal/atif/Sukoon_Mila.jpg'
+        },
+
+        {
+            name: 'Tera Hone Laga Hoon',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Tera_Hone_Laga_Hoon.mp3',
+            cover: 'Vishal/atif/Tera_Hone_Laga_Hoon.jpg'
         },
         {
-            name: 'Pachtaoge',
-            artist: 'Arjit Singh',
-            url: 'static/arjit/Pachtaoge.mp3',
-            cover: 'static/arjit/Pachtaoge.jpg'
+            name: 'Tu Mohabbat Hai',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Tu_Mohabbat_Hai.mp3',
+            cover: 'Vishal/atif/Tu_Mohabbat_Hai.jpg'
         },
         {
-            name: 'Tu Mila Toh Haina',
-            artist: 'Arjit Singh',
-            url: 'static/arjit/Tu_Mila_Toh_Haina.mp3',
-            cover: 'static/arjit/Tu_Mila_Toh_Haina.jpg'
+            name: 'Main Rang Sharbaton Ka.',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Main_Rang_Sharbaton_Ka.mp3',
+            cover: 'Vishal/atif/Main_Rang_Sharbaton_Ka.jpg'
         },
         {
-            name: 'Ik Vaari ya',
-            artist: 'Arjit Singh',
-            url: 'static/arjit/Ik_Vaari_ya.mp3',
-            cover: 'static/arjit/Ik_Vaari_ya.jpg'
+            name: 'O Saathi',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/O_Saathi.mp3',
+            cover: 'Vishal/atif/O_Saathi.jpg'
         },
         {
-            name: 'Darkhaast',
-            artist: 'Arjit Singh',
-            url: 'static/arjit/Darkhaast.mp3',
-            cover: 'static/arjit/Darkhaast.jpg'
+            name: 'Jeena Jeena',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Jeena_Jeena.mp3',
+            cover: 'Vishal/atif/Jeena_Jeena.jpg'
         },
+        {
+            name: 'Atif Aslam Mashup',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Atif_Aslam_Mashup.mp3',
+            cover: 'Vishal/atif/Atif_Aslam_Mashup.jpg'
+        },
+        {
+            name: 'Paniyon sa',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Paniyon_Sa.mp3',
+            cover: 'Vishal/atif/Paniyon_Sa.jpg'
+        },
+        {
+            name: 'Tu Jaane Na',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Tu_Jaane_Na.mp3',
+            cover: 'Vishal/atif/Tu_Jaane_Na.jpg'
+        },
+        {
+            name: 'Tere_Liye',
+            artist: 'Atif Aslam',
+            url: 'Vishal/atif/Tere_Liye.mp3',
+            cover: 'Vishal/atif/Tere_Liye.jpg'
+        },
+
+
+
     ]
 });
 
-console.log(ap.audio);
+
+
+
+
 let audiofiles = [
-    'static/2019/Kinna_Sona.mp3', 'static/2019/Garmi.mp3', 'static/2019/Teri_Mitti.mp3', 'static/2019/Hawa_Banke.mp3',
-    'static/2019/O_Saki_Saki.mp3', 'static/2020/Makhna.mp3', 'static/2019/Chandigarh_Mein.mp3', 'static/2019/Tujhe_Kitna_Chahne_Lage.mp3',
-    'static/2019/Thodi_Jagah.mp3', 'static/2019/Psycho_Saiyaan.mp3', 'static/arjit/Pachtaoge.mp3',
-    'static/arjit/Tu_Mila_Toh_Haina.mp3', 'static/arjit/Ik_Vaari_ya.mp3', 'static/arjit/Darkhaast.mp3',
-
-
+    'Vishal/atif/Jeene_Laga_Hoon.mp3', 'Vishal/atif/Maula.mp3', 'Vishal/atif/Pehli_Nazar_Mein.mp3',
+    'Vishal/atif/Piya_O_Re_Piya.mp3', 'Vishal/atif/Pehli_Dafa.mp3', 'Vishal/atif/Tere_Bin.mp3',
+    'Vishal/atif/Tere_Sang_Yaara.mp3', 'Vishal/atif/Woh_Lamhe_Woh_Baatein.mp3', 'Vishal/atif/Baarish.mp3',
+    'Vishal/atif/Gulabi_Aankhein.mp3', 'Vishal/atif/Sukoon_Mila.mp3', 'Vishal/atif/Tera_Hone_Laga_Hoon.mp3',
+    'Vishal/atif/Tu_Mohabbat_Hai.mp3', 'Vishal/atif/Main_Rang_Sharbaton_Ka.mp3', 'Vishal/atif/O_Saathi.mp3',
+    'Vishal/atif/Jeena_Jeena.mp3', 'Vishal/atif/Atif_Aslam_Mashup.mp3', 'Vishal/atif/Atif_Aslam_Mashup.mp3',
+    'Vishal/atif/Tu_Jaane_Na.mp3', 'Vishal/atif/Tere_Liye.mp3',
 ];
-
-
 let search = document.getElementById("searchTxt");
 search.addEventListener("input", function() {
     let inputVal = search.value;
@@ -131,10 +176,9 @@ search.addEventListener("input", function() {
         } else {
             element.style.display = "none";
         }
-
     })
-});
 
+})
 
 function changeTheme() {
     let body = document.body;
@@ -165,7 +209,6 @@ function changeTheme() {
 function changeIcon(element) {
     let icon = element.childNodes[0];
     if (icon.classList == "fa fa-heart-o") {
-
         icon.classList = "fa fa-heart";
     } else {
         icon.classList = "fa fa-heart-o";
@@ -179,17 +222,13 @@ var myFavprop = JSON.parse(localStorage.getItem("favProp"));
 Array.from(songCards).forEach((e) => {
     let songCard = e.childNodes;
     let songName = songCard[3].childNodes[1].innerHTML;
-    if (myFavprop != null) {
-
-        if (myFavprop.some(e => e.songName === songName)) {
-            /*localStorage contains this song*/
-            console.log(songCard[7].childNodes[0]);
-            let favBtn = songCard[7].childNodes[0];
-            console.log("Both are same");
-            console.log(favBtn);
-            favBtn.classList = "fa fa-heart";
-        }
-
+    if (myFavprop.some(e => e.songName === songName)) {
+        /*localStorage contains this song*/
+        console.log(songCard[7].childNodes[0]);
+        let favBtn = songCard[7].childNodes[0];
+        console.log("Both are same");
+        console.log(favBtn);
+        favBtn.classList = "fa fa-heart";
     }
 
 })
@@ -209,7 +248,7 @@ $(function() {
             imgFile: imgFile,
             songName: songName,
             songInfo: songInfo,
-            audioFile: `${audioFile}`
+            audioFile: audioFile
         }
         var myFavprop = JSON.parse(localStorage.getItem("favProp"));
         console.log(propToAdd);
@@ -245,4 +284,4 @@ $(function() {
         }
 
     })
-})
+});

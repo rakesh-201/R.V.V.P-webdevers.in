@@ -131,56 +131,69 @@
         transform: translateY(0);
         transition-delay: 0.9s
     }
+    
+    .align-left {
+        align-items: right;
+    }
 </style>
 
 <body>
     {% load static %}
+    <div class="col-12  align-left ">
+        <p class="text-danger text-weight-bolder mb-3">It all started with INHERITANCE. A program that is conducted in VJTI, wherein the SYs assign some project to the FYs so that they get an idea of how projects are made, what is team work, how to manage time and more than anything else how to utilize
+            summer vacation. This site is made by Four students of VJTI.</p>
+    </div>
     <div class="cont mt-2 text-warning">
-        <div>
-            <h5 class="text-danger text-weight-bolder mb-3">It all started with INHERITANCE. A program that is conducted in VJTI, wherein the SYs assign some project to the FYs so that they get an idea of how projects are made, what is team work, how to manage time and more than anything else how to
-                utilize summer vacation. This site is made by Four students of VJTI.</h5>
-        </div>
-        <div class="box mx-2">
-            <div class="imgBx">
-                <img src="{% static '/image/rakesh.jpg'%}">
-            </div>
-            <div class="content text-danger">
-                <h2>Rakesh Rajpurohit</h2>
-                <p>A student of VJTI. Branch IT.</p>
+        <div class="col-xl-3 col-12">
+            <div class="box mx-2">
+                <div class="imgBx">
+                    <img src="{% static '/image/rakesh.jpg'%}">
+                </div>
+                <div class="content text-danger">
+                    <h2>Rakesh Rajpurohit</h2>
+                    <p>A student of VJTI. Branch IT.</p>
 
+                </div>
             </div>
         </div>
 
-        <div class="box mx-2">
-            <div class="imgBx">
-                <img src="{% static '/image/1.jpeg' %}">
-            </div>
-            <div class="content text-danger">
-                <h2>Vishal Dange</h2>
-                <p>A student of VJTI. Branch IT.
-                </p>
+        <div class="col-xl-3 col-12">
+            <div class="box mx-2">
+                <div class="imgBx">
+                    <img src="{% static '/image/1.jpeg' %}">
+                </div>
+                <div class="content text-danger">
+                    <h2>Vishal Dange</h2>
+                    <p>A student of VJTI. Branch IT.
+                    </p>
 
+                </div>
             </div>
         </div>
+        <div class="col-xl-3 col-12">
 
-        <div class="box mx-2">
-            <div class="imgBx">
-                <img src="{% static '/image/2.jpeg' %}">
-            </div>
-            <div class="content text-danger">
-                <h2>Vedant Mondkar</h2>
-                <p>A student of VJTI. Branch IT.</p>
+            <div class="box mx-2">
+                <div class="imgBx">
+                    <img src="{% static '/image/2.jpeg' %}">
+                </div>
+                <div class="content text-danger">
+                    <h2>Vedant Mondkar</h2>
+                    <p>A student of VJTI. Branch IT.</p>
 
+                </div>
             </div>
         </div>
-        <div class="box mx-2">
-            <div class="imgBx">
-                <img src="{% static '/image/3.jpeg' %}">
-            </div>
-            <div class="content text-danger">
-                <h2>Prashant Bhala</h2>
-                <p>A student of VJTI. Branch IT.</p>
+        <div class="col-xl-3 col-12">
 
+            <div class="box mx-2">
+                <div class="imgBx">
+                    <img src="{% static '/image/3.jpeg' %}">
+                </div>
+                <div class="content text-danger">
+                    <h2>Prashant Bhala</h2>
+                    <p>A student of VJTI. Branch IT.</p>
+
+                </div>
             </div>
         </div>
     </div>

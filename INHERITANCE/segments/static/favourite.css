@@ -14,7 +14,7 @@ html {
     width: 66px;
     background-size: cover;
     background-position: 50%;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     padding: 5px 0px 0px 5px;
 }
@@ -29,19 +29,19 @@ img {
 
 
 /* .main{
-  padding:40px 0;
-  background-image: linear-gradient(rgb(24, 22, 22),rgb(0, 0, 15));
-} */
+    padding:40px 0;
+    background-image: linear-gradient(rgb(24, 22, 22),rgb(0, 0, 15));
+  } */
 
 
 /* .main{
-  padding:40px 0;
-  background: linear-gradient(lightgreen,#ff6600,pink,yellow,cyan);
-} */
+    padding:40px 0;
+    background: linear-gradient(lightgreen,#ff6600,pink,yellow,cyan);
+  } */
 
 .normal {
     padding: 40px 0;
-    background: linear-gradient(lightgreen, #ff6600, pink, yellow, cyan);
+    background: linear-gradient(yellow, cyan);
 }
 
 .dark {
@@ -77,11 +77,11 @@ img {
 
 
 /* .songCard{
-  border: 2px solid #fff000;
-  background: radial-gradien(blue,lightblue);
-  background: linear-gradient(blue,green);
-  border-radius: 15px;
-} */
+    border: 2px solid #fff000;
+    background: radial-gradien(blue,lightblue);
+    background: linear-gradient(blue,green);
+    border-radius: 15px;
+  } */
 
 h3 {
     font-size: 34px;
@@ -176,7 +176,7 @@ span {
 
 .col-md-12 h4 {
     font-weight: 800;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(17, 73, 255);
     padding-bottom: 5px;
     margin-bottom: 20px;
@@ -198,27 +198,27 @@ h4 {
     color: rgb(255, 78, 78);
     font-weight: 500;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 
 /* .singerImage{
-  text-align: center;
-  margin-bottom: 20px;
-  background: radial-gradient(green,yellow);
-} */
+    text-align: center;
+    margin-bottom: 20px;
+    background: radial-gradient(green,yellow);
+  } */
 
 
 /* #singerImg{
-  width: 50%;
-  border-radius: 49%;
-  border: 5px solid #0f0;
-} */
+    width: 50%;
+    border-radius: 49%;
+    border: 5px solid #0f0;
+  } */
 
 .singerImg {
-    width: 50%!important;
-    height: 90%!important;
-    margin-left: 23%!important;
+    width: 50% !important;
+    height: 90% !important;
+    margin-left: 23% !important;
 }
 
 #singerName {
@@ -240,6 +240,7 @@ b {
 }
 
 input {
+    -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
     color: -internal-light-dark-color(black, white);
     letter-spacing: normal;
@@ -250,7 +251,7 @@ input {
     display: inline-block;
     text-align: start;
     -webkit-appearance: textfield;
-    background-color: -internal-light-dark-color(rgb(255, 255, 255), rgb(59, 59, 59));
+    background-color: -internal-light-dark-color( rgb(255, 255, 255), rgb(59, 59, 59));
     -webkit-rtl-ordering: logical;
     cursor: text;
     margin: 0em;
@@ -258,7 +259,7 @@ input {
     padding: 1px 2px;
     border-width: 2px;
     border-style: inset;
-    border-color: -internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-color: -internal-light-dark-color( rgb(118, 118, 118), rgb(195, 195, 195));
     border-image: initial;
 }
 
@@ -301,8 +302,8 @@ input {
     -ms-border-radius: 25px 25px 25px 25px;
     -o-border-radius: 25px 25px 25px 25px;
     border-radius: 25px 25px 25px 25px;
-    background-color: #e72c30!important;
-    color: #fff!important;
+    background-color: #e72c30 !important;
+    color: #fff !important;
 }
 
 a.searchBtn {
@@ -312,7 +313,7 @@ a.searchBtn {
 
 .searchSong input {
     background-color: #efefef;
-    width: 100%!important;
+    width: 100% !important;
     padding: 13px 150px 13px 20px;
     box-sizing: border-box;
     font-size: 14px;
@@ -328,28 +329,16 @@ a.searchBtn {
     margin-left: 90%;
 }
 
-.favBtn {
+.removeBtn {
     border: 0px;
     background: none;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 button:focus {
-    outline: none!important;
+    outline: none !important;
 }
 
 .songNameContainer {
-    height: 15%;
-}
-
-.Large {
-    margin-left: 1%;
-}
-
-.medium {
-    margin-left: 24%;
-}
-
-.verySmall {
-    margin-left: 37%;
+    height: 20%;
 }

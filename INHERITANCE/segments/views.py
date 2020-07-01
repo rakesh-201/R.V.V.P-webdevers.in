@@ -82,7 +82,7 @@ def home(request):
             except Exception as e:
                 print(e)
                 if nn < 3:
-                    nn += 3
+                    nn += 1
                     print("Say that again please......")
                     playsound.playsound("sayagain.mp3")
                     return redirect("auxiliary_home")
@@ -98,17 +98,17 @@ def home(request):
         if email:
             if email1:
                 messages.warning(request, 'You already have an account, You may login.')
-                return render(request, "home.html")
+                return render(request, "home.html", user = get)
             else:
                 if  confirm_password == password:
                     user = User(username = username, email = email, password = password)
                     user.save()
                     messages.success(request, 'Your account has been created successfully, you may now login.')
-                    return render(request, "home.html")
+                    return render(request, "home.html", user = get)
                 else:
                     messages.success(request, 'Your Password and Confirm Password Fields Did Not Match. Please Try Again.')
-                    return render(request, "home.html")
-    return render(request, "home.html")
+                    return render(request, "home.html", user = get)
+    return render(request, "home.html", )
 
 
 def auxiliary_home(request):
@@ -150,7 +150,7 @@ def auxiliary_home(request):
     except Exception as e:
         print(e)
         if nn < 3:
-            nn += 3
+            nn += 1
             print("Say that again please......")
             playsound.playsound("sayagain.mp3")
             return redirect("auxiliary_home")
@@ -221,7 +221,7 @@ def login_(request):
             return render(request, "home1.html")
         else:
             messages.error(request, 'Invalid Email or Password, Please Check and Try Again.')
-        return render(request, "home.html")
+        return render(request, "home.html", user = get)
     if get():
         return render(request, "home1.html")
     return redirect("home")
@@ -340,7 +340,7 @@ def register(request):
                     return redirect("home")
             else:
                 messages.success(request, 'Your Password and Confirm Password Fields Did Not Match. Please Try Again.')
-                return render(request, "home.html")
+                return render(request, "home.html", user = get)
     return render(request, "register.html")
 
 
@@ -686,6 +686,12 @@ def songs_2019(request):
     if get():
         return render(request, "2019.html")
     return redirect("home")
+
+def favourite(request):
+    if get():
+        return render(request, "favourite.html")
+    return redirect("home")
+
 
 def error_404(request, *args, **kwargs):
     return render(request, "404.html")

@@ -4,14 +4,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% load static %}
     <link rel="stylesheet" href="{% static '/singerPage.css'%}">
     <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="bootstrap.bundle.min.js / bootstrap.bundle.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
     <title>Kishore songs</title>
 
@@ -41,25 +42,32 @@
 
         <div class="searchSong">
             <div class="searchContainer">
-                <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="text"
-                    placeholder="Search for songs">
+                <input class="form-control mr-sm-4 w-50 mx-5 my-2" id="searchTxt" type="text" placeholder="Search for songs">
                 <a class="searchBtn ">
                     <svg width="25" height="25" viewBox="0 0 25 25">
-                        <path class="fill_path" fill="#FFF" fill-rule="evenodd"
-                            d="M69.5 34a6.5 6.5 0 0 1 6.5 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 69.5 47a6.5 6.5 0 1 1 0-13zm0 2C67 36 65 38 65 40.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z"
-                            transform="translate(-59 -32)"></path>
-                    </svg>
-                    Search
+                            <path class="fill_path" fill="#FFF" fill-rule="evenodd"
+                                d="M69.5 34a6.5 6.5 0 0 1 6.5 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 69.5 47a6.5 6.5 0 1 1 0-13zm0 2C67 36 65 38 65 40.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z"
+                                transform="translate(-59 -32)"></path>
+                        </svg> Search
                 </a>
             </div>
         </div>
 
+        <style>
+            .btn-in {
+                background-color: aqua;
+                border: 2px solid black;
+                color: black;
+            }
+        </style>
         <div class="theme">
+            <a href="/songs"><button class="btn text-weight-bolder btn-in mb-4 mr-2">Back</button></a>
             <!-- <button type="button" data-toggle="popover" title="Dark mode" data-content="Check out the new Black theme"
                 onclick="changeTheme()"><i class="fa fa-moon-o" style="font-size:48px;color:black;"></i></button> -->
-            <button><a tabindex="0" role="button" data-toggle="popover" data-trigger="hover" title="Dark mode"
-                    onclick="changeTheme()" data-content="Check out the new Black theme"><i class="fa fa-moon-o"
-                        style="font-size:48px;color:black;"></i></a></button>
+            <button style="background-color: aqua;"><a tabindex="0" role="button" data-toggle="popover"
+                        data-trigger="hover" title="Dark mode" onclick="changeTheme()"
+                        data-content="Check out the new Black theme"><i class="fa fa-moon-o"
+                            style="font-size:48px;color:black;"></i></a></button>
         </div>
 
 
@@ -84,9 +92,7 @@
                 </div>
 
                 <div class="col-md-12 singerImage">
-                    <a href="https://en.wikipedia.org/wiki/Kishore_Kumar" tabindex="0" role="button"
-                        data-toggle="popover" data-trigger="hover" title="Get Info"
-                        data-content="Click to get info about artist" class="singerImg album-poster">
+                    <a href="https://en.wikipedia.org/wiki/Kishore_Kumar" tabindex="0" role="button" data-toggle="popover" data-trigger="hover" title="Get Info" data-content="Click to get info about artist" class="singerImg album-poster">
                         <img src="{% static '/Kishore_songs/kishore.jpeg' %}" id="singerImg" alt="Rafi Image">
                     </a>
                 </div>
@@ -94,16 +100,16 @@
                 <hr>
 
                 <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster"  data-switch="0">
+                    <a href="javascript:void();" class="album-poster" data-switch="0">
                         <img src="{% static '/Kishore_songs/Pal_pal.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Pal pal dil ke paas</h4>
                     </div>
-                    
+
                     <p><b>Blackmail</b></p>
                 </div>
-                
+
                 <div class="songCard col-md-3">
                     <a href="javascript:void();" class="album-poster" data-switch="1">
                         <img src="{% static '/Kishore_songs/Yeh_shaam.jpg' %}">
@@ -112,7 +118,7 @@
                         <h4>Yeh shaam mastani</h4>
 
                     </div>
-                    
+
                     <p><b>Kati Patang</b></p>
                 </div>
 
@@ -123,7 +129,7 @@
                     <div class="songNameContainer">
                         <h4>O mere dil ke chain</h4>
                     </div>
-                    
+
                     <p><b>Mere Jeevan Sathi</b></p>
                 </div>
 
@@ -134,7 +140,7 @@
                     <div class="songNameContainer">
                         <h4>Tere bina zindagi se koi</h4>
                     </div>
-                    
+
                     <p><b>Aandhi</b></p>
                 </div>
 
@@ -155,7 +161,7 @@
                     <div class="songNameContainer">
                         <h4>Meri soni meri tamanna</h4>
                     </div>
-                    
+
                     <p><b>Yaadon Ki Barat</b></p>
                 </div>
 
@@ -166,7 +172,7 @@
                     <div class="songNameContainer">
                         <h4>Neele neele ambar par</h4>
                     </div>
-                    
+
                     <p><b>Kalaakar</b></p>
                 </div>
 
@@ -177,7 +183,7 @@
                     <div class="songNameContainer">
                         <h4>Kehdu tumhe ya chup rahu</h4>
                     </div>
-                    
+
                     <p><b>Deewar</b></p>
                 </div>
 
@@ -188,7 +194,7 @@
                     <div class="songNameContainer">
                         <h4>Khaike paan banaras wala</h4>
                     </div>
-                    
+
                     <p><b>Don</b></p>
                 </div>
 
@@ -199,7 +205,7 @@
                     <div class="songNameContainer">
                         <h4>Kora kagaz tha ye man mera</h4>
                     </div>
-                    
+
                     <p><b>Aaradhna</b></p>
                 </div>
 
@@ -210,7 +216,7 @@
                     <div class="songNameContainer">
                         <h4>Mere mehboob qayamat hogi</h4>
                     </div>
-                    
+
                     <p><b>Mr.X In Bombay</b></p>
                 </div>
 
@@ -221,7 +227,7 @@
                     <div class="songNameContainer">
                         <h4>Mere sapno ki rani</h4>
                     </div>
-                    
+
                     <p><b>Aaradhna</b></p>
                 </div>
 
@@ -232,7 +238,7 @@
                     <div class="songNameContainer">
                         <h4>O saathi chal</h4>
                     </div>
-                    
+
                     <p><b>Seeta Aur Geeta</b></p>
                 </div>
 
@@ -243,7 +249,7 @@
                     <div class="songNameContainer">
                         <h4>Chhod do aanchal</h4>
                     </div>
-                    
+
                     <p><b>Paying Guest</b></p>
                 </div>
 
@@ -254,7 +260,7 @@
                     <div class="songNameContainer">
                         <h4>Dil kya kare</h4>
                     </div>
-                    
+
                     <p><b>Julee</b></p>
                 </div>
 
@@ -265,7 +271,7 @@
                     <div class="songNameContainer">
                         <h4>Gaata rahe mera dil</h4>
                     </div>
-                    
+
                     <p><b>Guide</b></p>
                 </div>
 
@@ -276,7 +282,7 @@
                     <div class="songNameContainer">
                         <h4>Gham ka fasana</h4>
                     </div>
-                    
+
                     <p><b>Manchali</b></p>
                 </div>
 
@@ -297,7 +303,7 @@
                     <div class="songNameContainer">
                         <h4>Jai jai shiv shankar</h4>
                     </div>
-                    
+
                     <p><b>Aap Ki Kasam</b></p>
                 </div>
 
@@ -308,7 +314,7 @@
                     <div class="songNameContainer">
                         <h4>Rimjhim gire saavan</h4>
                     </div>
-                    
+
                     <p><b>Manzil</b></p>
                 </div>
 
@@ -319,7 +325,7 @@
                     <div class="songNameContainer">
                         <h4>Sara zamana</h4>
                     </div>
-                    
+
                     <p><b>Yaarana</b></p>
                 </div>
 
@@ -330,7 +336,7 @@
                     <div class="songNameContainer">
                         <h4>Tum aa gaye ho</h4>
                     </div>
-                    
+
                     <p><b>Aandhi</b></p>
                 </div>
 
@@ -341,18 +347,18 @@
                     <div class="songNameContainer">
                         <h4>Wada tera wada</h4>
                     </div>
-                    
+
                     <p><b>Dushman</b></p>
                 </div>
 
                 <div class="songCard col-md-3">
-                    <a href="javascript:void();" class="album-poster"  data-switch="23">
+                    <a href="javascript:void();" class="album-poster" data-switch="23">
                         <img src="{% static '/Asha_songs/Ek_mai.jpg' %}">
                     </a>
                     <div class="songNameContainer">
                         <h4>Ek mai aur ek tu</h4>
                     </div>
-                    
+
                     <p><b>Khel Khel Mein</b></p>
                 </div>
 
@@ -362,7 +368,7 @@
                     </a>
                     <div class="songNameContainer">
                         <h4>Suno kaho suna</h4>
-                    </div>                   
+                    </div>
                     <p><b>Aap Ki Kasam</b></p>
                 </div>
 
@@ -372,7 +378,7 @@
                     </a>
                     <div class="songNameContainer">
                         <h4>Bheegi bheegi raaton me</h4>
-                    </div>                   
+                    </div>
                     <p><b>Ajanbee</b></p>
                 </div>
 
@@ -382,7 +388,7 @@
                     </a>
                     <div class="songNameContainer">
                         <h4>sagar jaisi aankhovali</h4>
-                    </div>                   
+                    </div>
                     <p><b>Sagar</b></p>
                 </div>
 
@@ -392,7 +398,7 @@
                     </a>
                     <div class="songNameContainer">
                         <h4>Aise na mujhe tum dekho</h4>
-                    </div>                   
+                    </div>
                     <p><b>Darling Darling</b></p>
                 </div>
 
@@ -402,7 +408,7 @@
                     </a>
                     <div class="songNameContainer">
                         <h4>Ha tu hai wahi</h4>
-                    </div>                   
+                    </div>
                     <p><b>Yeh waada raha</b></p>
                 </div>
 
@@ -423,17 +429,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-    <script src="{% static '/Kishore.js' %}"> </script>
+    <script src="{% static '/Kishore.js' %}">
+    </script>
 
 </body>
 
