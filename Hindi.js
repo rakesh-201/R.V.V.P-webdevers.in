@@ -8,6 +8,13 @@ $(".album-poster").on("click", function () {
   $("#aplayer").addClass("showPlayer");
 });
 
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
 
 
 
@@ -210,99 +217,116 @@ const ap = new APlayer({
   {
     name: 'Vaaste',
     artist: 'Dhvani Bhanushali',
-    url: 'Hindi songs/Vaaste.mp3',
-    cover: 'Hindi songs/Vaaste.jpg'
+    url: 'static/Hindi_songs/Vaaste.mp3',
+    cover: 'static/Hindi_songs/Vaaste.jpg'
   },
   {
     name: 'Ishq tera',
     artist: 'Guru Randhawa',
-    url: 'Hindi songs/Ishq_tera.mp3',
-    cover: 'Hindi songs/Ishq_tera.jpg'
+    url: 'static/Hindi_songs/Ishq_tera.mp3',
+    cover: 'static/Hindi_songs/Ishq_tera.jpg'
   },
   {
     name: 'Leja Re',
     artist: 'Dhvani Bhanushali',
-    url: 'Hindi songs/Leja_Re.mp3',
-    cover: 'Hindi songs/Leja_Re.jpg'
+    url: 'static/Hindi_songs/Leja_Re.mp3',
+    cover: 'static/Hindi_songs/Leja_Re.jpg'
   },
   {
     name: 'Naina',
     artist: '',
-    url: 'Hindi songs/Naina.mp3',
-    cover: 'Hindi songs/Naina.jpg'
+    url: 'static/Hindi_songs/Naina.mp3',
+    cover: 'static/Hindi_songs/Naina.jpg'
   },
   {
     name: 'Tera Ban Jaaunga',
     artist: 'Akhil Sachdeva and Tulsi',
-    url: 'Hindi songs/Tera_Ban_Jaaunga.mp3',
-    cover: 'Hindi songs/Tera_Ban_Jaaunga.jpg'
+    url: 'static/Hindi_songs/Tera_Ban_Jaaunga.mp3',
+    cover: 'static/Hindi_songs/Tera_Ban_Jaaunga.jpg'
   },
   {
     name: 'Kabira',
     artist: 'Rekha Bhardwaj and Tochi Raina',
-    url: 'Hindi songs/Kabira.mp3',
-    cover: 'Hindi songs/Kabira.jpg'
+    url: 'static/Hindi_songs/Kabira.mp3',
+    cover: 'static/Hindi_songs/Kabira.jpg'
   },
   {
     name: 'Teri Mitti',
     artist: 'B Praak',
-    url: 'Hindi songs/Teri_Mitti.mp3',
-    cover: 'Hindi songs/Teri_Mitti.jpg'
+    url: 'static/Hindi_songs/Teri_Mitti.mp3',
+    cover: 'static/Hindi_songs/Teri_Mitti.jpg'
   },
   {
     name: 'Ve Maahi',
     artist: 'Arijit Singh and Asees Kaur',
-    url: 'Hindi songs/Ve_Maahi.mp3',
-    cover: 'Hindi songs/Ve_Maahi.jpg'
+    url: 'static/Hindi_songs/Ve_Maahi.mp3',
+    cover: 'static/Hindi_songs/Ve_Maahi.jpg'
   },
   {
     name: 'Zara Zara Behekta Hai',
     artist: 'Bombay Jayashri',
-    url: 'Hindi songs/Zara_Zara_Behekta_Hai.mp3',
-    cover: 'Hindi songs/Zara_Zara_Behekta_Hai.jpg'
+    url: 'static/Hindi_songs/Zara_Zara_Behekta_Hai.mp3',
+    cover: 'static/Hindi_songs/Zara_Zara_Behekta_Hai.jpg'
   },
   {
     name: 'Tera Fitoor',
     artist: 'Arijit Singh',
-    url: 'Hindi songs/Tera_Fitoor.mp3',
-    cover: 'Hindi songs/Tera_Fitoor.jpg'
+    url: 'static/Hindi_songs/Tera_Fitoor.mp3',
+    cover: 'static/Hindi_songs/Tera_Fitoor.jpg'
   },
   {
     name: 'Tera Baa Aaya',
     artist: 'Farhad Bhiwandiwala',
-    url: 'Hindi songs/Tera_Baa_Aaya.mp3',
-    cover: 'Hindi songs/Tera_Baa_Aaya.jpg'
+    url: 'static/Hindi_songs/Tera_Baa_Aaya.mp3',
+    cover: 'static/Hindi_songs/Tera_Baa_Aaya.jpg'
   },
   {
     name: 'Shankara Re Shankara',
     artist: 'Mehul Vyas',
-    url: 'Hindi songs/Shankara_Re_Shankara.mp3',
-    cover: 'Hindi songs/Shankara_Re_Shankara.jpg'
+    url: 'static/Hindi_songs/Shankara_Re_Shankara.mp3',
+    cover: 'static/Hindi_songs/Shankara_Re_Shankara.jpg'
   },
   {
     name: 'Baala',
     artist: 'Sohail Sen and Vishal Dadlani',
-    url: 'Hindi songs/Baala.mp3',
-    cover: 'Hindi songs/Baala.jpg'
+    url: 'static/Hindi_songs/Baala.mp3',
+    cover: 'static/Hindi_songs/Baala.jpg'
   },
   {
     name: 'O SAKI SAKI',
     artist: 'Neha Kakkar and Tulsi Kumar',
-    url: 'Hindi songs/O_SAKI_SAKI.mp3',
-    cover: 'Hindi songs/O_SAKI_SAKI.jpg'
+    url: 'static/Hindi_songs/O_SAKI_SAKI.mp3',
+    cover: 'static/Hindi_songs/O_SAKI_SAKI.jpg'
   }
   ]
 });
 
+console.log(ap.audio);
+let audiofiles=[
+  'Hindi_songs/Aankh_Mare.mp3','Hindi_songs/Ae_Dil_Hai_Mushkil.mp3','Hindi_songs/All_Black.mp3',
+  'Hindi_songs/Ankhiyon_Se_Goli_Maare.mp3','Hindi_songs/Apna_Time_Aayega.mp3','Hindi_songs/Ban_Ja_Rani.mp3',
+  'Hindi_songs/Bekhayali.mp3','Hindi_songs/Bekhudi.mp3','Hindi_songs/Bheegi_Bheegi.mp3',
+  'Hindi_songs/Bon_Diggy_Diggy.mp3','Hindi_songs/Breathless.mp3','Hindi_songs/Chal_Bombay.mp3',
+  'Hindi_songs/Cheez_Badi.mp3','Hindi_songs/Coca_Cola.mp3','Hindi_songs/Daddy_Mummy.mp3',
+  'Hindi_songs/Das_Bahane_2.0.mp3','Hindi_songs/Deewani_Mastani.mp3','Hindi_songs/Dilbar.mp3',
+  'Hindi_songs/Dil_abhi_bhara_nhi.mp3','Hindi_songs/Dil_Hi_Toh_Hai.mp3','Hindi_songs/FIRSE_MACHAYENGE.mp3',
+  'Hindi_songs/Gali_Gali.mp3','Hindi_songs/Garmi_Song.mp3','Hindi_songs/Ghammand_Kar.mp3',
+  'Hindi_songs/Ghunghroo.mp3', 'Hindi_songs/High_Rated.mp3','Hindi_songs/Ik_Mulakat.mp3',
+  'Hindi_songs/Illrgal_Weapon_2.0.mp3','Hindi_songs/Ishare_Tere.mp3','Hindi_songs/Jo_Bhji_Thi_Duaa.mp3',
+  'Hindi_songs/Kabhi_Jo_Badal_Barse.mp3','Hindi_songs/Kamariya.mp3','Hindi_songs/Vaaste.mp3',
+  'Hindi_songs/Ishq_tera.mp3','Hindi_songs/Leja_Re.mp3','Hindi_songs/Naina.mp3',
+  'Hindi_songs/Tera_Ban_Jaaunga.mp3','Hindi_songs/Kabira.mp3','Hindi_songs/Teri_Mitti.mp3','Hindi_songs/Ve_Mahi.mp3','Hindi_songs/Zara_Zara_Behekta_Hai.mp3','Hindi_songs/Tera_Fitoor.mp3','Hindi_songs/Tera_Baap_Aaya.mp3','Hindi_songs/Shankara_Re_Shankara.mp3','Hindi_songs/Baala.mp3','Hindi_songs/O_SAKI_SAKI.mp3'
+];
+
 let search = document.getElementById("searchTxt");
 search.addEventListener("input", function () {
   let inputVal = search.value;
-  inputVal=inputVal.toLocaleLowerCase();
+  inputVal = inputVal.toLocaleLowerCase();
   console.log("input event fired!", inputVal);
   let songCards = document.getElementsByClassName("songCard");
   Array.from(songCards).forEach(function (element) {
     let songTxt = element.getElementsByTagName("h4")[0].innerText;
-    songTxt=songTxt.toLocaleLowerCase();
+    songTxt = songTxt.toLocaleLowerCase();
     if (songTxt.includes(inputVal)) {
       element.style.display = "block";
     }
@@ -311,4 +335,112 @@ search.addEventListener("input", function () {
     }
   })
 
+})
+
+
+function changeTheme() {
+  let body = document.body;
+  if (body.classList == "normal") {
+    body.classList = "dark";
+    let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+    Array.from(songName).forEach((element) => {
+      element.style.color = "yellow";
+    })
+    let artists = document.querySelectorAll("b");
+    Array.from(artists).forEach((element) => {
+      element.style.color = "lightgreen";
+    })
+
+  } else {
+    body.classList = "normal";
+    let songName = document.querySelectorAll(".col-md-3 .songNameContainer h4");
+    Array.from(songName).forEach((element) => {
+      element.style.color = "blue";
+    })
+    let artists = document.querySelectorAll("b");
+    Array.from(artists).forEach((element) => {
+      element.style.color = "green";
+    })
+  }
+}
+function changeIcon(element) {
+  let icon = element.childNodes[0];
+  if (icon.classList == "fa fa-heart-o") {
+    
+    icon.classList = "fa fa-heart";
+  }
+  else {
+    icon.classList = "fa fa-heart-o";
+  }
+
+}
+
+let songCards = document.getElementsByClassName("songCard");
+var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+// console.log(myFavprop);
+Array.from(songCards).forEach((e)=>{
+  let songCard = e.childNodes;
+  let songName = songCard[3].childNodes[1].innerHTML;
+  if (myFavprop.some(e => e.songName === songName)) {
+    /*localStorage contains this song*/
+    console.log(songCard[7].childNodes[0]);
+    let favBtn  = songCard[7].childNodes[0];
+    console.log("Both are same");
+    console.log(favBtn);
+    favBtn.classList = "fa fa-heart";
+  }
+
+})
+ 
+
+$(function () {
+  $(".favBtn").on("click", function (e) {
+    var icon = e.target;
+    var songCard = this.parentNode.childNodes;
+    var imgFile = songCard[1].childNodes[1].src;
+    var songName = songCard[3].childNodes[1].innerHTML;
+    var songInfo = songCard[5].childNodes[0].innerHTML;
+    var dataId = $(songCard[1]).attr("data-switch");
+    var audioFile = audiofiles[dataId];
+    console.log(audioFile);
+    var propToAdd = {
+      imgFile: imgFile,
+      songName: songName,
+      songInfo: songInfo,
+      audioFile: audioFile
+    }
+    var myFavprop = JSON.parse(localStorage.getItem("favProp"));
+    console.log(propToAdd);
+    console.log(myFavprop);
+    if (icon.classList == "fa fa-heart") {    
+      
+      if (myFavprop == null) {
+        myFavprop = [];
+      }
+      console.log(myFavprop);
+      if(myFavprop != null){
+         if(myFavprop.some(e => e.songName === propToAdd.songName)){
+           console.log("already included");
+            if(propToAdd == myFavprop[j]){
+               propToAdd = {};
+            }
+         }else{
+          console.log("pushing");
+          myFavprop.push(propToAdd);
+         }
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+    if(icon.classList == "fa fa-heart-o"){
+      for(let j=0;j<myFavprop.length;j++){
+        if((myFavprop[j].songName == propToAdd.songName)&&(myFavprop[j].songInfo == propToAdd.songInfo)){
+          console.log("already included");
+          myFavprop.splice(j,1);
+        }
+        console.log(myFavprop);
+      }
+      localStorage.setItem("favProp", JSON.stringify(myFavprop));
+    }
+
+  })
 })
