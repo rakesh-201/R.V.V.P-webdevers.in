@@ -100,4 +100,4 @@ The site also has an about us page and a contact us page.
 
 ## Screenshots
 
-![Screenshot alt text](https://drive.google.com/file/d/1OIGL7ad9vuJAfSanxTyk6kVKWbcOWH2y/view "Here is a screenshot")
+[Screenshot alt text](https://drive.google.com/drive/folders/1ECkwi90j1ZhkiNdxIixm2sI9B19PEEFr?usp=sharing)
