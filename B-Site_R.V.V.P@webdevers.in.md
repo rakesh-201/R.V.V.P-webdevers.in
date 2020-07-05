@@ -36,23 +36,29 @@ Project 1 is good for blink people, but isn't that good for common people. The r
 
 - Use of mouse instead of voice can create problems like speech overlapping and more.
 
-Hence need of a _* Non Voice Controlled *_ site is required.
+Hence need of a _*Non Voice Controlled*_ site is required.
 
 ### Common Features
 
-The site has a login system. You need to login to enjoy the services like music, news, dairy. In the news section first the title of latest news are spoken and then of the sorted news. The news is sorted into three categories:
+The site has a login system. You need to login to enjoy the services like music, news, dairy. In the news section first the titles of latest news are spoken and then of the sorted news. The news is sorted into three categories:
 
 - business
 - entertainment
 - sports
+
 you can choose any one at a time.
+
 The music section contains music sorted as follows:
+
 - Sorted by Years
 - Sorted by Languages
 - Sorted by Artists
+
 In the diary section the stories can be added by two ways:
+
 - Oral way
 - By typing
+
 The site also has an about us page and a contact us page.
 
 - GitHub repo link for Project 1: [Link to repository](https://github.com/rakesh-201/R.V.V.P-webdevers.in)
