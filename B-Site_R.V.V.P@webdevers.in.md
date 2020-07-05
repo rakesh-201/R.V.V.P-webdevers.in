@@ -100,4 +100,4 @@ The site also has an about us page and a contact us page.
 
 ## Screenshots
 
-![Screenshot alt text](https://edtimes.in/wp-content/uploads/2018/09/NikeMeme10-640x633.jpg "Here is a screenshot")
+![Screenshot alt text](https://drive.google.com/file/d/1wLHn0dXSDBij3hXZ9VIeb0mdDg5i4a7H/view?usp=sharing "Here is a screenshot")
