@@ -36,7 +36,7 @@ Project 1 is good for blink people, but isn't that good for common people. The r
 
 - Use of mouse instead of voice can create problems like speech overlapping and more.
 
-Hence need of a _** Non Voice Controlled **_ site is required.
+Hence need of a _* Non Voice Controlled *_ site is required.
 
 ### Common Features
 
