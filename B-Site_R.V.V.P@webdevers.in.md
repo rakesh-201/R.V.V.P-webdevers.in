@@ -13,7 +13,7 @@
 
 - Riya Gupta
 - Hrim Gandhi
-- Akshat Shah
+- Akshat Salve
 
 ## Description
 
@@ -45,15 +45,15 @@ The site has a login system. You need to login to enjoy the services like music,
 - business
 - entertainment
 - sports
-  you can choose any one at a time.
-  The music section contains music sorted as follows:
+you can choose any one at a time.
+The music section contains music sorted as follows:
 - Sorted by Years
 - Sorted by Languages
 - Sorted by Artists
-  In the diary section the stories can be added by two ways:
+In the diary section the stories can be added by two ways:
 - Oral way
 - By typing
-  The site also has an about us page and a contact us page.
+The site also has an about us page and a contact us page.
 
 - GitHub repo link for Project 1: [Link to repository](https://github.com/rakesh-201/R.V.V.P-webdevers.in)
 - GitHub repo link for Project 2: [Link to repository](https://github.com/rakesh-201/R.V.V.P-webdevers.in_withoutSound)
