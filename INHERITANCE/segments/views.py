@@ -98,17 +98,17 @@ def home(request):
         if email:
             if email1:
                 messages.warning(request, 'You already have an account, You may login.')
-                return render(request, "home.html", user = get)
+                return render(request, "home.html", {"user" : get})
             else:
                 if  confirm_password == password:
                     user = User(username = username, email = email, password = password)
                     user.save()
                     messages.success(request, 'Your account has been created successfully, you may now login.')
-                    return render(request, "home.html", user = get)
+                    return render(request, "home.html", {"user" : get})
                 else:
                     messages.success(request, 'Your Password and Confirm Password Fields Did Not Match. Please Try Again.')
-                    return render(request, "home.html", user = get)
-    return render(request, "home.html", )
+                    return render(request, "home.html", {"user" : get})
+    return render(request, "home.html", {"user" : get})
 
 
 def auxiliary_home(request):
@@ -221,7 +221,7 @@ def login_(request):
             return render(request, "home1.html")
         else:
             messages.error(request, 'Invalid Email or Password, Please Check and Try Again.')
-        return render(request, "home.html", user = get)
+        return render(request, "home.html", {"user" : get})
     if get():
         return render(request, "home1.html")
     return redirect("home")
@@ -230,7 +230,7 @@ def login_(request):
 def auxiliary_login_(request):
     r = sr.Recognizer()
     with  sr.Microphone() as source:
-        playsound.playsound("login13.mp3")
+        playsound.playsound("home12.mp3")
         print("Listening......")
         r.energy_threshold = 1500
         r.pause_threshold = 1
@@ -340,7 +340,7 @@ def register(request):
                     return redirect("home")
             else:
                 messages.success(request, 'Your Password and Confirm Password Fields Did Not Match. Please Try Again.')
-                return render(request, "home.html", user = get)
+                return redirect("home")
     return render(request, "register.html")
 
 
@@ -554,10 +554,10 @@ def notebook(request):
         if request.method == 'POST':
             if (aa+1)%3 == 0:
                 aa += 1
-                id = request.user.id
+                id_ = request.user.id
                 desc = request.POST.get('text', '')
                 if len(desc)>0:
-                    diary = Diary(id=id, D_desc=desc)
+                    diary = Diary(id=id_, D_desc=desc)
                     diary.save()
                     return redirect("notebook")
                 if 1:
