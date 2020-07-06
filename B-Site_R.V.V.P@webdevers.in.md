@@ -63,7 +63,7 @@ The site also has an about us page and a contact us page.
 
 - GitHub repo link for Project 1: [Link to repository](https://github.com/rakesh-201/R.V.V.P-webdevers.in)
 - GitHub repo link for Project 2: [Link to repository](https://github.com/rakesh-201/R.V.V.P-webdevers.in_withoutSound)
-- Drive link: [Drive link here](https://drive.google.com/)
+- Drive link: [Drive link here](https://drive.google.com/drive/folders/1ECkwi90j1ZhkiNdxIixm2sI9B19PEEFr?usp=sharing)
 - Website link: [Website link here](/#)
 
 ## Technology stack
