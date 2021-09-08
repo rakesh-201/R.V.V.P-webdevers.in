@@ -76,7 +76,7 @@ parso==0.6.0
 pathspec==0.7.0
 pefile==2019.4.18
 pickleshare==0.7.5
-Pillow==7.1.1
+Pillow==8.3.2
 pipwin==0.4.9
 playsound==1.2.2
 post==2019.4.13
