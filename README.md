@@ -1,3 +1,5 @@
+![Banner](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/B%20Site.gif)
+
 # B_SITE
 
 ### Team name: R.V.V.P@webdevers.in
@@ -100,4 +102,8 @@ The site also has an about us page and a contact us page.
 
 ## Screenshots
 
+![Image1](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(11).png)
+![Image2](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(12).png)
+![Image3](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(13).png)
+![Image4](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(14).png)
 [Link to ScreenShots](https://drive.google.com/drive/folders/1ECkwi90j1ZhkiNdxIixm2sI9B19PEEFr?usp=sharing)
