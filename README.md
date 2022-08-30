@@ -173,3 +173,16 @@ This project is built as a Final Submission for _INHERITANCE_, 2020, a mentorshi
 - Riya Gupta
 - Hrim Gandhi
 - Akshat Salva
+
+
+## Screenshots :framed_picture:
+
+![Image1](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(11).png)
+
+![Image2](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(9).png)
+
+![Image3](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(12).png)
+
+![Image4](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(13).png)
+
+
