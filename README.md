@@ -1,113 +1,175 @@
+
 ![Banner](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/B%20Site.gif)
 
-# B_SITE
+<!-- # B_Site :man_with_probing_cane: :woman_with_probing_cane: -->
 
-### Team name: R.V.V.P@webdevers.in
+B_Site is a voice controlled website built for a class of specially-abled people viz. blind people.
 
-## Team members
+The Moto with which B_Site was built is `Internet and its services should be accessible to all regardless of disability`.
 
-- Rakesh Rajpurohit - rakesh.rajpurohit.rr.rr.201@gmail.com
-- Vishal Bajrang Dange - dangebvishal@gmail.com
-- Vedant Deepak Mondkar - vedantmondkar2002@gmail.com
-- Prashant Tukaram Bhala - prashanttb151100@gmail.com
+This website provides users services like Daily News, access to 200+ latest songs and a Dairy for noting down the user's favourite moments, all of them operated orally.
 
-## Mentors
+## Motivation :sunrise_over_mountains:
 
+- The internet is currently at its very best worldwide. It have a lot of useful content which most of us leverage. Right from latest songs to live news, right from domain fundamentals to answers to your complicated questions, right from watching videos to connecting with your friends via video meets, it has all of them.
+
+- However, there are people who cannot leverage this internet. Yes, I am talking about specially-abled people.
+
+- So, we decided to help a category of such people viz. blind people, through this project. 
+
+
+
+## Issues to Tackle :mountain:
+
+- Blind people do not have vision, which leads to the following difficulties while using an application:
+
+    - They cannot locate buttons present on the screen, and hence are not able to navigate through the application.
+
+    - They cannot determine the screen on which they are currently browsing.
+
+    - They cannot use the keyboard/keypad for typing-in the requirements (e.g., searching for a song, searching for a particular news article, etc.).
+
+- So, when devicing a solution we need to take care of these difficulties, in our solution.
+## Features :star2:
+
+**Voice Controlled Operations**
+
+- Our project has a voice-controlled operation system, which allows the users to ask for a particular task (e.g., navigating to a different screen, playing a particular song, etc.) by orally commanding the website.
+
+- A general flow goes as follows:
+
+    - The website first tells the user the current page which is being displayed.
+
+    - The website then provides the possible options the user has, on this page.
+
+    - Then, it waits for some threshold time and repeats the options again. After 3 such tries, if the user does on respond, the website goes in a temporal sleep mode and wakes up again when the user responds.
+
+    - After getting a response, the website performs the coresponding task.
+
+    - This task could be related to navigation to a different screen or playing a specific song or playing latest news, etc.
+
+**News Section**
+
+- This section provides the users with the latest news, by commumnicated the information orally.
+
+- When the user navigates to this page, the page first tells the user 50 top general news.
+
+- After these news are completed, the page provides the user with four options as follows:
+    
+    - Play Top 50 Sports News.
+    
+    - Play Top 50 Bussiness News.
+    
+    - Play Top 50 Bollywood News.
+    
+    - Don't play anything.
+
+- The user can select any one of these options by repeating the option.
+
+- This page provides real-time news using [NEWS API](https://newsapi.org/), which is a JSON API and provides a variety of news articles.
+
+- This page also displays the news in cards, so that other people (non-blind) can read them.
+
+
+**Music Section**
+
+
+- This section is the biggest section of this project, comprising over 200 latest songs.
+
+- These songs are categorized using three schemes as follows:
+
+    - **Categorized By Year Of Release:**
+
+        - In this section, the songs are categorized by the year of release into two categories, i.e. songs released in 2020 and songs released in 2019.
+
+    - **Categorized By Artist:**
+
+        - In this section, the songs are categorized according to the artist of the song into six categories, i.e. songs by _Arijit Singh_, songs by _Atif_, songs by _Lata Mangeshkar_, songs by _Asha Bhosle_, songs by _Kishor Kumar_, and songs by _Md. Rafi_.
+
+    - **Categorized By Language:**
+
+        - In this section, the songs are categorized by the language used in the song into three categories, i.e. _Hollywood_ songs, _Bollywood_ songs, and _Marathi_ songs.
+
+- This section has an in-built media player, which provides various features like shuffling, fast forwarding, skipping, looping, etc.
+
+- Considering, the users' preference for using dark themes while listening to songs, we have integrated the dark mode feature in this section.
+
+
+**Diary Section**
+
+- People often like to have a diary wherein they can write their personal secrets, their likes, their dislikes, and other personal things.
+
+- In the case of Blind people, most of them find it difficult to maintain a diary. There are multiple reasons for it, and one of them is a lack of writing ability.
+
+- So, we tried to solve this problem through this section. In this section, the users can orally speak what they want to save, and then this page will convert the speech to text and save this text.
+
+- This text can be accessed at a later point in time and also can be deleted.
+
+## Technology Stack :hammer_and_wrench:
+
+**Client:** HTML, CSS, JS, Bootstrap
+
+**Server:** Python Django
+
+**Database:** SQLite
+
+
+## Installation & Setup :gear:
+
+Clone B_Site using the following command:
+
+```bash
+  git clone https://github.com/rakesh-201/R.V.V.P-webdevers.in.git
+```
+
+Now, download the dependencies using the following:
+
+```bash
+  cd INHERITANCE
+  pip install -r requirements.txt
+```
+
+Next-up, run the following commands to setup the database:
+
+```bash
+  python manage.py makemigrations
+  python manage.py migrate
+```
+
+Finally, start the project using the following command:
+
+```bash
+  python manage.py runserver
+```
+
+You can access the project by going to the following link in your browser:
+
+```bash
+  http://127.0.0.1:8000/
+```
+
+## Future Scope :stars:
+
+- The music section is not completely voice-controlled, some features in this section, e.g., adding a song to a favorite list, are not yet feasible through voice commands. Such features can be made voice-controlled.
+
+- New sections/features, e.g., oral web search, can be added.
+
+- A mobile app for this website can be built for smartphone users.
+
+## Contest Details :man_technologist:	
+
+**INHERITANCE, 2020**
+    
+This project is built as a Final Submission for _INHERITANCE_, 2020, a mentorship program conducted by _Community of coders, VJTI_.
+
+**TEAM MEMBERS**
+    
+- Rakesh Rajpurohit - [Email](mailto:rakesh.rajpurohit.rr.rr.201@gmail.com)
+- Vishal Bajrang Dange - [Email](dangebvishal@gmail.com)
+- Vedant Deepak Mondkar - [Email](vedantmondkar2002@gmail.com)
+- Prashant Tukaram Bhala - [Email](prashanttb151100@gmail.com)
+
+**MENTORS**
 - Riya Gupta
 - Hrim Gandhi
 - Akshat Salva
-
-## Description
-
-### Project 1(Voice Controlled)
-
-This project is a voice controlled website. We have build it in a way that every part and very feature of this site can be accessed by voice.
-
-#### Important Precaustions
-
-- While using this site try to minimize the use of mouse.
-- Try to speak clear will commanding the site.
-
-### Project 2(Non Voice Controlled)
-
-#### Need
-
-Project 1 is good for blink people, but isn't that good for common people. The reasons are as follows:
-
-- Its is a bit slow because it include ajax call, plus use of modules like gtts and speech-recognition slow the app.
-
-- Use of mouse instead of voice can create problems like speech overlapping and more.
-
-Hence need of a _**Non Voice Controlled**_ site arise.
-
-### Common Features
-
-The site has a login system. You need to login to enjoy the services like music, news, dairy. In the news section first the titles of latest news are spoken and then of the sorted news. The news is sorted into three categories:
-
-- business
-- entertainment
-- sports
-
-you can choose any one at a time.
-
-The music section contains music sorted as follows:
-
-- Sorted by Years
-- Sorted by Languages
-- Sorted by Artists
-
-In the diary section the stories can be added by two ways:
-
-- Oral way
-- By typing
-
-The site also has an about us page and a contact us page.
-
-- GitHub repo link for Project 1: [Link to repository](https://github.com/rakesh-201/R.V.V.P-webdevers.in)
-- GitHub repo link for Project 2: [Link to repository](https://github.com/rakesh-201/R.V.V.P-webdevers.in_withoutSound)
-- Drive link: [Drive link here](https://drive.google.com/drive/folders/1ECkwi90j1ZhkiNdxIixm2sI9B19PEEFr?usp=sharing)
-- Website link: [Website link here](/#)
-
-## Technology stack
-
-1. Python
-2. HTML, CSS, JS
-3. Python-Django
-4. jQuery
-5. Bootstrap
-
-## Usage
-
-### Project(Voice Controlled)
-
-> Being a voice controlled site one can use it using voice. The only precausions are, you need to have a good internet connection and your system should have a well working microphone.
-
-### Project(Non Voice Controlled)
-
-> You can run this site without any such precausions mentioned above.
-
-## Applications
-
-> This application is a great help for Blind people. It has a good range of functionality right from latest news to a range of songs to a diary for storing your past, present, future.
-
-> The diary can also be used for storing notes(#Save_Paper).
-
-## Future scope
-
-> This project is mainly dependent on its voice input and output. Hence, improvement in modules like speech-recognition, gtts(google-text-to-speech) plays a vital role in the sites improvement.
-
-> More music can also be added to the site.
-
-> More options can be added to the news page (description of each news, etc).
-
-## Screenshots
-
-![Image1](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(11).png)
-
-![Image2](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(12).png)
-
-![Image3](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(13).png)
-
-![Image4](https://github.com/rakesh-201/R.V.V.P-webdevers.in/blob/master/INHERITANCE/segments/static/Screenshot%20(14).png)
-
-[More](https://drive.google.com/drive/folders/1ECkwi90j1ZhkiNdxIixm2sI9B19PEEFr?usp=sharing)
