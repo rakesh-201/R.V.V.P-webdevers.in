@@ -82,7 +82,7 @@ playsound==1.2.2
 post==2019.4.13
 prometheus-client==0.7.1
 prompt-toolkit==3.0.3
-protobuf==3.6.1
+protobuf==3.18.3
 psycopg2==2.8.5
 public==2019.4.13
 PyAudio==0.2.11
