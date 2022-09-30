@@ -49,7 +49,7 @@ itsdangerous==1.1.0
 jdcal==1.4.1
 jedi==0.16.0
 Jinja2==2.10.3
-joblib==0.14.1
+joblib==1.2.0
 Js2Py==0.68
 json5==0.9.0
 jsonschema==3.2.0
